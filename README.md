@@ -191,10 +191,12 @@ npm run db:migrate   # creates a migration file and applies it
 
 ### Vercel (Production)
 
-1. Connect your GitHub repo to Vercel
-2. Set the following environment variables in Vercel project settings (all from `.env.example`)
-3. `VERCEL_URL` is auto-injected by Vercel
-4. Vercel auto-deploys on push to `main`
+The project is deployed to the `very-good-marketing` Vercel team: [vercel.com/very-good-marketing](https://vercel.com/very-good-marketing).
+
+- **Vercel project**: `versa` (`prj_A6ZfsCilCtUYf76ehT9YxI76SGec`)
+- **Vercel org**: `team_wfvPuAOvYcBXvGumlMRtY9iQ`
+- Vercel auto-deploys from GitHub via the Vercel GitHub integration
+- Additional GitHub Actions workflow (`deploy.yml`) handles post-deploy Prisma migrations
 
 ### Required GitHub Actions Secrets
 
@@ -202,9 +204,9 @@ Set these in your GitHub repo settings under **Settings > Secrets and Variables 
 
 | Secret | Description |
 |---|---|
-| `VERCEL_TOKEN` | Vercel personal access token |
-| `VERCEL_ORG_ID` | Your Vercel org/user ID |
-| `VERCEL_PROJECT_ID` | Your Vercel project ID |
+| `VERCEL_TOKEN` | Vercel personal access token (from [vercel.com/account/tokens](https://vercel.com/account/tokens)) |
+| `VERCEL_ORG_ID` | `team_wfvPuAOvYcBXvGumlMRtY9iQ` |
+| `VERCEL_PROJECT_ID` | `prj_A6ZfsCilCtUYf76ehT9YxI76SGec` |
 | `DATABASE_URL` | Prisma connection string (pooled) |
 | `DIRECT_URL` | Prisma direct connection (for migrations) |
 
