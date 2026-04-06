@@ -105,7 +105,7 @@ Versa helps small service businesses (plumbers, cleaners, landscapers, photograp
 ### 1. Clone and install
 
 ```bash
-git clone https://github.com/your-org/versa.git
+git clone https://github.com/verygoodmarketing/versa.git
 cd versa
 npm install
 ```
@@ -210,10 +210,10 @@ Set these in your GitHub repo settings under **Settings > Secrets and Variables 
 
 ### Multi-tenant subdomain setup
 
-Each business gets `{slug}.yourdomain.com`. To enable this on Vercel:
+Each business gets `{slug}.verygoodmarketing.com`. To enable this on Vercel:
 
-1. Add a wildcard domain `*.yourdomain.com` in Vercel project settings
-2. Configure DNS: `CNAME *.yourdomain.com -> cname.vercel-dns.com`
+1. Add a wildcard domain `*.verygoodmarketing.com` in Vercel project settings
+2. Configure DNS: `CNAME *.verygoodmarketing.com -> cname.vercel-dns.com`
 3. Next.js middleware reads the subdomain from `request.headers.get('host')` to resolve the business
 
 ## Contributing
