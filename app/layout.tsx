@@ -14,9 +14,39 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Versa — Websites & Marketing for Local Businesses",
+  title: {
+    default: "Versa — Websites & Marketing for Local Businesses",
+    template: "%s | Versa",
+  },
   description:
-    "Help local service businesses get online, get discovered, and grow their customer base.",
+    "Versa helps local service businesses get a professional website live in under an hour — with contact forms, Google discovery tools, and email marketing. No tech skills needed.",
+  keywords: [
+    "small business website builder",
+    "local business website",
+    "service business marketing",
+    "plumber website",
+    "landscaper website",
+    "cleaning business website",
+    "local SEO",
+  ],
+  openGraph: {
+    title: "Versa — Websites & Marketing for Local Businesses",
+    description:
+      "Versa helps local service businesses get a professional website live in under an hour. No tech skills needed.",
+    type: "website",
+    siteName: "Versa",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Versa — Websites & Marketing for Local Businesses",
+    description:
+      "Versa helps local service businesses get a professional website live in under an hour. No tech skills needed.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
