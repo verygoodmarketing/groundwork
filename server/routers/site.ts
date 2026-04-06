@@ -1,6 +1,7 @@
 import { z } from "zod";
 import { router, protectedProcedure } from "@/server/trpc";
 import { TRPCError } from "@trpc/server";
+import type { Prisma } from "@prisma/client";
 
 export const siteRouter = router({
   /**
@@ -27,8 +28,8 @@ export const siteRouter = router({
     .input(
       z.object({
         templateId: z.string(),
-        config: z.record(z.unknown()).optional(),
-        blocks: z.array(z.record(z.unknown())).optional(),
+        config: z.record(z.string(), z.unknown()).optional(),
+        blocks: z.array(z.record(z.string(), z.unknown())).optional(),
       })
     )
     .mutation(async ({ ctx, input }) => {
@@ -41,8 +42,8 @@ export const siteRouter = router({
         data: {
           businessId: owner.businessId,
           templateId: input.templateId,
-          config: input.config ?? {},
-          blocks: input.blocks ?? [],
+          config: (input.config ?? {}) as Prisma.InputJsonValue,
+          blocks: (input.blocks ?? []) as Prisma.InputJsonValue,
         },
       });
     }),
@@ -53,8 +54,8 @@ export const siteRouter = router({
   save: protectedProcedure
     .input(
       z.object({
-        blocks: z.array(z.record(z.unknown())).optional(),
-        config: z.record(z.unknown()).optional(),
+        blocks: z.array(z.record(z.string(), z.unknown())).optional(),
+        config: z.record(z.string(), z.unknown()).optional(),
         metaTitle: z.string().optional(),
         metaDescription: z.string().optional(),
       })
@@ -72,7 +73,16 @@ export const siteRouter = router({
 
       return ctx.db.site.update({
         where: { id: site.id },
-        data: input,
+        data: {
+          ...(input.blocks !== undefined && {
+            blocks: input.blocks as Prisma.InputJsonValue,
+          }),
+          ...(input.config !== undefined && {
+            config: input.config as Prisma.InputJsonValue,
+          }),
+          metaTitle: input.metaTitle,
+          metaDescription: input.metaDescription,
+        },
       });
     }),
 
