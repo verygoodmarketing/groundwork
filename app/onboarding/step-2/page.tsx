@@ -4,7 +4,25 @@ import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { OnboardingLayout } from "@/components/onboarding/OnboardingLayout";
 import { trpc } from "@/lib/trpc/client";
-import { Loader2, CheckCircle, XCircle } from "lucide-react";
+import { Loader2, CheckCircle2, XCircle, ChevronDown, ChevronUp } from "lucide-react";
+
+// Light-theme colour tokens
+const C = {
+  bg: "#ffffff",
+  bgPage: "#f0f6fc",
+  border: "#c9d1d9",
+  borderFocus: "#22c55e",
+  text: "#0d1117",
+  muted: "#8b949e",
+  brand: "#22c55e",
+  brandHover: "#16a34a",
+  brandText: "#16a34a",
+  error: "#ef4444",
+  errorBg: "#fef2f2",
+  errorBorder: "#fca5a5",
+};
+
+const QUICK_PICK_CATEGORIES = ["Plumbing", "Electrical", "Cleaning", "Landscaping / Lawn Care"];
 
 const SERVICE_CATEGORIES = [
   "Cleaning",
@@ -29,13 +47,29 @@ function toSlug(name: string): string {
     .slice(0, 63);
 }
 
+/** Suggest alternate slugs when the current one is taken */
+function suggestSlug(slug: string): string[] {
+  const base = slug.replace(/-\d+$/, ""); // strip trailing number
+  return [`${base}-2`, `${base}-pro`, `${base}-local`];
+}
+
+/** Format a phone number as (555) 000-0000 while typing */
+function formatPhone(raw: string): string {
+  const digits = raw.replace(/\D/g, "").slice(0, 10);
+  if (digits.length <= 3) return digits;
+  if (digits.length <= 6) return `(${digits.slice(0, 3)}) ${digits.slice(3)}`;
+  return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`;
+}
+
+const inputCls =
+  "w-full rounded-lg border px-4 py-3 text-sm font-body outline-none transition-colors";
+
 export default function Step2Page() {
   const router = useRouter();
 
   const [form, setForm] = useState({
     name: "",
     slug: "",
-    email: "",
     phone: "",
     category: "",
     address: "",
@@ -46,6 +80,7 @@ export default function Step2Page() {
   });
   const [slugManuallyEdited, setSlugManuallyEdited] = useState(false);
   const [slugToCheck, setSlugToCheck] = useState("");
+  const [addressExpanded, setAddressExpanded] = useState(false);
   const slugDebounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const { data: slugCheck, isFetching: slugChecking } = trpc.business.checkSlug.useQuery(
@@ -57,7 +92,6 @@ export default function Step2Page() {
     onSuccess: () => router.push("/onboarding/step-3"),
   });
 
-  // Create business (first time through step 2 — user may have no business yet)
   const createBusiness = trpc.business.create.useMutation({
     onSuccess: () => router.push("/onboarding/step-3"),
   });
@@ -72,7 +106,6 @@ export default function Step2Page() {
       setForm({
         name: currentBusiness.name ?? "",
         slug: currentBusiness.slug ?? "",
-        email: currentBusiness.email ?? "",
         phone: currentBusiness.phone ?? "",
         category: currentBusiness.category ?? "",
         address: currentBusiness.address ?? "",
@@ -81,7 +114,7 @@ export default function Step2Page() {
         zip: currentBusiness.zip ?? "",
         serviceAreaRadius: currentBusiness.serviceAreaRadius?.toString() ?? "",
       });
-      setSlugManuallyEdited(true); // don't auto-generate if existing
+      setSlugManuallyEdited(true);
     }
   }, [currentBusiness]);
 
@@ -110,22 +143,23 @@ export default function Step2Page() {
     }, 400);
   }
 
-  const isSlugAvailable =
-    slugToCheck === form.slug && slugCheck?.available === true;
-  const isSlugTaken =
-    slugToCheck === form.slug && slugCheck?.available === false;
+  function handlePhoneChange(raw: string) {
+    setForm((f) => ({ ...f, phone: formatPhone(raw) }));
+  }
+
+  const isSlugAvailable = slugToCheck === form.slug && slugCheck?.available === true;
+  const isSlugTaken = slugToCheck === form.slug && slugCheck?.available === false;
+  const slugSuggestions = isSlugTaken ? suggestSlug(form.slug) : [];
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     const radius = form.serviceAreaRadius ? parseInt(form.serviceAreaRadius) : undefined;
 
     if (currentBusiness) {
-      // Update existing business
       await updateOnboardingStep.mutateAsync({
         step: 2,
         name: form.name,
         slug: form.slug,
-        email: form.email,
         phone: form.phone || undefined,
         category: form.category || undefined,
         address: form.address || undefined,
@@ -135,11 +169,9 @@ export default function Step2Page() {
         serviceAreaRadius: radius,
       });
     } else {
-      // Create new business
       await createBusiness.mutateAsync({
         name: form.name,
         slug: form.slug,
-        email: form.email,
         phone: form.phone || undefined,
         category: form.category || undefined,
       });
@@ -148,30 +180,37 @@ export default function Step2Page() {
 
   const isSubmitting = updateOnboardingStep.isPending || createBusiness.isPending;
   const submitError = updateOnboardingStep.error?.message ?? createBusiness.error?.message;
+  const canContinue = !!form.name && !!form.slug && !!form.category && !!form.phone && !isSlugTaken;
 
   return (
     <OnboardingLayout currentStep={2}>
       <form onSubmit={handleSubmit} className="space-y-6">
-        <div>
-          <h1 className="font-display text-2xl font-bold text-[var(--foreground)]">
-            Tell us about your business
-          </h1>
-          <p className="font-body text-surface-400 mt-1">
-            This information will appear on your website.
-          </p>
-        </div>
-
-        {submitError && (
-          <div className="rounded-lg border border-red-500/40 bg-red-950/20 p-4 text-sm text-red-400 font-body">
-            {submitError}
+        <div
+          className="rounded-xl border p-6 shadow-sm space-y-5"
+          style={{ background: C.bg, borderColor: C.border }}
+        >
+          <div>
+            <h1 className="font-display text-2xl font-bold" style={{ color: C.text }}>
+              Tell us about your business
+            </h1>
+            <p className="font-body text-sm mt-1" style={{ color: C.muted }}>
+              We'll use this to set up your website.
+            </p>
           </div>
-        )}
 
-        <div className="space-y-4">
+          {submitError && (
+            <div
+              className="rounded-lg border p-4 text-sm font-body"
+              style={{ background: C.errorBg, borderColor: C.errorBorder, color: C.error }}
+            >
+              {submitError}
+            </div>
+          )}
+
           {/* Business name */}
           <div className="space-y-1">
-            <label htmlFor="biz-name" className="block text-sm font-medium text-[var(--foreground)] font-body">
-              Business name <span className="text-red-400">*</span>
+            <label htmlFor="biz-name" className="block text-sm font-medium font-body" style={{ color: C.text }}>
+              Business name <span style={{ color: C.error }}>*</span>
             </label>
             <input
               id="biz-name"
@@ -179,180 +218,281 @@ export default function Step2Page() {
               required
               value={form.name}
               onChange={(e) => handleNameChange(e.target.value)}
-              placeholder="Sparkle Cleaning Co."
-              className="w-full rounded-lg border border-surface-700 bg-surface-900 px-4 py-3 text-sm text-[var(--foreground)] placeholder:text-surface-400 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20 transition-colors font-body"
+              placeholder="e.g. Mike's Plumbing"
+              className={inputCls}
+              style={{ borderColor: C.border, background: C.bg, color: C.text }}
+              onFocus={(e) => (e.currentTarget.style.borderColor = C.borderFocus)}
+              onBlur={(e) => (e.currentTarget.style.borderColor = C.border)}
             />
           </div>
 
-          {/* Slug with live availability */}
-          <div className="space-y-1">
-            <label htmlFor="biz-slug" className="block text-sm font-medium text-[var(--foreground)] font-body">
-              Your website address <span className="text-red-400">*</span>
+          {/* Business category */}
+          <div className="space-y-2">
+            <label htmlFor="biz-category" className="block text-sm font-medium font-body" style={{ color: C.text }}>
+              Business category <span style={{ color: C.error }}>*</span>
             </label>
-            <div className="flex items-center gap-0 rounded-lg border border-surface-700 bg-surface-900 focus-within:border-brand-500 focus-within:ring-2 focus-within:ring-brand-500/20 transition-colors overflow-hidden">
-              <span className="px-3 py-3 text-sm text-surface-400 font-body border-r border-surface-700 bg-surface-900/50 whitespace-nowrap">
-                versa.app/
-              </span>
-              <input
-                id="biz-slug"
-                type="text"
-                required
-                value={form.slug}
-                onChange={(e) => handleSlugChange(e.target.value)}
-                placeholder="sparkle-cleaning"
-                className="flex-1 px-3 py-3 text-sm text-[var(--foreground)] bg-transparent placeholder:text-surface-400 focus:outline-none font-body"
-              />
-              <div className="pr-3">
-                {slugChecking && <Loader2 className="w-4 h-4 animate-spin text-surface-400" />}
-                {!slugChecking && isSlugAvailable && (
-                  <CheckCircle className="w-4 h-4 text-brand-500" />
-                )}
-                {!slugChecking && isSlugTaken && (
-                  <XCircle className="w-4 h-4 text-red-400" />
-                )}
-              </div>
+            {/* Quick-pick chips */}
+            <div className="flex flex-wrap gap-2">
+              {QUICK_PICK_CATEGORIES.map((cat) => (
+                <button
+                  key={cat}
+                  type="button"
+                  onClick={() => setForm((f) => ({ ...f, category: cat }))}
+                  className="rounded-full px-3 py-1 text-xs font-medium font-body border transition-colors"
+                  style={
+                    form.category === cat
+                      ? { background: C.brand, color: "#ffffff", borderColor: C.brand }
+                      : { background: C.bgPage, color: C.muted, borderColor: C.border }
+                  }
+                  onMouseEnter={(e) => {
+                    if (form.category !== cat) e.currentTarget.style.borderColor = C.brand;
+                  }}
+                  onMouseLeave={(e) => {
+                    if (form.category !== cat) e.currentTarget.style.borderColor = C.border;
+                  }}
+                >
+                  {cat}
+                </button>
+              ))}
             </div>
-            {isSlugTaken && (
-              <p className="text-xs text-red-400 font-body">That URL is already taken.</p>
-            )}
-            {isSlugAvailable && (
-              <p className="text-xs text-brand-400 font-body">This URL is available.</p>
-            )}
-          </div>
-
-          {/* Email */}
-          <div className="space-y-1">
-            <label htmlFor="biz-email" className="block text-sm font-medium text-[var(--foreground)] font-body">
-              Business email <span className="text-red-400">*</span>
-            </label>
-            <input
-              id="biz-email"
-              type="email"
-              required
-              value={form.email}
-              onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
-              placeholder="hello@yourbusiness.com"
-              className="w-full rounded-lg border border-surface-700 bg-surface-900 px-4 py-3 text-sm text-[var(--foreground)] placeholder:text-surface-400 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20 transition-colors font-body"
-            />
-          </div>
-
-          {/* Phone */}
-          <div className="space-y-1">
-            <label htmlFor="biz-phone" className="block text-sm font-medium text-[var(--foreground)] font-body">
-              Phone number
-            </label>
-            <input
-              id="biz-phone"
-              type="tel"
-              value={form.phone}
-              onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))}
-              placeholder="(555) 123-4567"
-              className="w-full rounded-lg border border-surface-700 bg-surface-900 px-4 py-3 text-sm text-[var(--foreground)] placeholder:text-surface-400 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20 transition-colors font-body"
-            />
-          </div>
-
-          {/* Category */}
-          <div className="space-y-1">
-            <label htmlFor="biz-category" className="block text-sm font-medium text-[var(--foreground)] font-body">
-              Service category
-            </label>
+            {/* Full dropdown */}
             <select
               id="biz-category"
+              required
               value={form.category}
               onChange={(e) => setForm((f) => ({ ...f, category: e.target.value }))}
-              className="w-full rounded-lg border border-surface-700 bg-surface-900 px-4 py-3 text-sm text-[var(--foreground)] focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20 transition-colors font-body"
+              className={inputCls}
+              style={{ borderColor: C.border, background: C.bg, color: form.category ? C.text : C.muted }}
+              onFocus={(e) => (e.currentTarget.style.borderColor = C.borderFocus)}
+              onBlur={(e) => (e.currentTarget.style.borderColor = C.border)}
             >
-              <option value="">Select a category</option>
+              <option value="">Select your trade</option>
               {SERVICE_CATEGORIES.map((cat) => (
                 <option key={cat} value={cat}>{cat}</option>
               ))}
             </select>
           </div>
 
-          {/* Address */}
+          {/* Phone */}
           <div className="space-y-1">
-            <label htmlFor="biz-address" className="block text-sm font-medium text-[var(--foreground)] font-body">
-              Street address
+            <label htmlFor="biz-phone" className="block text-sm font-medium font-body" style={{ color: C.text }}>
+              Phone number <span style={{ color: C.error }}>*</span>
             </label>
             <input
-              id="biz-address"
-              type="text"
-              value={form.address}
-              onChange={(e) => setForm((f) => ({ ...f, address: e.target.value }))}
-              placeholder="123 Main St"
-              className="w-full rounded-lg border border-surface-700 bg-surface-900 px-4 py-3 text-sm text-[var(--foreground)] placeholder:text-surface-400 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20 transition-colors font-body"
+              id="biz-phone"
+              type="tel"
+              required
+              value={form.phone}
+              onChange={(e) => handlePhoneChange(e.target.value)}
+              placeholder="(555) 000-0000"
+              className={inputCls}
+              style={{ borderColor: C.border, background: C.bg, color: C.text }}
+              onFocus={(e) => (e.currentTarget.style.borderColor = C.borderFocus)}
+              onBlur={(e) => (e.currentTarget.style.borderColor = C.border)}
             />
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
-            <div className="space-y-1">
-              <label htmlFor="biz-city" className="block text-sm font-medium text-[var(--foreground)] font-body">City</label>
+          {/* Slug with live availability */}
+          <div className="space-y-1">
+            <label htmlFor="biz-slug" className="block text-sm font-medium font-body" style={{ color: C.text }}>
+              Your website address <span style={{ color: C.error }}>*</span>
+            </label>
+            <div
+              className="flex items-center rounded-lg border overflow-hidden transition-colors focus-within:ring-2"
+              style={{ borderColor: C.border, background: C.bg }}
+              onFocusCapture={(e) => (e.currentTarget.style.borderColor = C.borderFocus)}
+              onBlurCapture={(e) => (e.currentTarget.style.borderColor = C.border)}
+            >
               <input
-                id="biz-city"
+                id="biz-slug"
                 type="text"
-                value={form.city}
-                onChange={(e) => setForm((f) => ({ ...f, city: e.target.value }))}
-                placeholder="Portland"
-                className="w-full rounded-lg border border-surface-700 bg-surface-900 px-4 py-3 text-sm text-[var(--foreground)] placeholder:text-surface-400 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20 transition-colors font-body"
+                required
+                value={form.slug}
+                onChange={(e) => handleSlugChange(e.target.value)}
+                placeholder="mikes-plumbing"
+                className="flex-1 px-4 py-3 text-sm font-body outline-none"
+                style={{ background: "transparent", color: C.text }}
               />
+              <span
+                className="px-3 py-3 text-sm font-body border-l whitespace-nowrap"
+                style={{ borderColor: C.border, color: C.muted, background: C.bgPage }}
+              >
+                .versa.app
+              </span>
+              <div className="pr-3 pl-2">
+                {slugChecking && <Loader2 className="w-4 h-4 animate-spin" style={{ color: C.muted }} />}
+                {!slugChecking && isSlugAvailable && (
+                  <CheckCircle2 className="w-4 h-4" style={{ color: C.brand }} />
+                )}
+                {!slugChecking && isSlugTaken && (
+                  <XCircle className="w-4 h-4" style={{ color: C.error }} />
+                )}
+              </div>
             </div>
-            <div className="space-y-1">
-              <label htmlFor="biz-state" className="block text-sm font-medium text-[var(--foreground)] font-body">State</label>
-              <input
-                id="biz-state"
-                type="text"
-                value={form.state}
-                onChange={(e) => setForm((f) => ({ ...f, state: e.target.value }))}
-                placeholder="OR"
-                maxLength={2}
-                className="w-full rounded-lg border border-surface-700 bg-surface-900 px-4 py-3 text-sm text-[var(--foreground)] placeholder:text-surface-400 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20 transition-colors font-body"
-              />
-            </div>
+            <p className="text-xs font-body" style={{ color: C.muted }}>
+              Letters, numbers and hyphens only
+            </p>
+            {isSlugAvailable && (
+              <p className="text-xs font-body" style={{ color: C.brandText }}>
+                ✓ Available: {form.slug}.versa.app
+              </p>
+            )}
+            {isSlugTaken && (
+              <div>
+                <p className="text-xs font-body" style={{ color: C.error }}>
+                  ✗ That URL is taken. Try one of these:
+                </p>
+                <div className="flex gap-2 mt-1 flex-wrap">
+                  {slugSuggestions.map((s) => (
+                    <button
+                      key={s}
+                      type="button"
+                      className="text-xs font-body underline"
+                      style={{ color: C.brand }}
+                      onClick={() => {
+                        setForm((f) => ({ ...f, slug: s }));
+                        setSlugManuallyEdited(true);
+                        debouncedSlugCheck(s);
+                      }}
+                    >
+                      {s}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
-            <div className="space-y-1">
-              <label htmlFor="biz-zip" className="block text-sm font-medium text-[var(--foreground)] font-body">ZIP code</label>
-              <input
-                id="biz-zip"
-                type="text"
-                value={form.zip}
-                onChange={(e) => setForm((f) => ({ ...f, zip: e.target.value }))}
-                placeholder="97201"
-                className="w-full rounded-lg border border-surface-700 bg-surface-900 px-4 py-3 text-sm text-[var(--foreground)] placeholder:text-surface-400 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20 transition-colors font-body"
-              />
-            </div>
-            <div className="space-y-1">
-              <label htmlFor="biz-radius" className="block text-sm font-medium text-[var(--foreground)] font-body">Service radius (miles)</label>
-              <input
-                id="biz-radius"
-                type="number"
-                value={form.serviceAreaRadius}
-                onChange={(e) => setForm((f) => ({ ...f, serviceAreaRadius: e.target.value }))}
-                placeholder="25"
-                min={1}
-                max={500}
-                className="w-full rounded-lg border border-surface-700 bg-surface-900 px-4 py-3 text-sm text-[var(--foreground)] placeholder:text-surface-400 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20 transition-colors font-body"
-              />
-            </div>
+          {/* Address accordion */}
+          <div className="border rounded-lg overflow-hidden" style={{ borderColor: C.border }}>
+            <button
+              type="button"
+              onClick={() => setAddressExpanded((v) => !v)}
+              className="w-full flex items-center justify-between px-4 py-3 text-sm font-medium font-body transition-colors text-left"
+              style={{ background: C.bgPage, color: C.muted }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = C.text)}
+              onMouseLeave={(e) => (e.currentTarget.style.color = C.muted)}
+            >
+              <span>
+                {addressExpanded ? "Hide address" : "Add your address"}
+                <span className="font-normal ml-1">(optional — adds credibility to local SEO)</span>
+              </span>
+              {addressExpanded
+                ? <ChevronUp className="w-4 h-4 flex-shrink-0" />
+                : <ChevronDown className="w-4 h-4 flex-shrink-0" />
+              }
+            </button>
+
+            {addressExpanded && (
+              <div className="px-4 pb-4 pt-3 space-y-3" style={{ background: C.bg }}>
+                <div className="space-y-1">
+                  <label htmlFor="biz-address" className="block text-xs font-medium font-body" style={{ color: C.muted }}>
+                    Street address
+                  </label>
+                  <input
+                    id="biz-address"
+                    type="text"
+                    value={form.address}
+                    onChange={(e) => setForm((f) => ({ ...f, address: e.target.value }))}
+                    placeholder="123 Main St"
+                    className={inputCls}
+                    style={{ borderColor: C.border, background: C.bg, color: C.text }}
+                    onFocus={(e) => (e.currentTarget.style.borderColor = C.borderFocus)}
+                    onBlur={(e) => (e.currentTarget.style.borderColor = C.border)}
+                  />
+                </div>
+                <div className="grid grid-cols-3 gap-3">
+                  <div className="col-span-2 space-y-1">
+                    <label htmlFor="biz-city" className="block text-xs font-medium font-body" style={{ color: C.muted }}>City</label>
+                    <input
+                      id="biz-city"
+                      type="text"
+                      value={form.city}
+                      onChange={(e) => setForm((f) => ({ ...f, city: e.target.value }))}
+                      placeholder="Portland"
+                      className={inputCls}
+                      style={{ borderColor: C.border, background: C.bg, color: C.text }}
+                      onFocus={(e) => (e.currentTarget.style.borderColor = C.borderFocus)}
+                      onBlur={(e) => (e.currentTarget.style.borderColor = C.border)}
+                    />
+                  </div>
+                  <div className="space-y-1">
+                    <label htmlFor="biz-state" className="block text-xs font-medium font-body" style={{ color: C.muted }}>State</label>
+                    <input
+                      id="biz-state"
+                      type="text"
+                      value={form.state}
+                      onChange={(e) => setForm((f) => ({ ...f, state: e.target.value }))}
+                      placeholder="OR"
+                      maxLength={2}
+                      className={inputCls}
+                      style={{ borderColor: C.border, background: C.bg, color: C.text }}
+                      onFocus={(e) => (e.currentTarget.style.borderColor = C.borderFocus)}
+                      onBlur={(e) => (e.currentTarget.style.borderColor = C.border)}
+                    />
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="space-y-1">
+                    <label htmlFor="biz-zip" className="block text-xs font-medium font-body" style={{ color: C.muted }}>ZIP code</label>
+                    <input
+                      id="biz-zip"
+                      type="text"
+                      value={form.zip}
+                      onChange={(e) => setForm((f) => ({ ...f, zip: e.target.value }))}
+                      placeholder="97201"
+                      className={inputCls}
+                      style={{ borderColor: C.border, background: C.bg, color: C.text }}
+                      onFocus={(e) => (e.currentTarget.style.borderColor = C.borderFocus)}
+                      onBlur={(e) => (e.currentTarget.style.borderColor = C.border)}
+                    />
+                  </div>
+                  <div className="space-y-1">
+                    <label htmlFor="biz-radius" className="block text-xs font-medium font-body" style={{ color: C.muted }}>
+                      Service radius (miles)
+                    </label>
+                    <input
+                      id="biz-radius"
+                      type="number"
+                      value={form.serviceAreaRadius}
+                      onChange={(e) => setForm((f) => ({ ...f, serviceAreaRadius: e.target.value }))}
+                      placeholder="25"
+                      min={1}
+                      max={500}
+                      className={inputCls}
+                      style={{ borderColor: C.border, background: C.bg, color: C.text }}
+                      onFocus={(e) => (e.currentTarget.style.borderColor = C.borderFocus)}
+                      onBlur={(e) => (e.currentTarget.style.borderColor = C.border)}
+                    />
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
 
-        <div className="flex gap-3">
+        {/* Sticky footer CTAs */}
+        <div className="flex gap-3 pt-2">
           <button
             type="button"
             onClick={() => router.push("/onboarding/step-1")}
-            className="flex-1 rounded-lg border border-surface-700 px-4 py-3 text-sm font-medium text-surface-400 hover:text-[var(--foreground)] hover:border-surface-600 transition-colors font-body"
+            className="flex-1 rounded-lg border px-4 py-3 text-sm font-medium font-body transition-colors"
+            style={{ borderColor: C.border, color: C.muted, background: C.bg }}
+            onMouseEnter={(e) => { e.currentTarget.style.color = C.text; e.currentTarget.style.borderColor = "#8b949e"; }}
+            onMouseLeave={(e) => { e.currentTarget.style.color = C.muted; e.currentTarget.style.borderColor = C.border; }}
           >
             Back
           </button>
           <button
             type="submit"
-            disabled={isSubmitting || isSlugTaken || !form.name || !form.slug || !form.email}
-            className="flex-[2] rounded-lg bg-brand-600 px-4 py-3 text-sm font-semibold text-white hover:bg-brand-500 transition-colors disabled:opacity-50 flex items-center justify-center gap-2 font-body"
+            disabled={isSubmitting || !canContinue}
+            className="flex-[2] rounded-lg px-4 py-3 text-sm font-semibold text-white font-body transition-colors disabled:opacity-40 flex items-center justify-center gap-2"
+            style={{ background: C.brand }}
+            onMouseEnter={(e) => { if (!e.currentTarget.disabled) e.currentTarget.style.background = C.brandHover; }}
+            onMouseLeave={(e) => { e.currentTarget.style.background = C.brand; }}
           >
             {isSubmitting && <Loader2 className="w-4 h-4 animate-spin" />}
-            Continue
+            Continue →
           </button>
         </div>
       </form>

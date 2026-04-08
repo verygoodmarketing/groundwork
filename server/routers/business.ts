@@ -34,7 +34,8 @@ export const businessRouter = router({
           .min(2)
           .max(63)
           .regex(/^[a-z0-9-]+$/, "Slug must be lowercase alphanumeric with dashes"),
-        email: z.string().email(),
+        // email is optional here — falls back to the authenticated user's email
+        email: z.string().email().optional(),
         phone: z.string().optional(),
         category: z.string().optional(),
         description: z.string().optional(),
@@ -55,6 +56,8 @@ export const businessRouter = router({
       const business = await ctx.db.business.create({
         data: {
           ...input,
+          // Fall back to auth email if not explicitly provided
+          email: input.email ?? ctx.user.email ?? "",
           owners: {
             create: {
               userId: ctx.user.id,

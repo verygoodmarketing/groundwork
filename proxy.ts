@@ -49,14 +49,17 @@ export async function proxy(request: NextRequest) {
     data: { user },
   } = await supabase.auth.getUser();
 
-  // Protect /dashboard routes — redirect to login if not authenticated
-  if (
-    !user &&
-    request.nextUrl.pathname.startsWith("/dashboard") &&
-    !request.nextUrl.pathname.startsWith("/dashboard/auth")
-  ) {
+  const { pathname } = request.nextUrl;
+
+  // Protect /onboarding/step-2 through step-5 and /dashboard
+  const isProtectedOnboarding = /^\/onboarding\/step-[2-5]/.test(pathname);
+  const isDashboard =
+    pathname.startsWith("/dashboard") &&
+    !pathname.startsWith("/dashboard/auth");
+
+  if ((isProtectedOnboarding || isDashboard) && !user) {
     const url = request.nextUrl.clone();
-    url.pathname = "/login";
+    url.pathname = "/onboarding/step-1";
     return NextResponse.redirect(url);
   }
 
