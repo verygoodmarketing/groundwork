@@ -19,6 +19,7 @@ import {
   Camera,
 } from "lucide-react";
 import { useInView } from "@/hooks/useInView";
+import { trpc } from "@/lib/trpc/client";
 
 // ─── Copy constants (easy for CMO/UX to update later) ────────────────────────
 
@@ -920,17 +921,22 @@ function PricingSection() {
 
 function WaitlistSection() {
   const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+  const joinMutation = trpc.waitlist.join.useMutation({
+    onSuccess: () => {
+      setErrorMessage(null);
+    },
+    onError: (err) => {
+      setErrorMessage(err.message || "Something went wrong. Please try again.");
+    },
+  });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
-    setLoading(true);
-    // Simulate submission — will wire to real API when backend is ready
-    await new Promise((r) => setTimeout(r, 800));
-    setLoading(false);
-    setSubmitted(true);
+    setErrorMessage(null);
+    joinMutation.mutate({ email });
   };
 
   return (
@@ -962,7 +968,7 @@ function WaitlistSection() {
           Join hundreds of local business owners getting early access to Versa. Free to try. No tech skills required.
         </p>
 
-        {submitted ? (
+        {joinMutation.isSuccess ? (
           <div className="bg-white/10 rounded-2xl p-10 ring-1 ring-white/20">
             <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
               <svg aria-hidden="true" className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -994,12 +1000,18 @@ function WaitlistSection() {
             />
             <button
               type="submit"
-              disabled={loading}
+              disabled={joinMutation.isPending}
               className="bg-surface-950 text-white font-semibold px-6 py-3.5 rounded-xl hover:bg-surface-800 transition-colors disabled:opacity-70 whitespace-nowrap shadow-lg active:scale-95"
             >
-              {loading ? "Joining..." : "Get early access"}
+              {joinMutation.isPending ? "Joining..." : "Get early access"}
             </button>
           </form>
+        )}
+
+        {errorMessage && (
+          <p className="text-sm text-red-300 mt-3" role="alert">
+            {errorMessage}
+          </p>
         )}
 
         <p className="text-xs text-brand-200/80 mt-5">

@@ -248,3 +248,15 @@ enum CampaignStatus {
   SENT
   CANCELLED
 }
+
+// ============================================================
+// WAITLIST: Early-access email capture for the Versa landing page
+// ============================================================
+
+model WaitlistSignup {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  createdAt DateTime @default(now())
+
+  @@map("waitlist_signups")
+}
