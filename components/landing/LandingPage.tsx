@@ -32,7 +32,7 @@ const NAV_LINKS = [
   { label: "Features", href: "#features" },
   { label: "Who We Help", href: "#who-we-help" },
   { label: "How it works", href: "#how-it-works" },
-  { label: "Pricing", href: "#pricing" },
+  { label: "Pricing", href: "/pricing" },
 ];
 
 const FEATURES = [
@@ -91,43 +91,43 @@ const WHO_WE_HELP = [
     id: "plumbers",
     title: "Plumbers",
     Icon: Wrench,
-    pain: "[CMO copy]",
-    solution: "[CMO copy]",
+    pain: "Missed calls mean missed jobs. Your competitors show up on Google — you don't.",
+    solution: "Get a professional website and booking form that captures leads 24/7, even when you're on a job.",
   },
   {
     id: "electricians",
     title: "Electricians",
     Icon: Zap,
-    pain: "[CMO copy]",
-    solution: "[CMO copy]",
+    pain: "Customers search online first. Without a strong web presence, you're invisible to new clients.",
+    solution: "Stand out in local search with a polished site that builds trust and turns visitors into calls.",
   },
   {
     id: "landscapers",
     title: "Landscapers",
     Icon: Leaf,
-    pain: "[CMO copy]",
-    solution: "[CMO copy]",
+    pain: "Seasonal peaks are short. You can't afford to waste any lead — yet most inquiries go nowhere.",
+    solution: "Showcase your work with a stunning photo gallery and let customers request quotes instantly.",
   },
   {
     id: "cleaners",
     title: "Cleaners",
     Icon: Sparkles,
-    pain: "[CMO copy]",
-    solution: "[CMO copy]",
+    pain: "Word of mouth only goes so far. Growing beyond your current circle feels impossible.",
+    solution: "Automate review requests and let happy customers bring in new business on autopilot.",
   },
   {
     id: "contractors",
     title: "Contractors",
     Icon: HardHat,
-    pain: "[CMO copy]",
-    solution: "[CMO copy]",
+    pain: "Big jobs require big trust. Prospects want proof you're reliable before they ever call.",
+    solution: "Build credibility fast with project photos, client testimonials, and a professional online profile.",
   },
   {
     id: "photographers",
     title: "Photographers",
     Icon: Camera,
-    pain: "[CMO copy]",
-    solution: "[CMO copy]",
+    pain: "Your portfolio deserves to be seen. Social media algorithms work against you.",
+    solution: "Own your presence with a beautiful portfolio site that ranks locally and drives direct bookings.",
   },
 ];
 
@@ -188,11 +188,12 @@ const TESTIMONIALS = [
 const PRICING = [
   {
     name: "Starter",
-    price: "$39",
+    price: "$49",
     period: "/month",
     description: "Everything you need to get online and start getting leads.",
     features: [
-      "Professional website with 1 custom domain",
+      "1 professional website",
+      "Versa subdomain (yourbiz.versa.app)",
       "Contact forms + lead inbox",
       "Click-to-call + mobile-optimized",
       "Basic SEO + sitemap",
@@ -200,16 +201,18 @@ const PRICING = [
       "Google Business Profile integration",
       "Basic analytics",
     ],
-    cta: "Get started free",
+    cta: "Get started",
+    href: "/pricing",
     highlighted: false,
   },
   {
     name: "Pro",
-    price: "$79",
+    price: "$99",
     period: "/month",
     description: "For businesses ready to grow faster and keep more customers.",
     features: [
       "Everything in Starter",
+      "Custom domain support",
       "Up to 500 email contacts",
       "Email broadcast + newsletter",
       "Review request campaigns",
@@ -218,7 +221,27 @@ const PRICING = [
       "Early access to new features",
     ],
     cta: "Start free trial",
+    href: "/pricing",
     highlighted: true,
+  },
+  {
+    name: "Business",
+    price: "$199",
+    period: "/month",
+    description:
+      "For growing businesses that need more power and white-glove support.",
+    features: [
+      "Everything in Pro",
+      "Unlimited email contacts",
+      "Dedicated account manager",
+      "Custom integrations",
+      "Multi-location support",
+      "White-label reports",
+      "Phone support",
+    ],
+    cta: "Start free trial",
+    href: "/pricing",
+    highlighted: false,
   },
 ];
 
@@ -845,7 +868,7 @@ function PricingSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {PRICING.map((plan) => (
             <div
               key={plan.name}
@@ -898,7 +921,7 @@ function PricingSection() {
               </ul>
 
               <a
-                href="#waitlist"
+                href={plan.href}
                 className={`block w-full text-center font-semibold py-3.5 rounded-xl transition-all active:scale-95 ${
                   plan.highlighted
                     ? "bg-brand-600 text-white hover:bg-brand-500 shadow-lg"
@@ -912,7 +935,10 @@ function PricingSection() {
         </div>
 
         <p className="text-center text-sm text-gray-400 mt-8">
-          Both plans include a 14-day free trial. No credit card required to start.
+          All plans include a 14-day free trial. No credit card required to start.{" "}
+          <a href="/pricing" className="text-brand-600 hover:text-brand-700 underline underline-offset-2">
+            See full pricing details →
+          </a>
         </p>
       </div>
     </section>

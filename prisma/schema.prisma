@@ -28,9 +28,13 @@ model Business {
 
   // Stripe integration
   stripeCustomerId       String?  @unique
-  stripeSubscriptionId   String?
+  stripeSubscriptionId   String?  @unique
   stripePlanId           String?
   stripeCurrentPeriodEnd DateTime?
+
+  // Subscription tier & status (managed by webhook)
+  planTier           PlanTier?
+  subscriptionStatus BillingStatus?
 
   // Onboarding
   onboardingStep     Int     @default(1) // 1–5, tracks where user left off
@@ -58,6 +62,19 @@ model Business {
   emailLists EmailList[]
 
   @@map("businesses")
+}
+
+enum PlanTier {
+  STARTER
+  PRO
+  BUSINESS
+}
+
+enum BillingStatus {
+  ACTIVE
+  CANCELLED
+  PAST_DUE
+  TRIAL
 }
 
 // Business owner (maps to Supabase Auth user)
