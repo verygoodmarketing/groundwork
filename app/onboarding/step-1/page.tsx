@@ -74,7 +74,9 @@ function Step1Form() {
       } else {
         const { error } = await supabase.auth.signInWithPassword({ email, password });
         if (error) throw error;
-        router.push("/onboarding/step-2");
+        // Route through the smart hub so returning users (onboardingComplete=true)
+        // land on /dashboard instead of being dropped back into onboarding.
+        router.push("/onboarding");
       }
     } catch (err: unknown) {
       setError(
@@ -94,7 +96,9 @@ function Step1Form() {
       const { error } = await supabase.auth.signInWithOAuth({
         provider: "google",
         options: {
-          redirectTo: `${window.location.origin}/auth/callback?next=/onboarding/step-2`,
+          // No `next` param — let the callback check onboardingComplete and
+          // route returning users to /dashboard or new users into onboarding.
+          redirectTo: `${window.location.origin}/auth/callback`,
         },
       });
       if (error) throw error;
