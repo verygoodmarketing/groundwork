@@ -1,5 +1,7 @@
 # Groundwork — Websites & Marketing for Local Businesses
 
+[![CI](https://github.com/verygoodmarketing/groundwork/actions/workflows/ci.yml/badge.svg)](https://github.com/verygoodmarketing/groundwork/actions/workflows/ci.yml)
+
 Groundwork helps small service businesses (plumbers, cleaners, landscapers, photographers, etc.) build a professional online presence, get discovered, and grow their customer base.
 
 ## Tech Stack
@@ -224,6 +226,54 @@ Each business gets `{slug}.verygoodmarketing.com`. To enable this on Vercel:
 - Commits: use conventional commits (`feat:`, `fix:`, `chore:`, etc.)
 - TypeScript: no `any`, no `ts-ignore` without justification
 - Prisma: never edit migration files after they've been applied
+
+## CI Runbook — What To Do When The Build Fails
+
+When the CI badge turns red (or you get a failure notification on a PR), follow these steps:
+
+### 1. Find the failing run
+
+Click the badge at the top of this README, or go to the [Actions tab](https://github.com/verygoodmarketing/groundwork/actions) and open the failing run.
+
+### 2. Identify which job failed
+
+There are two CI jobs:
+
+| Job | What it checks |
+|-----|----------------|
+| `Lint & Type Check` | ESLint rules + TypeScript strict type errors |
+| `Build` | Full Next.js production build |
+
+### 3. Fix common failures
+
+**ESLint errors (`npm run lint`)**
+- Run `npm run lint` locally to reproduce.
+- Fix the reported rule violations.
+- If a rule is genuinely inapplicable, add an inline `// eslint-disable-next-line <rule>` comment with a justification.
+
+**TypeScript errors (`npm run typecheck`)**
+- Run `npm run typecheck` locally.
+- Fix type errors — do not use `any` or `@ts-ignore` without a comment explaining why.
+
+**Build errors (`npm run build`)**
+- Run `npm run build` locally (the CI workflow sets stub env vars; replicate them if needed).
+- Common causes: missing env vars referenced at build time, invalid imports, Prisma client not generated (`npx prisma generate`).
+
+### 4. Push a fix
+
+Commit the fix on your branch and push — CI will re-run automatically.
+
+### 5. If you cannot fix it immediately
+
+- Leave the PR as a draft so the red badge is visible.
+- Post a comment on the PR explaining the blocker.
+- Do **not** merge with a failing CI.
+
+### Email / Slack notifications
+
+GitHub sends failure email notifications to committers by default. To configure personal notification preferences, visit [GitHub Notification Settings](https://github.com/settings/notifications).
+
+If you want Slack notifications, add a `SLACK_WEBHOOK_URL` secret in **Settings > Secrets and Variables > Actions** and add a step to `ci.yml` using the `slackapi/slack-github-action` action.
 
 ## License
 
