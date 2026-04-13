@@ -1141,8 +1141,8 @@ function Footer() {
             <div>
               <h4 className="text-sm font-semibold text-surface-50 mb-4">Company</h4>
               <ul className="space-y-2.5 text-sm">
-                <li><span className="text-surface-400 cursor-default">About</span></li>
-                <li><span className="text-surface-400 cursor-default">Blog</span></li>
+                <li><a href="/about" className="hover:text-brand-400 transition-colors">About</a></li>
+                <li><a href="/blog" className="hover:text-brand-400 transition-colors">Blog</a></li>
                 <li><a href="#waitlist" className="hover:text-brand-400 transition-colors">Contact</a></li>
               </ul>
             </div>
@@ -1152,8 +1152,8 @@ function Footer() {
         <div className="border-t border-surface-700 mt-12 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-surface-600">
           <p>&copy; {new Date().getFullYear()} {BRAND.name}. All rights reserved.</p>
           <div className="flex gap-5">
-            <span className="cursor-default">Privacy Policy</span>
-            <span className="cursor-default">Terms of Service</span>
+            <a href="/privacy" className="hover:text-surface-300 transition-colors">Privacy Policy</a>
+            <a href="/terms" className="hover:text-surface-300 transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>
