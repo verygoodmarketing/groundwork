@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { FileX, RefreshCcw, Clock } from "lucide-react";
 import { trpc } from "@/lib/trpc/client";
 import { createClient } from "@/lib/supabase/client";
 
@@ -317,16 +318,23 @@ export function PricingPage({ plans }: Props) {
               ))}
             </div>
 
-            {/* Trust line */}
-            <div className="mt-10 text-center">
-              <p className="text-sm text-gray-500">
-                14-day free trial on all plans. No credit card required. Cancel
-                anytime.
-              </p>
-              <p className="text-sm text-gray-500 mt-1">
-                Thousands of plumbers, landscapers, cleaners, and HVAC techs
-                already use Versa to grow their business.
-              </p>
+            {/* Trust reinforcement row */}
+            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
+              {[
+                { Icon: FileX, label: "No contracts", detail: "Month-to-month, always." },
+                { Icon: RefreshCcw, label: "Cancel anytime", detail: "No fees, no hassle." },
+                { Icon: Clock, label: "Setup in under an hour", detail: "Live faster than you think." },
+              ].map(({ Icon, label, detail }) => (
+                <div key={label} className="flex items-center gap-3 text-left">
+                  <div className="w-10 h-10 bg-brand-50 rounded-xl ring-1 ring-brand-200 flex items-center justify-center flex-shrink-0">
+                    <Icon className="w-5 h-5 text-brand-600" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-gray-800">{label}</p>
+                    <p className="text-xs text-gray-400">{detail}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>

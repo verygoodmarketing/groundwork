@@ -17,6 +17,10 @@ import {
   Sparkles,
   HardHat,
   Camera,
+  Clock,
+  UserX,
+  Store,
+  CreditCard,
 } from "lucide-react";
 import { useInView } from "@/hooks/useInView";
 import { trpc } from "@/lib/trpc/client";
@@ -158,6 +162,45 @@ const HOW_IT_WORKS = [
     description:
       "We provision a free subdomain instantly, or connect your existing domain. SSL is automatic. You're live.",
     Icon: Rocket,
+  },
+];
+
+const TRUST_STATS = [
+  {
+    id: "setup-time",
+    Icon: Clock,
+    headline: "Set up in under an hour",
+    detail: "No developer, no agency — just you and a simple setup wizard.",
+    colorBg: "bg-brand-50",
+    colorIcon: "text-brand-600",
+    colorRing: "ring-brand-200",
+  },
+  {
+    id: "no-dev",
+    Icon: UserX,
+    headline: "No developer needed",
+    detail: "Built for business owners, not engineers. Zero coding required.",
+    colorBg: "bg-blue-50",
+    colorIcon: "text-blue-600",
+    colorRing: "ring-blue-200",
+  },
+  {
+    id: "built-for-local",
+    Icon: Store,
+    headline: "Built for local service businesses",
+    detail: "Every feature is designed around winning local jobs — not generic websites.",
+    colorBg: "bg-violet-50",
+    colorIcon: "text-violet-600",
+    colorRing: "ring-violet-200",
+  },
+  {
+    id: "free-trial",
+    Icon: CreditCard,
+    headline: "14-day free trial",
+    detail: "No credit card required to start. Try everything risk-free.",
+    colorBg: "bg-amber-50",
+    colorIcon: "text-amber-600",
+    colorRing: "ring-amber-200",
   },
 ];
 
@@ -781,6 +824,64 @@ function HowItWorksSection() {
   );
 }
 
+function TrustSection() {
+  const { ref, inView } = useInView();
+
+  return (
+    <section
+      id="why-versa"
+      className="py-24 bg-gray-50 px-4 sm:px-6 lg:px-8"
+      aria-labelledby="trust-section-heading"
+    >
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-14 max-w-2xl mx-auto">
+          <span className="inline-block text-xs font-bold uppercase tracking-widest text-brand-600 mb-3">
+            Why Versa
+          </span>
+          <h2
+            id="trust-section-heading"
+            className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4"
+            style={{ fontFamily: "var(--font-display)" }}
+          >
+            The simplest way to get your business online
+          </h2>
+          <p className="text-lg text-gray-500">
+            We built Versa so you can focus on your trade — not on tech.
+          </p>
+        </div>
+
+        <div
+          ref={ref as React.RefObject<HTMLDivElement>}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+        >
+          {TRUST_STATS.map((stat, i) => (
+            <div
+              key={stat.id}
+              className={`animate-fade-up ${inView ? "in-view" : ""} flex flex-col items-center text-center bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200`}
+              style={{ transitionDelay: `${i * 80}ms` }}
+            >
+              <div
+                className={`w-12 h-12 rounded-xl ${stat.colorBg} ${stat.colorIcon} ring-1 ${stat.colorRing} flex items-center justify-center mb-5 flex-shrink-0`}
+              >
+                <stat.Icon className="w-6 h-6" aria-hidden="true" />
+              </div>
+              <h3
+                className="text-base font-bold text-gray-900 mb-2 leading-snug"
+                style={{ fontFamily: "var(--font-display)" }}
+              >
+                {stat.headline}
+              </h3>
+              <p className="text-sm text-gray-500 leading-relaxed">
+                {stat.detail}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function TestimonialsSection() {
   const { ref, inView } = useInView();
 
@@ -1116,6 +1217,7 @@ export function LandingPage() {
       <main className="flex-1">
         <HeroSection />
         <FeaturesSection />
+        <TrustSection />
         <WhoWeHelpSection />
         <HowItWorksSection />
         <TestimonialsSection />
