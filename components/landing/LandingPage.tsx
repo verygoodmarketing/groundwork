@@ -402,13 +402,13 @@ function Navbar() {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="#waitlist"
+              href="/onboarding/step-1?mode=signin"
               className="text-sm font-medium text-[#8b949e] hover:text-white transition-colors"
             >
               Sign in
             </a>
             <a
-              href="#waitlist"
+              href="/onboarding/step-1"
               className="bg-brand-600 text-white text-sm font-semibold px-4 py-2 rounded-xl hover:bg-brand-700 transition-colors shadow-[0_0_16px_rgba(22,163,74,0.35)]"
             >
               Get early access
@@ -453,7 +453,7 @@ function Navbar() {
                 className="block w-full bg-brand-600 text-white text-sm font-semibold px-4 py-2 rounded-xl text-center hover:bg-brand-700 transition-colors"
                 onClick={() => {
                   setMenuOpen(false);
-                  document.getElementById("waitlist")?.scrollIntoView({ behavior: "smooth" });
+                  window.location.href = "/onboarding/step-1";
                 }}
               >
                 Get early access
@@ -516,7 +516,7 @@ function HeroSection() {
 
             <div className="flex flex-col sm:flex-row gap-3 mb-10">
               <a
-                href="#waitlist"
+                href="/onboarding/step-1"
                 className="inline-flex items-center justify-center gap-2 bg-brand-600 text-white font-semibold text-lg px-8 py-4 rounded-xl hover:bg-brand-700 transition-colors shadow-xl shadow-brand-600/30 active:scale-95"
                 style={{ fontFamily: "var(--font-display)" }}
               >
@@ -672,7 +672,7 @@ function WhoWeHelpSection() {
 
         <div className="text-center mt-12">
           <a
-            href="#waitlist"
+            href="/onboarding/step-1"
             className="inline-flex items-center gap-2 bg-brand-600 text-white font-semibold px-8 py-4 rounded-xl hover:bg-brand-700 transition-colors shadow-md shadow-brand-600/25 active:scale-95"
           >
             Get your business online
@@ -755,7 +755,7 @@ function HowItWorksSection() {
         {/* CTA */}
         <div className="text-center mt-12">
           <a
-            href="#waitlist"
+            href="/onboarding/step-1"
             className="inline-flex items-center gap-2 bg-white text-surface-900 font-semibold px-8 py-4 rounded-xl hover:bg-brand-50 transition-colors shadow-xl active:scale-95"
           >
             Start building your site

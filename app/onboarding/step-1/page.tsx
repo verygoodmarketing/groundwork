@@ -38,7 +38,10 @@ function Step1Form() {
   const searchParams = useSearchParams();
   const callbackError = searchParams.get("error");
 
-  const [mode, setMode] = useState<"signup" | "signin">("signup");
+  const modeParam = searchParams.get("mode");
+  const [mode, setMode] = useState<"signup" | "signin">(
+    modeParam === "signin" ? "signin" : "signup"
+  );
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
