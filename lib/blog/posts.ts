@@ -933,6 +933,331 @@ const contractorsPost: BlogPost = {
   ],
 };
 
+const plumberSchedulingPost: BlogPost = {
+  slug: "best-scheduling-software-for-plumbers",
+  title: "Best Scheduling Software for Plumbers in 2026",
+  metaTitle: "Best Scheduling Software for Plumbers in 2026 | Groundwork",
+  metaDescription:
+    "Looking for the best scheduling software for your plumbing business? See what plumbers actually need to manage jobs, dispatch techs, and never miss a booking — without expensive enterprise tools.",
+  publishedAt: "2026-04-14",
+  excerpt:
+    "Missing a scheduling call costs a plumber $200–$600. The right scheduling software eliminates no-shows, keeps your calendar full, and routes jobs automatically — so you can focus on the work.",
+  sections: [
+    {
+      type: "heading2",
+      text: "Why Scheduling Is One of the Biggest Problems in Plumbing",
+    },
+    {
+      type: "paragraph",
+      text: "Ask any plumber what eats up their time and money, and scheduling comes up fast. Missed calls from leads who needed a same-day appointment. Double-bookings when two techs end up at the same address. Customers who never got a confirmation and didn't show. A job running long that wrecks the rest of the day.",
+    },
+    {
+      type: "paragraph",
+      text: "For solo plumbers and small crews, the answer has usually been a mix of text messages, a paper calendar, and memory. That works until it doesn't — and when it fails, it fails publicly, with an angry customer.",
+    },
+    {
+      type: "paragraph",
+      text: "The right scheduling software closes that gap. But not all tools are built for the trades. Here's what to look for — and what actually works for a plumbing business.",
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "What Plumbers Actually Need in Scheduling Software",
+    },
+    {
+      type: "paragraph",
+      text: "Enterprise scheduling tools built for hospitals or law firms aren't the right fit. Plumbing businesses need something that handles the specific chaos of field service work:",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "Online booking from your website.",
+          rest: " Customers should be able to request an appointment or book a slot directly from your website — without having to call during business hours. You capture more leads, especially from emergency searches at night.",
+        },
+        {
+          bold: "Automated confirmations and reminders.",
+          rest: " A text or email reminder 24 hours before the appointment dramatically reduces no-shows. For plumbers, a no-show means a wasted trip and a gap in the day that can't be filled.",
+        },
+        {
+          bold: "Job routing and dispatch.",
+          rest: " If you run multiple techs, your scheduling tool needs to show who is where, how long jobs are expected to take, and who's closest to the next job. Basic calendar apps don't do this.",
+        },
+        {
+          bold: "Mobile access for the crew.",
+          rest: " Your techs are in the field, not behind a desk. They need to see their schedule, get turn-by-turn directions, and update job status from a phone.",
+        },
+        {
+          bold: "Integration with your website and CRM.",
+          rest: " New leads coming in through your website should flow directly into your scheduling system — not get lost in an email inbox that someone has to check manually.",
+        },
+      ],
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "The Scheduling Problem Most Plumbers Don't Talk About",
+    },
+    {
+      type: "paragraph",
+      text: "Most scheduling discussions focus on the calendar. But the bigger problem is what happens before someone books: they couldn't find you.",
+    },
+    {
+      type: "paragraph",
+      text: "When a pipe bursts at 9 PM and a homeowner searches \u201cemergency plumber near me,\u201d the first result with a fast-loading website and a visible \u201cRequest Service\u201d button gets the call. The second result \u2014 even if it\u2019s a better plumber \u2014 gets nothing.",
+    },
+    {
+      type: "paragraph",
+      text: "That's the problem Groundwork is built to solve. It's not just a scheduler — it's a website and marketing platform that gets you found first, then makes it easy for the customer to book or contact you immediately.",
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "Scheduling Software Options for Plumbers: What's Out There",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "Housecall Pro.",
+          rest: " Purpose-built for home service businesses. Solid dispatch, invoicing, and customer notifications. Starts around $65/month. Good fit for growing plumbing companies with multiple techs.",
+        },
+        {
+          bold: "ServiceTitan.",
+          rest: " The enterprise option — powerful dispatch, full CRM, marketing tools. Expensive (typically $400+/month) and requires onboarding support. Best for large plumbing operations.",
+        },
+        {
+          bold: "Jobber.",
+          rest: " Popular with small field service businesses. Clean interface, online booking, automated reminders. Starts around $49/month. A reasonable mid-tier option.",
+        },
+        {
+          bold: "Acuity Scheduling / Calendly.",
+          rest: " General-purpose booking tools — not built for plumbing. Fine for appointment-based businesses but lack dispatch, job routing, and field crew features.",
+        },
+        {
+          bold: "Groundwork.",
+          rest: " Combines a professional plumbing website with built-in lead capture and contact forms. When a customer fills out a service request on your Groundwork site, it goes straight to you — so you never miss a lead. Pair it with Housecall Pro or Jobber for full scheduling, and you have a complete system starting at $49/month.",
+        },
+      ],
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "How to Set Up a Simple Scheduling System for Your Plumbing Business",
+    },
+    {
+      type: "orderedList",
+      items: [
+        "Get a professional website with a lead capture form and click-to-call (Groundwork handles this)",
+        "Set up online booking or a service request form — so customers can reach you 24/7",
+        "Add automated text/email reminders for confirmed appointments",
+        "Use a dispatch tool if you have multiple techs (Housecall Pro or Jobber)",
+        "Connect your Google Business Profile so new leads see your booking option directly in search results",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "For most solo plumbers and small crews, steps 1–3 get you 80% of the value. You don't need enterprise software to stop missing jobs — you need a website that captures leads and a basic reminder system.",
+    },
+    {
+      type: "cta",
+      linkText: "Get your plumbing website with built-in lead capture \u2192",
+      href: "/for/plumbers",
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "FAQ: Scheduling Software for Plumbers",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "What's the best free scheduling software for a plumber?",
+          rest: " There's no great free option built for plumbing specifically. Google Calendar is free but lacks client-facing booking, reminders, and dispatch features. Calendly has a free tier but isn't designed for field service. Most plumbing businesses find that paying $49–$65/month for a real tool saves far more in recovered jobs than it costs.",
+        },
+        {
+          bold: "Do I need scheduling software if I'm a solo plumber?",
+          rest: " If you're turning down jobs or missing calls because you can't coordinate your calendar, yes. A solo plumber with online booking and automated reminders looks more professional and books more jobs than one relying on phone calls and texts. It also frees you from the phone while you're on the job.",
+        },
+        {
+          bold: "Can scheduling software help me get more reviews?",
+          rest: " Yes — many scheduling tools include post-job follow-up features that automatically ask customers to leave a Google review after the appointment closes. Groundwork also includes review request tools. More reviews means better local search rankings and more trust for new customers.",
+        },
+      ],
+    },
+    { type: "divider" },
+    {
+      type: "cta",
+      linkText:
+        "Build your plumbing website with Groundwork \u2014 free trial, no credit card needed.",
+      href: "/for/plumbers",
+    },
+  ],
+};
+
+const hvacDispatchPost: BlogPost = {
+  slug: "hvac-dispatch-software",
+  title: "HVAC Dispatch Software: What Actually Works for Small HVAC Companies",
+  metaTitle: "Best HVAC Dispatch Software for Small Companies in 2026 | Groundwork",
+  metaDescription:
+    "Looking for HVAC dispatch software? Here's what small HVAC companies actually need to route techs, manage jobs, and stop missing service calls — without paying for enterprise tools.",
+  publishedAt: "2026-04-14",
+  excerpt:
+    "Dispatching is where HVAC businesses lose money they don't realize they're losing. The right dispatch software keeps techs moving, customers informed, and your schedule full.",
+  sections: [
+    {
+      type: "heading2",
+      text: "Why HVAC Dispatch Is So Hard to Get Right",
+    },
+    {
+      type: "paragraph",
+      text: "HVAC dispatch isn't just assigning jobs to technicians. It's routing the right tech to the right job, accounting for travel time, equipment in the truck, and the fact that every HVAC job has a range of possible complexity. A \"tune-up\" that turns into a compressor replacement blows up the day's schedule.",
+    },
+    {
+      type: "paragraph",
+      text: "Most small HVAC companies dispatch with a combination of phone calls, text messages, and a whiteboard. It works until the team gets to 3–4 techs and the complexity multiplies. Suddenly you're double-booking, missing service windows, and getting calls from angry customers who waited three hours and no one showed.",
+    },
+    {
+      type: "paragraph",
+      text: "The right dispatch software doesn't eliminate that complexity — but it makes it manageable, visible, and easier to recover from.",
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "What Good HVAC Dispatch Software Does",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "Visual dispatch board.",
+          rest: " You need to see all your techs and all your jobs in one place, updated in real time. Color-coded by status (en route, on site, complete) with drag-and-drop reassignment when things change.",
+        },
+        {
+          bold: "GPS tracking and routing.",
+          rest: " Knowing where every tech is lets you optimize routes and respond to emergency calls by sending whoever is closest. This alone saves hours of drive time per week for a 3-4 tech operation.",
+        },
+        {
+          bold: "Customer notifications.",
+          rest: " Automated texts telling the customer their tech is on the way — with a real-time ETA — reduce inbound \"where is my tech?\" calls dramatically. This is a major quality-of-life improvement for both customers and your office staff.",
+        },
+        {
+          bold: "Mobile job management for techs.",
+          rest: " Techs should be able to see their schedule, get job details and address history, update job status, and collect signatures or photos from a phone. Calling the office for every update is a bottleneck.",
+        },
+        {
+          bold: "Scheduling and booking integration.",
+          rest: " Dispatch and scheduling should live in the same system so adding a new job automatically accounts for current workload and travel time. Separate tools for scheduling and dispatch create gaps.",
+        },
+      ],
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "The Other Half of the HVAC Dispatch Problem: Getting Found in the First Place",
+    },
+    {
+      type: "paragraph",
+      text: "The best dispatch system in the world doesn't help if the phone isn't ringing.",
+    },
+    {
+      type: "paragraph",
+      text: "HVAC is a high-urgency category. When an AC dies in July or a furnace goes out in February, people pick up their phone and search — and they call the first business that looks legitimate. A professional website with your phone number prominently displayed, a service request form, and real customer reviews is the difference between getting that call and watching it go to a competitor.",
+    },
+    {
+      type: "paragraph",
+      text: "That's what Groundwork provides — a website and marketing platform built specifically for HVAC companies. Local SEO, lead capture, review tools. When someone searches \"HVAC company near me,\" you need to show up looking credible.",
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "HVAC Dispatch Software Options: A Practical Comparison",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "Housecall Pro.",
+          rest: " Strong choice for small-to-mid HVAC companies. Visual dispatch board, GPS tracking, customer notifications, invoicing, and online booking. Starts around $65/month. One of the most popular tools in the trades.",
+        },
+        {
+          bold: "ServiceTitan.",
+          rest: " The industry standard for larger HVAC operations. Full dispatch, CRM, marketing, and reporting suite. Pricing starts at $400+/month and requires onboarding. Worth it at 10+ techs; overkill for smaller shops.",
+        },
+        {
+          bold: "Jobber.",
+          rest: " Clean, affordable field service tool. Good for small HVAC companies doing mostly residential work. Dispatch, scheduling, automated reminders. Starts around $49/month.",
+        },
+        {
+          bold: "FieldEdge.",
+          rest: " HVAC-specific software with service history tracking, flat-rate pricing integration, and equipment tracking. Good option if you do a lot of warranty and maintenance contract work.",
+        },
+        {
+          bold: "Groundwork.",
+          rest: " Not a dispatch tool, but the front end of your HVAC business — the website that captures leads and turns searches into service calls. Pair it with Housecall Pro or Jobber for a complete operations stack starting under $150/month.",
+        },
+      ],
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "How to Build a Simple HVAC Operations Stack",
+    },
+    {
+      type: "paragraph",
+      text: "For a small HVAC company (1–5 techs), you don't need enterprise software. Here's a practical, affordable setup:",
+    },
+    {
+      type: "orderedList",
+      items: [
+        "Professional website with lead capture and click-to-call — so you get found and customers can reach you immediately (Groundwork, $49–$99/month)",
+        "Field service + dispatch software for job management, routing, and customer notifications (Housecall Pro or Jobber, $49–$65/month)",
+        "Google Business Profile, fully filled out with photos, services, and hours — free, and critical for local search",
+        "Review request follow-up after every completed job — builds the rating that drives future calls",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Total investment: under $165/month. One recovered emergency call typically pays for 3–4 months of that stack.",
+    },
+    {
+      type: "cta",
+      linkText: "Get your HVAC company website started with Groundwork \u2192",
+      href: "/for/hvac",
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "FAQ: HVAC Dispatch Software",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "What's the difference between HVAC scheduling and dispatch software?",
+          rest: " Scheduling is about setting appointments — when will we do this job? Dispatch is about routing — which tech goes where, in what order, and how do we adjust when things change? Some tools (like Housecall Pro and ServiceTitan) combine both. Others are pure scheduling tools. For HVAC, you want a system that handles both.",
+        },
+        {
+          bold: "Is ServiceTitan worth it for a small HVAC company?",
+          rest: " Probably not if you have fewer than 5 techs. ServiceTitan is powerful but expensive and complex to implement. Most small HVAC companies get 90% of the same operational value from Housecall Pro or Jobber at a fraction of the cost. Start there, and upgrade if you outgrow it.",
+        },
+        {
+          bold: "How does dispatch software reduce drive time?",
+          rest: " Real-time GPS tracking lets dispatchers see where every tech is and route the next job to the tech who's closest — not just who's available on paper. For an HVAC company with 3 techs doing 6–8 jobs per day, smarter routing can recover 30–60 minutes of windshield time per tech per day. At scale, that's multiple additional jobs per week.",
+        },
+      ],
+    },
+    { type: "divider" },
+    {
+      type: "cta",
+      linkText:
+        "Build your HVAC website with Groundwork \u2014 free trial, no credit card needed.",
+      href: "/for/hvac",
+    },
+  ],
+};
+
 export const allPosts: BlogPost[] = [
   plumbersPost,
   landscapersPost,
@@ -940,6 +1265,8 @@ export const allPosts: BlogPost[] = [
   hvacPost,
   electriciansPost,
   contractorsPost,
+  plumberSchedulingPost,
+  hvacDispatchPost,
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
