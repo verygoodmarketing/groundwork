@@ -103,6 +103,7 @@ export default function Step2Page() {
   // Pre-fill from existing business if resuming
   useEffect(() => {
     if (currentBusiness) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setForm({
         name: currentBusiness.name ?? "",
         slug: currentBusiness.slug ?? "",
@@ -194,7 +195,7 @@ export default function Step2Page() {
               Tell us about your business
             </h1>
             <p className="font-body text-sm mt-1" style={{ color: C.muted }}>
-              We'll use this to set up your website.
+              We&apos;ll use this to set up your website.
             </p>
           </div>
 

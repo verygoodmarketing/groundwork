@@ -48,6 +48,7 @@ export default function Step4Page() {
 
   useEffect(() => {
     if (business) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setNotifyEmail(business.email ?? "");
     }
   }, [business]);
@@ -184,7 +185,7 @@ export default function Step4Page() {
                 onBlur={(e) => (e.currentTarget.style.borderColor = C.border)}
               />
               <p className="text-xs font-body" style={{ color: C.muted }}>
-                We'll email you when someone fills out this form.
+                We&apos;ll email you when someone fills out this form.
               </p>
             </div>
           </div>

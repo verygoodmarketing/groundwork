@@ -112,7 +112,7 @@ function Step1Form() {
         },
       });
       if (error) throw error;
-    } catch (err: unknown) {
+    } catch {
       setError(
         "Couldn't connect to Google. Use email instead, or check that pop-ups aren't blocked."
       );

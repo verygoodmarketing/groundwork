@@ -307,7 +307,7 @@ function HowItWorksSection({ data }: { data: IndustryPageData }) {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-          {steps.map((step, index) => (
+          {steps.map((step) => (
             <div key={step.step} className="bg-white/5 rounded-2xl p-8 ring-1 ring-white/10 text-center">
               <div className="flex flex-col items-center gap-3 mb-5">
                 <span className="text-xs font-bold uppercase tracking-widest text-brand-400">Step {step.step}</span>

@@ -41,6 +41,7 @@ function useConfetti(active: boolean) {
 
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setPrefersReducedMotion(mq.matches);
   }, []);
 
@@ -63,6 +64,7 @@ function useConfetti(active: boolean) {
         zIndex: 9999,
       } as React.CSSProperties,
     }));
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setPieces(newPieces);
     const timer = setTimeout(() => setPieces([]), 4500);
     return () => clearTimeout(timer);
@@ -125,7 +127,7 @@ function SuccessScreen({
         {/* Personalized headline */}
         <div>
           <h1 className="font-display text-3xl font-bold" style={{ color: C.brandText }}>
-            You're live!
+            You&apos;re live!
           </h1>
           <p className="font-body text-lg mt-2 font-medium" style={{ color: C.text }}>
             {businessName} is on the internet.
@@ -280,10 +282,10 @@ export default function Step5Page() {
         >
           <div>
             <h1 className="font-display text-2xl font-bold" style={{ color: C.text }}>
-              You're almost live!
+              You&apos;re almost live!
             </h1>
             <p className="font-body text-sm mt-1" style={{ color: C.muted }}>
-              Here's your website address.
+              Here&apos;s your website address.
             </p>
           </div>
 

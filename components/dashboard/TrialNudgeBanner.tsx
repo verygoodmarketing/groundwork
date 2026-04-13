@@ -34,6 +34,7 @@ export function TrialNudgeBanner({ state }: TrialNudgeBannerProps) {
   useEffect(() => {
     if (state.kind === "incomplete_onboarding") {
       const val = sessionStorage.getItem("trial_nudge_onboarding_dismissed");
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setDismissed(val === "true");
     } else if (state.kind === "trial_warning") {
       const stored = localStorage.getItem("trial_nudge_warning_dismissed_at");

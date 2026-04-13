@@ -130,6 +130,7 @@ export default function Step3Page() {
     if (business?.category && !selectedTemplate) {
       // Auto-set filter
       const matchingFilter = FILTER_CATEGORIES.find((f) => f === business.category);
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       if (matchingFilter) setFilterCategory(matchingFilter);
       // Pre-select the best-matching template
       const match = TEMPLATES.find((t) => t.categories.includes(business.category ?? ""));
