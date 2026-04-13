@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PricingPage } from "@/components/pricing/PricingPage";
 
 export const metadata: Metadata = {
-  title: "Pricing — Versa",
+  title: "Pricing — Groundwork",
   description:
     "Simple, transparent pricing for local service businesses. Get your professional website, lead capture, and marketing tools starting at $49/month. 14-day free trial.",
 };
@@ -21,7 +21,7 @@ export default function Pricing() {
       description: "Get your business online and start capturing leads from day one.",
       features: [
         "Your own professional website — live in under an hour",
-        "Free web address (yourbiz.versa.app) included",
+        "Free web address (yourbiz.groundworklocal.com) included",
         "Contact forms that funnel leads straight to your inbox",
         "Click-to-call button — customers tap and ring you instantly",
         "Built-in SEO so Google can find your business",
@@ -48,7 +48,7 @@ export default function Pricing() {
         "Automated review requests — get more 5-star Google reviews",
         "Priority support — real humans, fast responses",
         "Advanced analytics — see which marketing is winning jobs",
-        "First access to every new Versa feature",
+        "First access to every new Groundwork feature",
       ],
       cta: "Start free trial",
       paymentLink: process.env.STRIPE_PAYMENT_LINK_PRO ?? null,

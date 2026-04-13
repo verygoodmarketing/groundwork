@@ -49,9 +49,9 @@ export function OnboardingLayout({ currentStep, hideStepper, children }: Onboard
                 )}
               </div>
 
-              {/* Versa wordmark */}
+              {/* Groundwork wordmark */}
               <span className="font-display font-bold text-lg" style={{ color: "#16a34a" }}>
-                Versa
+                Groundwork
               </span>
 
               {/* Step indicator */}

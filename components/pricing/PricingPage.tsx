@@ -209,8 +209,8 @@ const FAQ = [
     a: "Yes. You can upgrade or downgrade your plan at any time. Upgrades take effect immediately; downgrades apply at the end of your billing period.",
   },
   {
-    q: "What's a Versa subdomain?",
-    a: "We give every business a free subdomain like yourbiz.versa.app. On the Pro and Business plans you can connect your own domain (e.g. myplumbing.com).",
+    q: "What's a Groundwork subdomain?",
+    a: "We give every business a free subdomain like yourbiz.groundworklocal.com. On the Pro and Business plans you can connect your own domain (e.g. myplumbing.com).",
   },
   {
     q: "Is my website data secure?",
@@ -221,8 +221,8 @@ const FAQ = [
     a: "Most service businesses are live in under an hour. Our setup wizard walks you through every step.",
   },
   {
-    q: "Is Versa built for businesses like mine?",
-    a: "Yes. Versa is designed specifically for local service businesses — plumbers, electricians, HVAC techs, landscapers, cleaners, and contractors. Every feature is built around winning local jobs.",
+    q: "Is Groundwork built for businesses like mine?",
+    a: "Yes. Groundwork is designed specifically for local service businesses — plumbers, electricians, HVAC techs, landscapers, cleaners, and contractors. Every feature is built around winning local jobs.",
   },
 ];
 
@@ -236,7 +236,7 @@ export function PricingPage({ plans }: Props) {
             <Link
               href="/"
               className="flex items-center gap-2"
-              aria-label="Versa home"
+              aria-label="Groundwork home"
             >
               <div className="w-8 h-8 bg-brand-50 rounded-lg flex items-center justify-center">
                 <span
@@ -250,7 +250,7 @@ export function PricingPage({ plans }: Props) {
                 className="text-xl font-bold text-white tracking-tight"
                 style={{ fontFamily: "var(--font-display)" }}
               >
-                Versa
+                Groundwork
               </span>
             </Link>
             <Link
@@ -369,7 +369,7 @@ export function PricingPage({ plans }: Props) {
                 <tbody className="divide-y divide-gray-100">
                   {[
                     ["Professional website", true, true, true],
-                    ["Versa subdomain", true, true, true],
+                    ["Groundwork subdomain", true, true, true],
                     ["Contact forms + lead inbox", true, true, true],
                     ["Basic SEO + sitemap", true, true, true],
                     ["Email contacts", "200", "500", "Unlimited"],
@@ -474,7 +474,7 @@ export function PricingPage({ plans }: Props) {
       {/* Footer */}
       <footer className="bg-[#0d1117] text-gray-400 py-8 px-4 text-center text-sm">
         <p>
-          &copy; {new Date().getFullYear()} Versa. All rights reserved.{" "}
+          &copy; {new Date().getFullYear()} Groundwork. All rights reserved.{" "}
           <Link href="/" className="hover:text-brand-400 transition-colors">
             Back to home
           </Link>

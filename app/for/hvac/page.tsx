@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import { Thermometer } from "lucide-react";
 import { IndustryLandingPage, type IndustryPageData } from "@/components/for/IndustryLandingPage";
 
-const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "https://versa-kohl.vercel.app";
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "https://groundworklocal.com";
 
 const data: IndustryPageData = {
   slug: "hvac",
-  pageTitle: "HVAC Company Website Builder — Get More Heating & Cooling Jobs | Versa",
+  pageTitle: "HVAC Company Website Builder — Get More Heating & Cooling Jobs | Groundwork",
   metaDescription:
     "Build a professional HVAC company website in under an hour. Get found for AC repair, furnace installation, and heating & cooling in your area. Local SEO, lead forms, and click-to-call included. Free to try.",
   h1: "HVAC Company Website Builder",
@@ -34,7 +34,7 @@ const data: IndustryPageData = {
       icon: "📍",
       title: "Rank for AC repair and heating near me",
       description:
-        "Versa sites are built for local search from day one — with structured data, service area pages, and Google Business integration. Show up for the high-intent searches that drive real revenue.",
+        "Groundwork sites are built for local search from day one — with structured data, service area pages, and Google Business integration. Show up for the high-intent searches that drive real revenue.",
     },
     {
       icon: "📋",
@@ -46,7 +46,7 @@ const data: IndustryPageData = {
       icon: "⭐",
       title: "Collect reviews after every job",
       description:
-        "More Google reviews = higher local rankings = more calls. Versa's automated review requests make it easy to build a strong reputation without any extra work.",
+        "More Google reviews = higher local rankings = more calls. Groundwork's automated review requests make it easy to build a strong reputation without any extra work.",
     },
   ],
   testimonial: {
@@ -54,19 +54,19 @@ const data: IndustryPageData = {
     initials: "TH",
     business: "H&H Heating & Cooling",
     quote:
-      "We had a basic site that hadn't been touched in 5 years. Switched to Versa and within the first month we were getting calls from people who found us on Google search — something that never happened before.",
+      "We had a basic site that hadn't been touched in 5 years. Switched to Groundwork and within the first month we were getting calls from people who found us on Google search — something that never happened before.",
     color: "from-orange-500 to-red-600",
   },
   faqs: [
     {
       question: "What HVAC services can I list on my website?",
       answer:
-        "Any services you offer — AC repair and installation, furnace and boiler repair, heat pump installation, duct cleaning, seasonal tune-ups, emergency HVAC, commercial HVAC. Versa lets you list and describe all of them clearly.",
+        "Any services you offer — AC repair and installation, furnace and boiler repair, heat pump installation, duct cleaning, seasonal tune-ups, emergency HVAC, commercial HVAC. Groundwork lets you list and describe all of them clearly.",
     },
     {
       question: "Will my HVAC website show up for emergency searches?",
       answer:
-        "Versa sites include local SEO that helps you rank for high-intent searches like 'emergency AC repair near me', 'furnace repair [city]', and 'HVAC company [city]'. We handle all the technical SEO automatically.",
+        "Groundwork sites include local SEO that helps you rank for high-intent searches like 'emergency AC repair near me', 'furnace repair [city]', and 'HVAC company [city]'. We handle all the technical SEO automatically.",
     },
     {
       question: "Can I add my service area to my website?",
@@ -93,7 +93,7 @@ export const metadata: Metadata = {
     description: data.metaDescription,
     type: "website",
     url: `${APP_URL}/for/hvac`,
-    siteName: "Versa",
+    siteName: "Groundwork",
   },
   twitter: {
     card: "summary_large_image",

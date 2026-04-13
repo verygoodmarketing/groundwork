@@ -140,7 +140,7 @@ function Step1Form() {
       >
         <div>
           <h1 className="font-display text-2xl font-bold" style={{ color: C.text }}>
-            {mode === "signup" ? "Create your account" : "Sign in to Versa"}
+            {mode === "signup" ? "Create your account" : "Sign in to Groundwork"}
           </h1>
           <p className="font-body text-sm mt-1" style={{ color: C.muted }}>
             {mode === "signup"

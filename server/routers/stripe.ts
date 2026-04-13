@@ -5,7 +5,7 @@ import { stripe, PLANS } from "@/lib/stripe/client";
 import { track } from "@vercel/analytics/server";
 
 const APP_URL =
-  process.env.NEXT_PUBLIC_APP_URL ?? "https://versa-kohl.vercel.app";
+  process.env.NEXT_PUBLIC_APP_URL ?? "https://groundworklocal.com";
 
 export const stripeRouter = router({
   /**

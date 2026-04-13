@@ -4,7 +4,7 @@ import { prisma } from "@/lib/db/client";
 import { stripe } from "@/lib/stripe/client";
 
 const APP_URL =
-  process.env.NEXT_PUBLIC_APP_URL ?? "https://versa-kohl.vercel.app";
+  process.env.NEXT_PUBLIC_APP_URL ?? "https://groundworklocal.com";
 
 /**
  * POST /api/stripe/portal

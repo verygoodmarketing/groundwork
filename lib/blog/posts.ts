@@ -20,9 +20,9 @@ export interface BlogPost {
 const plumbersPost: BlogPost = {
   slug: "best-website-for-plumbers",
   title: "The Best Website for Plumbers in 2026",
-  metaTitle: "The Best Website for Plumbers in 2026 | Versa",
+  metaTitle: "The Best Website for Plumbers in 2026 | Groundwork",
   metaDescription:
-    "Looking for the best website builder for your plumbing business? See what plumbers actually need in a website — and why Versa is built specifically for the trades.",
+    "Looking for the best website builder for your plumbing business? See what plumbers actually need in a website — and why Groundwork is built specifically for the trades.",
   publishedAt: "2026-04-13",
   excerpt:
     "When a pipe bursts at 9 PM, the first thing a homeowner does is reach for their phone and search \u2018plumber near me.\u2019 If your business isn\u2019t showing up, you\u2019re handing that job to a competitor.",
@@ -74,7 +74,7 @@ const plumbersPost: BlogPost = {
     { type: "divider" },
     {
       type: "heading2",
-      text: "Why Versa Is Built for Plumbers (Not Generic Like Wix or Squarespace)",
+      text: "Why Groundwork Is Built for Plumbers (Not Generic Like Wix or Squarespace)",
     },
     {
       type: "paragraph",
@@ -82,7 +82,7 @@ const plumbersPost: BlogPost = {
     },
     {
       type: "paragraph",
-      text: "Versa is different. It\u2019s made specifically for service businesses like plumbing, HVAC, electrical, and cleaning. That means:",
+      text: "Groundwork is different. It\u2019s made specifically for service businesses like plumbing, HVAC, electrical, and cleaning. That means:",
     },
     {
       type: "list",
@@ -102,14 +102,14 @@ const plumbersPost: BlogPost = {
     },
     {
       type: "paragraph",
-      text: "When you\u2019re running a plumbing business, you don\u2019t have time to wrestle with drag-and-drop editors or figure out SEO plugins. Versa handles the hard stuff so you can focus on the job.",
+      text: "When you\u2019re running a plumbing business, you don\u2019t have time to wrestle with drag-and-drop editors or figure out SEO plugins. Groundwork handles the hard stuff so you can focus on the job.",
     },
     { type: "divider" },
     { type: "heading2", text: "How to Get Started in 5 Minutes" },
     {
       type: "orderedList",
       items: [
-        "Go to versa-kohl.vercel.app/for/plumbers",
+        "Go to groundworklocal.com/for/plumbers",
         "Enter your business name and service area",
         "Pick a look that fits your brand",
         "Add your services and contact info",
@@ -136,7 +136,7 @@ const plumbersPost: BlogPost = {
         },
         {
           bold: "How much does a plumber website cost?",
-          rest: " A custom website from a web design agency can run $2,000\u2013$8,000 upfront, plus ongoing hosting fees. Versa gives you a professional site for a flat monthly rate \u2014 a fraction of the cost, and you own it from day one. No waiting weeks for a developer to make changes.",
+          rest: " A custom website from a web design agency can run $2,000\u2013$8,000 upfront, plus ongoing hosting fees. Groundwork gives you a professional site for a flat monthly rate \u2014 a fraction of the cost, and you own it from day one. No waiting weeks for a developer to make changes.",
         },
         {
           bold: "Will a website actually get me more customers?",
@@ -148,7 +148,7 @@ const plumbersPost: BlogPost = {
     {
       type: "cta",
       linkText:
-        "Build your plumber website with Versa \u2014 free trial, no credit card needed.",
+        "Build your plumber website with Groundwork \u2014 free trial, no credit card needed.",
       href: "/for/plumbers",
     },
   ],
@@ -157,9 +157,9 @@ const plumbersPost: BlogPost = {
 const landscapersPost: BlogPost = {
   slug: "best-website-for-landscapers",
   title: "The Best Website for Landscapers in 2026",
-  metaTitle: "The Best Website for Landscapers in 2026 | Versa",
+  metaTitle: "The Best Website for Landscapers in 2026 | Groundwork",
   metaDescription:
-    "Looking for the best website builder for your landscaping business? Here\u2019s what landscapers actually need in a website \u2014 and why Versa is purpose-built for the trades.",
+    "Looking for the best website builder for your landscaping business? Here\u2019s what landscapers actually need in a website \u2014 and why Groundwork is purpose-built for the trades.",
   publishedAt: "2026-04-13",
   excerpt:
     "Spring rolls around and homeowners start Googling \u201classcapers near me.\u201d If your business isn\u2019t showing up with a professional website, you\u2019re invisible \u2014 and your competitor two towns over is getting that call.",
@@ -217,7 +217,7 @@ const landscapersPost: BlogPost = {
     { type: "divider" },
     {
       type: "heading2",
-      text: "Why Versa Is Built for Landscapers (Not Generic Like Wix or Squarespace)",
+      text: "Why Groundwork Is Built for Landscapers (Not Generic Like Wix or Squarespace)",
     },
     {
       type: "paragraph",
@@ -225,7 +225,7 @@ const landscapersPost: BlogPost = {
     },
     {
       type: "paragraph",
-      text: "Versa is built specifically for service businesses like landscaping, HVAC, plumbing, and cleaning. The difference shows:",
+      text: "Groundwork is built specifically for service businesses like landscaping, HVAC, plumbing, and cleaning. The difference shows:",
     },
     {
       type: "list",
@@ -244,7 +244,7 @@ const landscapersPost: BlogPost = {
         },
         {
           bold: "Review request tools",
-          rest: " \u2014 after you finish a job, Versa can automatically ask happy customers to leave a Google review",
+          rest: " \u2014 after you finish a job, Groundwork can automatically ask happy customers to leave a Google review",
         },
         {
           bold: "No coding required",
@@ -254,14 +254,14 @@ const landscapersPost: BlogPost = {
     },
     {
       type: "paragraph",
-      text: "Landscapers are busy people. You\u2019re managing crews, equipment, and a full job schedule. The last thing you need is to spend hours wrestling with a website builder. Versa handles the hard stuff so you can focus on the work.",
+      text: "Landscapers are busy people. You\u2019re managing crews, equipment, and a full job schedule. The last thing you need is to spend hours wrestling with a website builder. Groundwork handles the hard stuff so you can focus on the work.",
     },
     { type: "divider" },
     { type: "heading2", text: "How to Get Started in 5 Minutes" },
     {
       type: "orderedList",
       items: [
-        "Go to versa-kohl.vercel.app/for/landscapers",
+        "Go to groundworklocal.com/for/landscapers",
         "Enter your business name and service area",
         "Pick a look that fits your brand",
         "Add your services, photos, and contact info",
@@ -291,7 +291,7 @@ const landscapersPost: BlogPost = {
         },
         {
           bold: "How do I show off my work on a website?",
-          rest: " A photo gallery is the most effective thing a landscaper can have on their website. Versa makes it easy to upload photos of completed projects \u2014 before and after shots, seasonal cleanups, patio installations \u2014 so potential customers can see exactly what you do before they ever call.",
+          rest: " A photo gallery is the most effective thing a landscaper can have on their website. Groundwork makes it easy to upload photos of completed projects \u2014 before and after shots, seasonal cleanups, patio installations \u2014 so potential customers can see exactly what you do before they ever call.",
         },
         {
           bold: "Will a website help me get more jobs in the off-season?",
@@ -303,7 +303,7 @@ const landscapersPost: BlogPost = {
     {
       type: "cta",
       linkText:
-        "Build your landscaping website with Versa \u2014 free trial, no credit card needed.",
+        "Build your landscaping website with Groundwork \u2014 free trial, no credit card needed.",
       href: "/for/landscapers",
     },
   ],
@@ -312,9 +312,9 @@ const landscapersPost: BlogPost = {
 const cleanersPost: BlogPost = {
   slug: "best-website-for-cleaning-businesses",
   title: "The Best Website for Cleaning Businesses in 2026",
-  metaTitle: "The Best Website for Cleaning Businesses in 2026 | Versa",
+  metaTitle: "The Best Website for Cleaning Businesses in 2026 | Groundwork",
   metaDescription:
-    "Looking for the best website builder for your cleaning business? Here\u2019s what house cleaners and cleaning companies actually need in a website \u2014 and why Versa is built for the trades.",
+    "Looking for the best website builder for your cleaning business? Here\u2019s what house cleaners and cleaning companies actually need in a website \u2014 and why Groundwork is built for the trades.",
   publishedAt: "2026-04-13",
   excerpt:
     "When someone moves into a new neighborhood and needs a house cleaner, they don\u2019t ask around \u2014 they Google it. If you\u2019re not showing up, you don\u2019t exist to those potential customers.",
@@ -372,7 +372,7 @@ const cleanersPost: BlogPost = {
     { type: "divider" },
     {
       type: "heading2",
-      text: "Why Versa Is Built for Cleaning Businesses (Not Generic Like Wix or Squarespace)",
+      text: "Why Groundwork Is Built for Cleaning Businesses (Not Generic Like Wix or Squarespace)",
     },
     {
       type: "paragraph",
@@ -380,7 +380,7 @@ const cleanersPost: BlogPost = {
     },
     {
       type: "paragraph",
-      text: "Versa is purpose-built for service businesses like cleaning, landscaping, plumbing, and HVAC. That means:",
+      text: "Groundwork is purpose-built for service businesses like cleaning, landscaping, plumbing, and HVAC. That means:",
     },
     {
       type: "list",
@@ -409,14 +409,14 @@ const cleanersPost: BlogPost = {
     },
     {
       type: "paragraph",
-      text: "Running a cleaning business means long days, early mornings, and managing schedules. You don\u2019t have time to figure out website platforms. Versa is designed to be set up once and work for you automatically.",
+      text: "Running a cleaning business means long days, early mornings, and managing schedules. You don\u2019t have time to figure out website platforms. Groundwork is designed to be set up once and work for you automatically.",
     },
     { type: "divider" },
     { type: "heading2", text: "How to Get Started in 5 Minutes" },
     {
       type: "orderedList",
       items: [
-        "Go to versa-kohl.vercel.app/for/cleaners",
+        "Go to groundworklocal.com/for/cleaners",
         "Enter your business name and service area",
         "Choose a look that fits your brand",
         "Add your services, photos, and contact info",
@@ -442,7 +442,7 @@ const cleanersPost: BlogPost = {
       items: [
         {
           bold: "How do I get more cleaning clients from my website?",
-          rest: " The most important thing is showing up when people search for cleaners in your area \u2014 that requires local SEO. Versa handles the technical side automatically: your business gets the right metadata, local structured data, and service area targeting so Google can match you with nearby customers. Beyond that, a clear quote request form converts browsers into leads.",
+          rest: " The most important thing is showing up when people search for cleaners in your area \u2014 that requires local SEO. Groundwork handles the technical side automatically: your business gets the right metadata, local structured data, and service area targeting so Google can match you with nearby customers. Beyond that, a clear quote request form converts browsers into leads.",
         },
         {
           bold: "Do I need a website if I\u2019m already on Google Business Profile?",
@@ -450,7 +450,7 @@ const cleanersPost: BlogPost = {
         },
         {
           bold: "What should I put on my cleaning business website?",
-          rest: " At minimum: your services, your service area, your contact info, and a way to request a quote or book. Photos of your work and a handful of customer reviews will set you apart from competitors who just have a basic listing. Versa gives you a template designed specifically for cleaning businesses \u2014 so you\u2019re not starting from scratch.",
+          rest: " At minimum: your services, your service area, your contact info, and a way to request a quote or book. Photos of your work and a handful of customer reviews will set you apart from competitors who just have a basic listing. Groundwork gives you a template designed specifically for cleaning businesses \u2014 so you\u2019re not starting from scratch.",
         },
       ],
     },
@@ -458,7 +458,7 @@ const cleanersPost: BlogPost = {
     {
       type: "cta",
       linkText:
-        "Build your cleaning business website with Versa \u2014 free trial, no credit card needed.",
+        "Build your cleaning business website with Groundwork \u2014 free trial, no credit card needed.",
       href: "/for/cleaners",
     },
   ],
@@ -467,9 +467,9 @@ const cleanersPost: BlogPost = {
 const hvacPost: BlogPost = {
   slug: "best-website-for-hvac-companies",
   title: "The Best Website for HVAC Companies in 2026",
-  metaTitle: "The Best Website for HVAC Companies in 2026 | Versa",
+  metaTitle: "The Best Website for HVAC Companies in 2026 | Groundwork",
   metaDescription:
-    "Looking for the best website builder for your HVAC business? Here\u2019s what HVAC contractors actually need in a website \u2014 and why Versa is purpose-built for service businesses.",
+    "Looking for the best website builder for your HVAC business? Here\u2019s what HVAC contractors actually need in a website \u2014 and why Groundwork is purpose-built for service businesses.",
   publishedAt: "2026-04-13",
   excerpt:
     "It\u2019s July. A homeowner\u2019s AC stops working at 8 PM. They\u2019re not calling their neighbor for a referral \u2014 they\u2019re searching \u201cHVAC company near me\u201d and calling the first business that looks trustworthy.",
@@ -527,7 +527,7 @@ const hvacPost: BlogPost = {
     { type: "divider" },
     {
       type: "heading2",
-      text: "Why Versa Is Built for HVAC Companies (Not Generic Like Wix or Squarespace)",
+      text: "Why Groundwork Is Built for HVAC Companies (Not Generic Like Wix or Squarespace)",
     },
     {
       type: "paragraph",
@@ -535,7 +535,7 @@ const hvacPost: BlogPost = {
     },
     {
       type: "paragraph",
-      text: "Versa is built specifically for service businesses: HVAC, plumbing, electrical, landscaping, and cleaning. That means:",
+      text: "Groundwork is built specifically for service businesses: HVAC, plumbing, electrical, landscaping, and cleaning. That means:",
     },
     {
       type: "list",
@@ -554,7 +554,7 @@ const hvacPost: BlogPost = {
         },
         {
           bold: "Review request automation",
-          rest: " \u2014 after a job is complete, Versa can ask your customers to leave a Google review",
+          rest: " \u2014 after a job is complete, Groundwork can ask your customers to leave a Google review",
         },
         {
           bold: "No coding, no design background required",
@@ -564,14 +564,14 @@ const hvacPost: BlogPost = {
     },
     {
       type: "paragraph",
-      text: "HVAC technicians are running jobs, managing service calls, and keeping customers\u2019 homes comfortable. The last thing you need is to spend hours building a website. Versa is designed so you can set it up once and let it work for you.",
+      text: "HVAC technicians are running jobs, managing service calls, and keeping customers\u2019 homes comfortable. The last thing you need is to spend hours building a website. Groundwork is designed so you can set it up once and let it work for you.",
     },
     { type: "divider" },
     { type: "heading2", text: "How to Get Started in 5 Minutes" },
     {
       type: "orderedList",
       items: [
-        "Go to versa-kohl.vercel.app/for/hvac",
+        "Go to groundworklocal.com/for/hvac",
         "Enter your business name and service area",
         "Choose a look that fits your company",
         "Add your services, credentials, and contact info",
@@ -601,7 +601,7 @@ const hvacPost: BlogPost = {
         },
         {
           bold: "Should I list pricing on my HVAC website?",
-          rest: " Most HVAC contractors don\u2019t list exact pricing because jobs vary too much. What you should have is a way to request a quote quickly. A clear \u201cGet a Free Estimate\u201d form or phone number does more than a price list \u2014 it starts the conversation. Versa makes it easy to add a quote request form to every page.",
+          rest: " Most HVAC contractors don\u2019t list exact pricing because jobs vary too much. What you should have is a way to request a quote quickly. A clear \u201cGet a Free Estimate\u201d form or phone number does more than a price list \u2014 it starts the conversation. Groundwork makes it easy to add a quote request form to every page.",
         },
         {
           bold: "Do I need a website if I\u2019m already on Yelp and Google Business?",
@@ -613,7 +613,7 @@ const hvacPost: BlogPost = {
     {
       type: "cta",
       linkText:
-        "Build your HVAC company website with Versa \u2014 free trial, no credit card needed.",
+        "Build your HVAC company website with Groundwork \u2014 free trial, no credit card needed.",
       href: "/for/hvac",
     },
   ],
@@ -622,9 +622,9 @@ const hvacPost: BlogPost = {
 const electriciansPost: BlogPost = {
   slug: "best-website-for-electricians",
   title: "The Best Website for Electricians in 2026",
-  metaTitle: "The Best Website for Electricians in 2026 | Versa",
+  metaTitle: "The Best Website for Electricians in 2026 | Groundwork",
   metaDescription:
-    "Looking for the best website builder for your electrical business? Here\u2019s what electricians actually need in a website \u2014 and why Versa is purpose-built for the trades.",
+    "Looking for the best website builder for your electrical business? Here\u2019s what electricians actually need in a website \u2014 and why Groundwork is purpose-built for the trades.",
   publishedAt: "2026-04-13",
   excerpt:
     "When a homeowner\u2019s circuit breaker trips or they need a panel upgrade before closing on a house, they don\u2019t flip through the Yellow Pages. They open Google and type \u201celectrician near me.\u201d If your business doesn\u2019t show up \u2014 or shows up but looks like a hobbyist built your site in 2009 \u2014 that job goes to someone else.",
@@ -682,7 +682,7 @@ const electriciansPost: BlogPost = {
     { type: "divider" },
     {
       type: "heading2",
-      text: "Why Versa Is Built for Electricians (Not Generic Like Wix or Squarespace)",
+      text: "Why Groundwork Is Built for Electricians (Not Generic Like Wix or Squarespace)",
     },
     {
       type: "paragraph",
@@ -690,7 +690,7 @@ const electriciansPost: BlogPost = {
     },
     {
       type: "paragraph",
-      text: "Versa is different. It\u2019s purpose-built for service businesses \u2014 electricians, plumbers, HVAC contractors, cleaners \u2014 so everything is designed around how your business actually works:",
+      text: "Groundwork is different. It\u2019s purpose-built for service businesses \u2014 electricians, plumbers, HVAC contractors, cleaners \u2014 so everything is designed around how your business actually works:",
     },
     {
       type: "list",
@@ -709,7 +709,7 @@ const electriciansPost: BlogPost = {
         },
         {
           bold: "Review request tools",
-          rest: " \u2014 after each job, Versa can automatically prompt customers to leave a Google or Facebook review",
+          rest: " \u2014 after each job, Groundwork can automatically prompt customers to leave a Google or Facebook review",
         },
         {
           bold: "No coding, no web designer needed",
@@ -719,14 +719,14 @@ const electriciansPost: BlogPost = {
     },
     {
       type: "paragraph",
-      text: "When you\u2019re running an electrical business, your time is better spent on the job than wrestling with a website editor. Versa makes it fast and keeps it running.",
+      text: "When you\u2019re running an electrical business, your time is better spent on the job than wrestling with a website editor. Groundwork makes it fast and keeps it running.",
     },
     { type: "divider" },
     { type: "heading2", text: "How to Get Started in 5 Minutes" },
     {
       type: "orderedList",
       items: [
-        "Go to versa-kohl.vercel.app/for/electricians",
+        "Go to groundworklocal.com/for/electricians",
         "Enter your business name and the areas you serve",
         "Choose a layout that fits your brand",
         "Add your services, license info, and contact details",
@@ -756,11 +756,11 @@ const electriciansPost: BlogPost = {
         },
         {
           bold: "What does it cost to have an electrician website built?",
-          rest: " Hiring an agency or freelance designer typically runs $1,500\u2013$6,000 upfront, plus monthly hosting, plus fees every time you want to make changes. Versa is a flat monthly subscription \u2014 you get a professional site, SEO tools, and lead capture without the agency price tag. And you can update it yourself whenever your services or rates change.",
+          rest: " Hiring an agency or freelance designer typically runs $1,500\u2013$6,000 upfront, plus monthly hosting, plus fees every time you want to make changes. Groundwork is a flat monthly subscription \u2014 you get a professional site, SEO tools, and lead capture without the agency price tag. And you can update it yourself whenever your services or rates change.",
         },
         {
           bold: "Will a website help me rank on Google Maps?",
-          rest: " Yes, but it works best in combination with a Google Business Profile. Your website builds the content signals Google uses to understand what you do and where you do it. Versa\u2019s local SEO features are specifically designed to support that \u2014 service area pages, proper structured data, and fast load speeds all contribute to better local rankings over time.",
+          rest: " Yes, but it works best in combination with a Google Business Profile. Your website builds the content signals Google uses to understand what you do and where you do it. Groundwork\u2019s local SEO features are specifically designed to support that \u2014 service area pages, proper structured data, and fast load speeds all contribute to better local rankings over time.",
         },
       ],
     },
@@ -768,7 +768,7 @@ const electriciansPost: BlogPost = {
     {
       type: "cta",
       linkText:
-        "Try Versa free \u2014 no credit card needed.",
+        "Try Groundwork free \u2014 no credit card needed.",
       href: "/for/electricians",
     },
   ],
@@ -777,9 +777,9 @@ const electriciansPost: BlogPost = {
 const contractorsPost: BlogPost = {
   slug: "best-website-for-contractors",
   title: "The Best Website for Contractors in 2026",
-  metaTitle: "The Best Website for Contractors in 2026 | Versa",
+  metaTitle: "The Best Website for Contractors in 2026 | Groundwork",
   metaDescription:
-    "Looking for the best website builder for your contracting business? Here\u2019s what general contractors actually need in a website \u2014 and why Versa is purpose-built for the trades.",
+    "Looking for the best website builder for your contracting business? Here\u2019s what general contractors actually need in a website \u2014 and why Groundwork is purpose-built for the trades.",
   publishedAt: "2026-04-13",
   excerpt:
     "Homeowners don\u2019t hire contractors the way they used to. Word-of-mouth still matters, but the first thing someone does after getting a referral is look you up online. If they can\u2019t find a website \u2014 or they find one that looks outdated and thin \u2014 doubt creeps in. They start calling other contractors.",
@@ -841,7 +841,7 @@ const contractorsPost: BlogPost = {
     { type: "divider" },
     {
       type: "heading2",
-      text: "Why Versa Is Built for Contractors (Not Generic Like Wix or Squarespace)",
+      text: "Why Groundwork Is Built for Contractors (Not Generic Like Wix or Squarespace)",
     },
     {
       type: "paragraph",
@@ -849,7 +849,7 @@ const contractorsPost: BlogPost = {
     },
     {
       type: "paragraph",
-      text: "Versa is built specifically for service businesses \u2014 contractors, electricians, plumbers, HVAC companies \u2014 so the features you actually need are already there:",
+      text: "Groundwork is built specifically for service businesses \u2014 contractors, electricians, plumbers, HVAC companies \u2014 so the features you actually need are already there:",
     },
     {
       type: "list",
@@ -868,7 +868,7 @@ const contractorsPost: BlogPost = {
         },
         {
           bold: "Review request tools",
-          rest: " \u2014 Versa can automatically follow up after a job and ask happy customers to leave a Google review",
+          rest: " \u2014 Groundwork can automatically follow up after a job and ask happy customers to leave a Google review",
         },
         {
           bold: "No developers, no designers, no coding",
@@ -885,7 +885,7 @@ const contractorsPost: BlogPost = {
     {
       type: "orderedList",
       items: [
-        "Go to versa-kohl.vercel.app/for/contractors",
+        "Go to groundworklocal.com/for/contractors",
         "Enter your business name and the areas you serve",
         "Choose a layout that fits your brand",
         "Add your services, photos, and contact information",
@@ -898,7 +898,7 @@ const contractorsPost: BlogPost = {
     },
     {
       type: "cta",
-      linkText: "Build your contractor website with Versa \u2192",
+      linkText: "Build your contractor website with Groundwork \u2192",
       href: "/for/contractors",
     },
     { type: "divider" },
@@ -915,11 +915,11 @@ const contractorsPost: BlogPost = {
         },
         {
           bold: "What does a contractor website actually cost?",
-          rest: " A custom-built site from a web design agency can run $3,000\u2013$10,000 or more, plus ongoing hosting and maintenance fees. Versa is a flat monthly subscription \u2014 no upfront build cost, no developer fees when you need to update a page, and you can make changes yourself anytime. It\u2019s built to cost less than a single lost job.",
+          rest: " A custom-built site from a web design agency can run $3,000\u2013$10,000 or more, plus ongoing hosting and maintenance fees. Groundwork is a flat monthly subscription \u2014 no upfront build cost, no developer fees when you need to update a page, and you can make changes yourself anytime. It\u2019s built to cost less than a single lost job.",
         },
         {
           bold: "How long does it take to start ranking on Google?",
-          rest: " SEO takes time \u2014 typically 3\u20136 months before you see significant organic traffic for competitive terms. That\u2019s true no matter what website builder you use. But the faster you start, the faster you compound. Versa\u2019s local SEO features \u2014 service area targeting, structured data, clean URLs, and fast load speeds \u2014 set you up correctly from day one so every month builds on the last.",
+          rest: " SEO takes time \u2014 typically 3\u20136 months before you see significant organic traffic for competitive terms. That\u2019s true no matter what website builder you use. But the faster you start, the faster you compound. Groundwork\u2019s local SEO features \u2014 service area targeting, structured data, clean URLs, and fast load speeds \u2014 set you up correctly from day one so every month builds on the last.",
         },
       ],
     },
@@ -927,7 +927,7 @@ const contractorsPost: BlogPost = {
     {
       type: "cta",
       linkText:
-        "Try Versa free \u2014 no credit card needed.",
+        "Try Groundwork free \u2014 no credit card needed.",
       href: "/for/contractors",
     },
   ],

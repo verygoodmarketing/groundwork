@@ -22,7 +22,7 @@ export const PLANS = {
     priceId: process.env.STRIPE_STARTER_PRICE_ID ?? null,
     features: [
       "1 professional website",
-      "Versa subdomain (yourbiz.versa.app)",
+      "Groundwork subdomain (yourbiz.groundworklocal.com)",
       "Contact form + lead inbox",
       "Click-to-call + mobile optimized",
       "Basic SEO + sitemap",

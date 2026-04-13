@@ -317,7 +317,7 @@ export default function Step2Page() {
                 className="px-3 py-3 text-sm font-body border-l whitespace-nowrap"
                 style={{ borderColor: C.border, color: C.muted, background: C.bgPage }}
               >
-                .versa.app
+                .groundworklocal.com
               </span>
               <div className="pr-3 pl-2">
                 {slugChecking && <Loader2 className="w-4 h-4 animate-spin" style={{ color: C.muted }} />}
@@ -334,7 +334,7 @@ export default function Step2Page() {
             </p>
             {isSlugAvailable && (
               <p className="text-xs font-body" style={{ color: C.brandText }}>
-                ✓ Available: {form.slug}.versa.app
+                ✓ Available: {form.slug}.groundworklocal.com
               </p>
             )}
             {isSlugTaken && (

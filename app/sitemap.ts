@@ -3,7 +3,7 @@ import { allPosts } from "@/lib/blog/posts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const appUrl =
-    process.env.NEXT_PUBLIC_APP_URL ?? "https://versa-kohl.vercel.app";
+    process.env.NEXT_PUBLIC_APP_URL ?? "https://groundworklocal.com";
   const now = new Date();
 
   const industryPages = [

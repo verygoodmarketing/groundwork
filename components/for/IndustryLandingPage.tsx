@@ -4,7 +4,7 @@ import { type LucideIcon } from "lucide-react";
 // ─── JSON-LD ──────────────────────────────────────────────────────────────────
 
 const APP_URL =
-  process.env.NEXT_PUBLIC_APP_URL ?? "https://versa-kohl.vercel.app";
+  process.env.NEXT_PUBLIC_APP_URL ?? "https://groundworklocal.com";
 
 function JsonLd({ data }: { data: IndustryPageData }) {
   const pageUrl = `${APP_URL}/for/${data.slug}`;
@@ -12,7 +12,7 @@ function JsonLd({ data }: { data: IndustryPageData }) {
   const softwareApplicationSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: "Versa",
+    name: "Groundwork",
     applicationCategory: "BusinessApplication",
     description: `Professional website builder for ${data.industryLabel.toLowerCase()}s`,
     operatingSystem: "Web",
@@ -30,7 +30,7 @@ function JsonLd({ data }: { data: IndustryPageData }) {
         price: "49",
         priceCurrency: "USD",
         billingIncrement: "P1M",
-        description: "Full access to all Versa features",
+        description: "Full access to all Groundwork features",
       },
     ],
     url: APP_URL,
@@ -127,7 +127,7 @@ function Navbar() {
           <Link href="/" className="flex items-center gap-2">
             <LogoMark />
             <span className="text-xl font-bold text-white tracking-tight" style={{ fontFamily: "var(--font-display)" }}>
-              Versa
+              Groundwork
             </span>
           </Link>
           <div className="hidden md:flex items-center gap-6">
@@ -246,7 +246,7 @@ function FeaturesSection({ data }: { data: IndustryPageData }) {
             Everything your {data.industryLabel.toLowerCase()} business needs online
           </h2>
           <p className="text-lg text-gray-500 max-w-2xl mx-auto">
-            Versa gives you the tools that actually matter for winning more local customers — without the complexity or the cost.
+            Groundwork gives you the tools that actually matter for winning more local customers — without the complexity or the cost.
           </p>
         </div>
 
@@ -462,7 +462,7 @@ function Footer({ data }: { data: IndustryPageData }) {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
         <div className="flex items-center gap-2">
           <LogoMark />
-          <span className="text-white font-bold" style={{ fontFamily: "var(--font-display)" }}>Versa</span>
+          <span className="text-white font-bold" style={{ fontFamily: "var(--font-display)" }}>Groundwork</span>
         </div>
         <div className="flex gap-6 flex-wrap justify-center">
           <Link href="/" className="hover:text-brand-400 transition-colors">Home</Link>
@@ -476,7 +476,7 @@ function Footer({ data }: { data: IndustryPageData }) {
           )}
           <Link href="/onboarding/step-1" className="hover:text-brand-400 transition-colors">Get started</Link>
         </div>
-        <p className="text-xs text-gray-600">&copy; {new Date().getFullYear()} Versa. All rights reserved.</p>
+        <p className="text-xs text-gray-600">&copy; {new Date().getFullYear()} Groundwork. All rights reserved.</p>
       </div>
     </footer>
   );

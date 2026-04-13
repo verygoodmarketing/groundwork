@@ -1,6 +1,6 @@
-# Versa — Websites & Marketing for Local Businesses
+# Groundwork — Websites & Marketing for Local Businesses
 
-Versa helps small service businesses (plumbers, cleaners, landscapers, photographers, etc.) build a professional online presence, get discovered, and grow their customer base.
+Groundwork helps small service businesses (plumbers, cleaners, landscapers, photographers, etc.) build a professional online presence, get discovered, and grow their customer base.
 
 ## Tech Stack
 
@@ -105,8 +105,8 @@ Versa helps small service businesses (plumbers, cleaners, landscapers, photograp
 ### 1. Clone and install
 
 ```bash
-git clone https://github.com/verygoodmarketing/versa.git
-cd versa
+git clone https://github.com/verygoodmarketing/groundwork.git
+cd groundwork
 npm install
 ```
 
@@ -193,7 +193,7 @@ npm run db:migrate   # creates a migration file and applies it
 
 The project is deployed to the `very-good-marketing` Vercel team: [vercel.com/very-good-marketing](https://vercel.com/very-good-marketing).
 
-- **Vercel project**: `versa` (`prj_A6ZfsCilCtUYf76ehT9YxI76SGec`)
+- **Vercel project**: `groundwork` (`prj_A6ZfsCilCtUYf76ehT9YxI76SGec`)
 - **Vercel org**: `team_wfvPuAOvYcBXvGumlMRtY9iQ`
 - Vercel auto-deploys from GitHub via the Vercel GitHub integration
 - Additional GitHub Actions workflow (`deploy.yml`) handles post-deploy Prisma migrations

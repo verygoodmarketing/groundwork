@@ -233,7 +233,7 @@ export default function Step5Page() {
     onSuccess: () => setPublished(true),
   });
 
-  const siteUrl = business?.slug ? `https://${business.slug}.versa.app` : null;
+  const siteUrl = business?.slug ? `https://${business.slug}.groundworklocal.com` : null;
 
   // DNS accordion — opens automatically when a domain is typed
   const showDnsInstructions = customDomain.trim().length > 0;
@@ -291,7 +291,7 @@ export default function Step5Page() {
           {/* Subdomain display — read-only */}
           <div className="space-y-1">
             <p className="text-sm font-medium font-body" style={{ color: C.text }}>
-              Your free Versa URL
+              Your free Groundwork URL
             </p>
             <div
               className="flex items-center rounded-lg border px-4 py-3 gap-2"
@@ -377,13 +377,13 @@ export default function Step5Page() {
                     <span>Type</span><span>Name</span><span>Points to</span>
                   </div>
                   <div className="grid grid-cols-3 gap-2" style={{ color: C.text }}>
-                    <span>CNAME</span><span>@ or www</span><span>sites.versa.app</span>
+                    <span>CNAME</span><span>@ or www</span><span>sites.groundworklocal.com</span>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <button
                     type="button"
-                    onClick={() => handleCopy("sites.versa.app")}
+                    onClick={() => handleCopy("sites.groundworklocal.com")}
                     className="text-xs font-body border rounded px-2 py-1 transition-colors"
                     style={{ borderColor: C.border, color: C.muted, background: C.bg }}
                   >

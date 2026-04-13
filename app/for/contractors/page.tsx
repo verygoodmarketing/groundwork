@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import { HardHat } from "lucide-react";
 import { IndustryLandingPage, type IndustryPageData } from "@/components/for/IndustryLandingPage";
 
-const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "https://versa-kohl.vercel.app";
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "https://groundworklocal.com";
 
 const data: IndustryPageData = {
   slug: "contractors",
-  pageTitle: "Website for General Contractors — Win More Construction Jobs Online | Versa",
+  pageTitle: "Website for General Contractors — Win More Construction Jobs Online | Groundwork",
   metaDescription:
     "Build a professional contractor website in under an hour. Show your project portfolio, capture leads, and rank for construction and remodeling services in your area. Free to try.",
   h1: "The Website Builder for General Contractors",
@@ -46,7 +46,7 @@ const data: IndustryPageData = {
       icon: "📍",
       title: "Rank for contractor and remodeling searches",
       description:
-        "Versa sites are optimized for local SEO — so you show up when homeowners and developers search for general contractors, remodelers, or construction companies in your area.",
+        "Groundwork sites are optimized for local SEO — so you show up when homeowners and developers search for general contractors, remodelers, or construction companies in your area.",
     },
   ],
   testimonial: {
@@ -54,19 +54,19 @@ const data: IndustryPageData = {
     initials: "CM",
     business: "Masuda Construction",
     quote:
-      "We were getting all our work from referrals, which was great but unpredictable. After launching on Versa, we started getting RFQs from homeowners who found us on Google. Filled our pipeline for the whole season.",
+      "We were getting all our work from referrals, which was great but unpredictable. After launching on Groundwork, we started getting RFQs from homeowners who found us on Google. Filled our pipeline for the whole season.",
     color: "from-stone-500 to-zinc-600",
   },
   faqs: [
     {
       question: "Can I show photos of my past construction and remodeling projects?",
       answer:
-        "Absolutely. Versa has a full-featured project portfolio gallery. You can organize photos by project type — kitchen remodels, additions, new construction, commercial buildouts — and add descriptions to tell the story of each job.",
+        "Absolutely. Groundwork has a full-featured project portfolio gallery. You can organize photos by project type — kitchen remodels, additions, new construction, commercial buildouts — and add descriptions to tell the story of each job.",
     },
     {
       question: "Will my contractor website show up in local searches?",
       answer:
-        "Yes. Versa builds local SEO into every site — helping you rank for searches like 'general contractor near me', 'home remodeling [city]', 'construction company [city]', and similar terms. Structured data and Google Business integration are included.",
+        "Yes. Groundwork builds local SEO into every site — helping you rank for searches like 'general contractor near me', 'home remodeling [city]', 'construction company [city]', and similar terms. Structured data and Google Business integration are included.",
     },
     {
       question: "Can I show my contractor license and insurance on the site?",
@@ -93,7 +93,7 @@ export const metadata: Metadata = {
     description: data.metaDescription,
     type: "website",
     url: `${APP_URL}/for/contractors`,
-    siteName: "Versa",
+    siteName: "Groundwork",
   },
   twitter: {
     card: "summary_large_image",

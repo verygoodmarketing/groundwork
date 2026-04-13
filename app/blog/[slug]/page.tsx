@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   const APP_URL =
-    process.env.NEXT_PUBLIC_APP_URL ?? "https://versa-kohl.vercel.app";
+    process.env.NEXT_PUBLIC_APP_URL ?? "https://groundworklocal.com";
 
   return {
     title: post.metaTitle,
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: post.metaDescription,
       type: "article",
       url: `${APP_URL}/blog/${post.slug}`,
-      siteName: "Versa",
+      siteName: "Groundwork",
       publishedTime: post.publishedAt,
     },
     twitter: {

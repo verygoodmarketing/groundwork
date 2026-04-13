@@ -29,7 +29,7 @@ export default async function BillingPage() {
       <header className="border-b border-surface-800/30">
         <div className="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/dashboard" className="font-display font-bold text-xl text-[var(--foreground)]">
-            Versa
+            Groundwork
           </Link>
           <span className="text-sm text-surface-400 font-body">{business.name}</span>
         </div>

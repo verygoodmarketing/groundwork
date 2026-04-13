@@ -28,7 +28,7 @@ import { trpc } from "@/lib/trpc/client";
 // ─── Copy constants (easy for CMO/UX to update later) ────────────────────────
 
 const BRAND = {
-  name: "Versa",
+  name: "Groundwork",
   tagline: "Websites & marketing for local service businesses",
 };
 
@@ -60,7 +60,7 @@ const FEATURES = [
     id: "seo",
     title: "Show up on Google",
     description:
-      "Versa sites are built for local SEO from day one — with auto-generated meta tags, sitemaps, and Google Business Profile integration so customers find you when they search nearby.",
+      "Groundwork sites are built for local SEO from day one — with auto-generated meta tags, sitemaps, and Google Business Profile integration so customers find you when they search nearby.",
     Icon: MapPin,
     colorKey: "violet",
   },
@@ -212,7 +212,7 @@ const TESTIMONIALS = [
     businessType: "Cleaning",
     color: "from-violet-500 to-purple-600",
     quote:
-      "I had no website for 6 years. I built mine on Versa in 45 minutes and got my first online lead within a week. Game changer.",
+      "I had no website for 6 years. I built mine on Groundwork in 45 minutes and got my first online lead within a week. Game changer.",
   },
   {
     name: "Dave R.",
@@ -221,7 +221,7 @@ const TESTIMONIALS = [
     businessType: "Landscaping",
     color: "from-emerald-500 to-teal-600",
     quote:
-      "My old website was from 2015. Versa made it stupid easy to get a new one up that actually looks professional. Customers tell me all the time.",
+      "My old website was from 2015. Groundwork made it stupid easy to get a new one up that actually looks professional. Customers tell me all the time.",
   },
   {
     name: "Sandra K.",
@@ -242,7 +242,7 @@ const PRICING = [
     description: "Everything you need to get online and start getting leads.",
     features: [
       "1 professional website",
-      "Versa subdomain (yourbiz.versa.app)",
+      "Groundwork subdomain (yourbiz.groundworklocal.com)",
       "Contact forms + lead inbox",
       "Click-to-call + mobile-optimized",
       "Basic SEO + sitemap",
@@ -339,7 +339,7 @@ function HeroIllustration() {
           </div>
           <div className="flex-1 mx-4">
             <div className="bg-white/10 rounded-md px-3 py-1 text-xs text-white/50 font-mono truncate">
-              ridgelinelandscaping.versa.site
+              ridgelinelandscaping.groundworklocal.com
             </div>
           </div>
         </div>
@@ -560,7 +560,7 @@ function HeroSection() {
             </h1>
 
             <p className="text-xl text-[#c9d1d9] mb-8 leading-relaxed max-w-lg">
-              Versa helps local service businesses — plumbers, cleaners, landscapers, photographers, and more — get a professional website live in under an hour. No tech skills. No agencies. No nonsense.
+              Groundwork helps local service businesses — plumbers, cleaners, landscapers, photographers, and more — get a professional website live in under an hour. No tech skills. No agencies. No nonsense.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mb-10">
@@ -638,7 +638,7 @@ function FeaturesSection() {
             Everything you need. Nothing you don&apos;t.
           </h2>
           <p className="text-lg text-gray-500">
-            Versa bundles the 5 tools that local businesses actually need into one simple platform — so you can stop paying for 5 different subscriptions and start actually using them.
+            Groundwork bundles the 5 tools that local businesses actually need into one simple platform — so you can stop paying for 5 different subscriptions and start actually using them.
           </p>
         </div>
 
@@ -688,7 +688,7 @@ function WhoWeHelpSection() {
             Built for the Businesses That Keep Your Town Running
           </h2>
           <p className="text-lg text-gray-500">
-            We built Versa specifically for trade and service businesses — people who are experts at their craft but didn&apos;t sign up to become web developers or marketers.
+            We built Groundwork specifically for trade and service businesses — people who are experts at their craft but didn&apos;t sign up to become web developers or marketers.
           </p>
         </div>
 
@@ -829,14 +829,14 @@ function TrustSection() {
 
   return (
     <section
-      id="why-versa"
+      id="why-groundwork"
       className="py-24 bg-gray-50 px-4 sm:px-6 lg:px-8"
       aria-labelledby="trust-section-heading"
     >
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-14 max-w-2xl mx-auto">
           <span className="inline-block text-xs font-bold uppercase tracking-widest text-brand-600 mb-3">
-            Why Versa
+            Why Groundwork
           </span>
           <h2
             id="trust-section-heading"
@@ -846,7 +846,7 @@ function TrustSection() {
             The simplest way to get your business online
           </h2>
           <p className="text-lg text-gray-500">
-            We built Versa so you can focus on your trade — not on tech.
+            We built Groundwork so you can focus on your trade — not on tech.
           </p>
         </div>
 
@@ -893,7 +893,7 @@ function TestimonialsSection() {
             Customer stories
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4" style={{ fontFamily: "var(--font-display)" }}>
-            Local businesses love Versa
+            Local businesses love Groundwork
           </h2>
           <p className="text-lg text-gray-500 mb-6">
             Real results from real business owners.
@@ -1104,7 +1104,7 @@ function WaitlistSection() {
           Ready to get more customers?
         </h2>
         <p className="text-lg text-brand-100 mb-10">
-          Join hundreds of local business owners getting early access to Versa. Free to try. No tech skills required.
+          Join hundreds of local business owners getting early access to Groundwork. Free to try. No tech skills required.
         </p>
 
         {joinMutation.isSuccess ? (

@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Versa",
+  title: "Privacy Policy — Groundwork",
   description:
-    "Read Versa's Privacy Policy. Learn how we collect, use, and protect your personal information.",
+    "Read Groundwork's Privacy Policy. Learn how we collect, use, and protect your personal information.",
   robots: { index: true, follow: true },
 };
 
 const EFFECTIVE_DATE = "April 1, 2026";
-const COMPANY_NAME = "Versa";
-const COMPANY_EMAIL = "privacy@versa.app";
+const COMPANY_NAME = "Groundwork";
+const COMPANY_EMAIL = "privacy@groundworklocal.com";
 
 export default function PrivacyPage() {
   return (
@@ -22,7 +22,7 @@ export default function PrivacyPage() {
             href="/"
             className="font-display font-bold text-lg text-surface-950 hover:text-brand-600 transition-colors"
           >
-            Versa
+            Groundwork
           </Link>
           <Link
             href="/onboarding/step-1"

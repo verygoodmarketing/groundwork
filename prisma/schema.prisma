@@ -282,7 +282,7 @@ enum CampaignStatus {
 }
 
 // ============================================================
-// WAITLIST: Early-access email capture for the Versa landing page
+// WAITLIST: Early-access email capture for the Groundwork landing page
 // ============================================================
 
 model WaitlistSignup {

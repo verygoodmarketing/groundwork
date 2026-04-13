@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import { Sparkles } from "lucide-react";
 import { IndustryLandingPage, type IndustryPageData } from "@/components/for/IndustryLandingPage";
 
-const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "https://versa-kohl.vercel.app";
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "https://groundworklocal.com";
 
 const data: IndustryPageData = {
   slug: "cleaners",
-  pageTitle: "Website for Cleaning Businesses — Get More Cleaning Clients Online | Versa",
+  pageTitle: "Website for Cleaning Businesses — Get More Cleaning Clients Online | Groundwork",
   metaDescription:
     "Build a professional cleaning business website in under an hour. Attract residential and commercial clients with local SEO, booking forms, and automated Google review requests. Free to try.",
   h1: "Grow Your Cleaning Business Online",
@@ -46,7 +46,7 @@ const data: IndustryPageData = {
       icon: "📍",
       title: "Rank for 'house cleaners near me'",
       description:
-        "Versa sites are optimized for local search from day one — so you show up when people search for cleaning services in your city or neighbourhood.",
+        "Groundwork sites are optimized for local search from day one — so you show up when people search for cleaning services in your city or neighbourhood.",
     },
   ],
   testimonial: {
@@ -54,24 +54,24 @@ const data: IndustryPageData = {
     initials: "MT",
     business: "Spotless Cleaning Co.",
     quote:
-      "I had no website for 6 years. I built mine on Versa in 45 minutes and got my first online lead within a week. Now I get 3-4 new bookings per month from people who found me on Google.",
+      "I had no website for 6 years. I built mine on Groundwork in 45 minutes and got my first online lead within a week. Now I get 3-4 new bookings per month from people who found me on Google.",
     color: "from-violet-500 to-purple-600",
   },
   faqs: [
     {
       question: "Can I show different cleaning service packages on my website?",
       answer:
-        "Yes. Versa lets you list all your services — standard cleaning, deep cleaning, move-out, commercial, and more — with descriptions and pricing. You can also show pricing tiers or leave a 'get a quote' option.",
+        "Yes. Groundwork lets you list all your services — standard cleaning, deep cleaning, move-out, commercial, and more — with descriptions and pricing. You can also show pricing tiers or leave a 'get a quote' option.",
     },
     {
       question: "How do I get more Google reviews for my cleaning business?",
       answer:
-        "Versa includes a built-in review request tool. After a job, you send a short email with a direct link to your Google review page. One click from your customer and they're reviewing you. Most Versa users double their review count within 3 months.",
+        "Groundwork includes a built-in review request tool. After a job, you send a short email with a direct link to your Google review page. One click from your customer and they're reviewing you. Most Groundwork users double their review count within 3 months.",
     },
     {
       question: "I only clean in specific neighbourhoods — can my website reflect that?",
       answer:
-        "Yes. You can list your service areas on your website and Versa's local SEO tools help you rank for searches in those specific areas, not just generic city-wide searches.",
+        "Yes. You can list your service areas on your website and Groundwork's local SEO tools help you rank for searches in those specific areas, not just generic city-wide searches.",
     },
     {
       question: "What's included in the free trial?",
@@ -93,7 +93,7 @@ export const metadata: Metadata = {
     description: data.metaDescription,
     type: "website",
     url: `${APP_URL}/for/cleaners`,
-    siteName: "Versa",
+    siteName: "Groundwork",
   },
   twitter: {
     card: "summary_large_image",
