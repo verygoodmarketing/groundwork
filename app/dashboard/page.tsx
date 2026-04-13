@@ -126,9 +126,9 @@ export default async function DashboardPage() {
             {
               icon: Globe,
               label: "View site",
-              href: hasActiveSub ? siteUrl : "/pricing",
-              external: hasActiveSub,
-              locked: !hasActiveSub,
+              href: business.site?.isPublished ? siteUrl : "/pricing",
+              external: business.site?.isPublished,
+              locked: !business.site?.isPublished,
             },
             { icon: Settings, label: "Settings", href: "#", locked: false },
             {
