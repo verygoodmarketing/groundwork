@@ -79,6 +79,10 @@ const data: IndustryPageData = {
         "14 days of full access, no credit card required. Your site goes live immediately, so you can start capturing leads during your trial. After the trial, plans start at $49/month.",
     },
   ],
+  blogPost: {
+    href: "/blog/best-website-for-hvac-companies",
+    title: "The Best Website for HVAC Companies in 2026",
+  },
 };
 
 export const metadata: Metadata = {

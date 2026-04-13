@@ -79,6 +79,10 @@ const data: IndustryPageData = {
         "Versa starts at $49/month with a 14-day free trial — no credit card required to get started. You can cancel anytime. Most plumbers make back their monthly fee from just one new job.",
     },
   ],
+  blogPost: {
+    href: "/blog/best-website-for-plumbers",
+    title: "The Best Website for Plumbers in 2026",
+  },
 };
 
 export const metadata: Metadata = {

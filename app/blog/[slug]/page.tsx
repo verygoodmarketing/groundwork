@@ -120,14 +120,12 @@ function RenderSection({
     case "cta":
       return (
         <p key={index} className="my-4">
-          <a
-            href={section.href}
+          <Link
+            href={section.href ?? "/"}
             className="text-brand-600 font-semibold hover:text-brand-700 transition-colors underline"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             {section.linkText}
-          </a>
+          </Link>
         </p>
       );
 

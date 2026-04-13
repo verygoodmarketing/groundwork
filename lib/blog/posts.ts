@@ -123,7 +123,7 @@ const plumbersPost: BlogPost = {
     {
       type: "cta",
       linkText: "Get your plumber website started today \u2192",
-      href: "https://versa-kohl.vercel.app/for/plumbers",
+      href: "/for/plumbers",
     },
     { type: "divider" },
     { type: "heading2", text: "FAQ: What Plumbers Ask About Getting a Website" },
@@ -149,7 +149,7 @@ const plumbersPost: BlogPost = {
       type: "cta",
       linkText:
         "Build your plumber website with Versa \u2014 free trial, no credit card needed.",
-      href: "https://versa-kohl.vercel.app/for/plumbers",
+      href: "/for/plumbers",
     },
   ],
 };
@@ -275,7 +275,7 @@ const landscapersPost: BlogPost = {
     {
       type: "cta",
       linkText: "Get your landscaping website started today \u2192",
-      href: "https://versa-kohl.vercel.app/for/landscapers",
+      href: "/for/landscapers",
     },
     { type: "divider" },
     {
@@ -304,7 +304,7 @@ const landscapersPost: BlogPost = {
       type: "cta",
       linkText:
         "Build your landscaping website with Versa \u2014 free trial, no credit card needed.",
-      href: "https://versa-kohl.vercel.app/for/landscapers",
+      href: "/for/landscapers",
     },
   ],
 };
@@ -430,7 +430,7 @@ const cleanersPost: BlogPost = {
     {
       type: "cta",
       linkText: "Get your cleaning business website started today \u2192",
-      href: "https://versa-kohl.vercel.app/for/cleaners",
+      href: "/for/cleaners",
     },
     { type: "divider" },
     {
@@ -459,7 +459,7 @@ const cleanersPost: BlogPost = {
       type: "cta",
       linkText:
         "Build your cleaning business website with Versa \u2014 free trial, no credit card needed.",
-      href: "https://versa-kohl.vercel.app/for/cleaners",
+      href: "/for/cleaners",
     },
   ],
 };
@@ -585,7 +585,7 @@ const hvacPost: BlogPost = {
     {
       type: "cta",
       linkText: "Get your HVAC company website started today \u2192",
-      href: "https://versa-kohl.vercel.app/for/hvac",
+      href: "/for/hvac",
     },
     { type: "divider" },
     {
@@ -614,7 +614,7 @@ const hvacPost: BlogPost = {
       type: "cta",
       linkText:
         "Build your HVAC company website with Versa \u2014 free trial, no credit card needed.",
-      href: "https://versa-kohl.vercel.app/for/hvac",
+      href: "/for/hvac",
     },
   ],
 };

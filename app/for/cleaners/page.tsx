@@ -79,6 +79,10 @@ const data: IndustryPageData = {
         "Full access to all features for 14 days. No credit card required. You'll have a live website, lead forms, and local SEO active from day one of your trial.",
     },
   ],
+  blogPost: {
+    href: "/blog/best-website-for-cleaning-businesses",
+    title: "The Best Website for Cleaning Businesses in 2026",
+  },
 };
 
 export const metadata: Metadata = {

@@ -101,6 +101,8 @@ export interface IndustryPageData {
   faqs: { question: string; answer: string }[];
   /** Keywords banner items */
   trustSignals: string[];
+  /** Optional link to the corresponding blog post */
+  blogPost?: { href: string; title: string };
 }
 
 // ─── Logo Mark (shared) ───────────────────────────────────────────────────────
@@ -454,7 +456,7 @@ function CtaSection({ data }: { data: IndustryPageData }) {
 
 // ─── Footer ───────────────────────────────────────────────────────────────────
 
-function Footer() {
+function Footer({ data }: { data: IndustryPageData }) {
   return (
     <footer className="bg-[#0d1117] text-gray-400 py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
@@ -462,10 +464,16 @@ function Footer() {
           <LogoMark />
           <span className="text-white font-bold" style={{ fontFamily: "var(--font-display)" }}>Versa</span>
         </div>
-        <div className="flex gap-6">
+        <div className="flex gap-6 flex-wrap justify-center">
           <Link href="/" className="hover:text-brand-400 transition-colors">Home</Link>
           <Link href="/pricing" className="hover:text-brand-400 transition-colors">Pricing</Link>
           <Link href="/#features" className="hover:text-brand-400 transition-colors">Features</Link>
+          <Link href="/blog" className="hover:text-brand-400 transition-colors">Blog</Link>
+          {data.blogPost && (
+            <Link href={data.blogPost.href} className="hover:text-brand-400 transition-colors">
+              Read: {data.blogPost.title} →
+            </Link>
+          )}
           <Link href="/onboarding/step-1" className="hover:text-brand-400 transition-colors">Get started</Link>
         </div>
         <p className="text-xs text-gray-600">&copy; {new Date().getFullYear()} Versa. All rights reserved.</p>
@@ -490,7 +498,7 @@ export function IndustryLandingPage({ data }: { data: IndustryPageData }) {
           <FAQSection data={data} />
           <CtaSection data={data} />
         </main>
-        <Footer />
+        <Footer data={data} />
       </div>
     </>
   );

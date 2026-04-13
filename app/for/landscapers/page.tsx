@@ -79,6 +79,10 @@ const data: IndustryPageData = {
         "Visitors fill out a form on your site describing the job. You get an email instantly with their contact info and job details. No third-party tools or add-ons needed.",
     },
   ],
+  blogPost: {
+    href: "/blog/best-website-for-landscapers",
+    title: "The Best Website for Landscapers in 2026",
+  },
 };
 
 export const metadata: Metadata = {
