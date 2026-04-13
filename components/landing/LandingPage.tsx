@@ -93,6 +93,7 @@ const WHO_WE_HELP = [
     Icon: Wrench,
     pain: "Missed calls mean missed jobs. Your competitors show up on Google — you don't.",
     solution: "Get a professional website and booking form that captures leads 24/7, even when you're on a job.",
+    href: "/for/plumbers",
   },
   {
     id: "electricians",
@@ -100,6 +101,7 @@ const WHO_WE_HELP = [
     Icon: Zap,
     pain: "Customers search online first. Without a strong web presence, you're invisible to new clients.",
     solution: "Stand out in local search with a polished site that builds trust and turns visitors into calls.",
+    href: "/for/electricians",
   },
   {
     id: "landscapers",
@@ -107,6 +109,7 @@ const WHO_WE_HELP = [
     Icon: Leaf,
     pain: "Seasonal peaks are short. You can't afford to waste any lead — yet most inquiries go nowhere.",
     solution: "Showcase your work with a stunning photo gallery and let customers request quotes instantly.",
+    href: "/for/landscapers",
   },
   {
     id: "cleaners",
@@ -114,6 +117,7 @@ const WHO_WE_HELP = [
     Icon: Sparkles,
     pain: "Word of mouth only goes so far. Growing beyond your current circle feels impossible.",
     solution: "Automate review requests and let happy customers bring in new business on autopilot.",
+    href: "/for/cleaners",
   },
   {
     id: "contractors",
@@ -121,13 +125,15 @@ const WHO_WE_HELP = [
     Icon: HardHat,
     pain: "Big jobs require big trust. Prospects want proof you're reliable before they ever call.",
     solution: "Build credibility fast with project photos, client testimonials, and a professional online profile.",
+    href: "/for/contractors",
   },
   {
-    id: "photographers",
-    title: "Photographers",
+    id: "hvac",
+    title: "HVAC Companies",
     Icon: Camera,
-    pain: "Your portfolio deserves to be seen. Social media algorithms work against you.",
-    solution: "Own your presence with a beautiful portfolio site that ranks locally and drives direct bookings.",
+    pain: "Emergency HVAC calls go to whoever shows up first in search. That should be you.",
+    solution: "Get a professional site with click-to-call and local SEO that puts you at the top when customers need you most.",
+    href: "/for/hvac",
   },
 ];
 
@@ -648,25 +654,31 @@ function WhoWeHelpSection() {
           className="grid grid-cols-1 lg:grid-cols-2 gap-6"
         >
           {WHO_WE_HELP.map((vertical, i) => (
-            <div
+            <a
               key={vertical.id}
-              className={`animate-fade-up ${inView ? "in-view" : ""} bg-white rounded-2xl p-6 border border-gray-100 hover:border-brand-200 hover:-translate-y-0.5 hover:shadow-md transition-all duration-200`}
+              href={vertical.href}
+              className={`animate-fade-up ${inView ? "in-view" : ""} bg-white rounded-2xl p-6 border border-gray-100 hover:border-brand-200 hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 block no-underline`}
               style={{ transitionDelay: `${i * 80}ms` }}
             >
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 bg-brand-50 rounded-xl flex items-center justify-center flex-shrink-0">
                   <vertical.Icon className="w-5 h-5 text-brand-600" aria-hidden="true" />
                 </div>
-                <div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2" style={{ fontFamily: "var(--font-display)" }}>
-                    {vertical.title}
-                  </h3>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center justify-between gap-2 mb-2">
+                    <h3 className="text-lg font-bold text-gray-900" style={{ fontFamily: "var(--font-display)" }}>
+                      {vertical.title}
+                    </h3>
+                    <svg aria-hidden="true" className="w-4 h-4 text-brand-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
                   <p className="text-sm text-gray-500 leading-relaxed">
                     {vertical.pain}
                   </p>
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 

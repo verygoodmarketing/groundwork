@@ -5,6 +5,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     process.env.NEXT_PUBLIC_APP_URL ?? "https://versa-kohl.vercel.app";
   const now = new Date();
 
+  const industryPages = [
+    "plumbers",
+    "landscapers",
+    "cleaners",
+    "hvac",
+    "electricians",
+    "contractors",
+  ];
+
   return [
     {
       url: appUrl,
@@ -18,5 +27,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    ...industryPages.map((slug) => ({
+      url: `${appUrl}/for/${slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    })),
   ];
 }
