@@ -215,6 +215,14 @@ const FAQ = [
     q: "Is my website data secure?",
     a: "Yes. All sites are served over HTTPS, data is stored in encrypted databases, and we never share your information with third parties.",
   },
+  {
+    q: "How quickly can I get my business online?",
+    a: "Most service businesses are live in under an hour. Our setup wizard walks you through every step.",
+  },
+  {
+    q: "Is Versa built for businesses like mine?",
+    a: "Yes. Versa is designed specifically for local service businesses — plumbers, electricians, HVAC techs, landscapers, cleaners, and contractors. Every feature is built around winning local jobs.",
+  },
 ];
 
 export function PricingPage({ plans }: Props) {
@@ -264,11 +272,12 @@ export function PricingPage({ plans }: Props) {
             className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            Simple, transparent pricing
+            More customers. Less hassle. One simple price.
           </h1>
           <p className="text-xl text-gray-500 max-w-2xl mx-auto mb-8">
-            No setup fees. No long-term contracts. Cancel anytime. All plans
-            include a 14-day free trial — no credit card required.
+            Get your business found online, collect leads, and win more jobs —
+            starting at $49/month. No setup fees. No contracts. 14-day free
+            trial, no credit card required.
           </p>
 
           {/* Trust badges */}
@@ -278,6 +287,7 @@ export function PricingPage({ plans }: Props) {
               "No credit card required",
               "Cancel anytime",
               "Live support",
+              "Set up in under an hour",
             ].map((item) => (
               <span key={item} className="flex items-center gap-1.5">
                 <svg
@@ -306,6 +316,18 @@ export function PricingPage({ plans }: Props) {
                 <PlanCard key={plan.key} plan={plan} />
               ))}
             </div>
+
+            {/* Trust line */}
+            <div className="mt-10 text-center">
+              <p className="text-sm text-gray-500">
+                14-day free trial on all plans. No credit card required. Cancel
+                anytime.
+              </p>
+              <p className="text-sm text-gray-500 mt-1">
+                Thousands of plumbers, landscapers, cleaners, and HVAC techs
+                already use Versa to grow their business.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -316,7 +338,7 @@ export function PricingPage({ plans }: Props) {
               className="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-10 text-center"
               style={{ fontFamily: "var(--font-display)" }}
             >
-              What&apos;s included
+              Everything you get — side by side
             </h2>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
@@ -379,7 +401,7 @@ export function PricingPage({ plans }: Props) {
               className="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-10 text-center"
               style={{ fontFamily: "var(--font-display)" }}
             >
-              Frequently asked questions
+              Got questions? We&apos;ve got answers.
             </h2>
             <div className="space-y-6">
               {FAQ.map(({ q, a }) => (
@@ -422,7 +444,7 @@ export function PricingPage({ plans }: Props) {
             href="/onboarding/step-1"
             className="inline-flex items-center gap-2 bg-brand-600 text-white font-semibold text-lg px-8 py-4 rounded-xl hover:bg-brand-700 transition-colors shadow-xl shadow-brand-600/30 active:scale-95"
           >
-            Start free trial
+            Start free trial — no credit card needed
             <svg
               aria-hidden="true"
               className="w-5 h-5"
