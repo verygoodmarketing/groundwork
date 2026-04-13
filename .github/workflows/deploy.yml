@@ -19,7 +19,7 @@ jobs:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           # VERCEL_ORG_ID = team_wfvPuAOvYcBXvGumlMRtY9iQ (very-good-marketing team)
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          # VERCEL_PROJECT_ID = prj_A6ZfsCilCtUYf76ehT9YxI76SGec (versa project)
+          # VERCEL_PROJECT_ID = prj_A6ZfsCilCtUYf76ehT9YxI76SGec (groundwork project)
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           vercel-args: "--prod"
           working-directory: ./
