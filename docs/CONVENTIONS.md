@@ -1,4 +1,4 @@
-# Groundwork — Code & Architecture Conventions
+# GroundWork — Code & Architecture Conventions
 
 ## File Naming
 

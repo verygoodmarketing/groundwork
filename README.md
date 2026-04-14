@@ -1,8 +1,8 @@
-# Groundwork — Websites & Marketing for Local Businesses
+# GroundWork — Websites & Marketing for Local Businesses
 
 [![CI](https://github.com/verygoodmarketing/groundwork/actions/workflows/ci.yml/badge.svg)](https://github.com/verygoodmarketing/groundwork/actions/workflows/ci.yml)
 
-Groundwork helps small service businesses (plumbers, cleaners, landscapers, photographers, etc.) build a professional online presence, get discovered, and grow their customer base.
+GroundWork helps small service businesses (plumbers, cleaners, landscapers, photographers, etc.) build a professional online presence, get discovered, and grow their customer base.
 
 ## Tech Stack
 
