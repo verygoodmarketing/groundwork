@@ -15,6 +15,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "contractors",
   ];
 
+  const comparisonPages = ["wix", "squarespace", "godaddy"];
+
   const blogPosts = allPosts.map((post) => ({
     url: `${appUrl}/blog/${post.slug}`,
     lastModified: new Date(post.publishedAt),
@@ -46,6 +48,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.9,
+    })),
+    ...comparisonPages.map((slug) => ({
+      url: `${appUrl}/vs/${slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
     })),
     ...blogPosts,
   ];
