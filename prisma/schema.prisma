@@ -55,11 +55,14 @@ model Business {
   updatedAt DateTime @updatedAt
 
   // Relations
-  owners     BusinessOwner[]
-  site       Site?
-  contacts   Contact[]
-  bookings   Booking[]
-  emailLists EmailList[]
+  owners        BusinessOwner[]
+  site          Site?
+  contacts      Contact[]
+  bookings      Booking[]
+  emailLists    EmailList[]
+  referralCode  ReferralCode?
+  referralsGiven   Referral[] @relation("ReferrerReferrals")
+  referralsReceived Referral[] @relation("ReferredReferrals")
 
   @@map("businesses")
 }
@@ -291,4 +294,48 @@ model WaitlistSignup {
   createdAt DateTime @default(now())
 
   @@map("waitlist_signups")
+}
+
+// ============================================================
+// REFERRALS: Referral program tracking
+// ============================================================
+
+model Referral {
+  id               String         @id @default(cuid())
+  referrerBusinessId String       // Business that referred
+  referredBusinessId String?      // Business that was referred (null until signup)
+  referralCode     String         @unique // 8-char URL-safe code
+  status           ReferralStatus @default(PENDING)
+
+  referredAt   DateTime  @default(now())
+  convertedAt  DateTime? // when referred user completed first paid month
+  rewardedAt   DateTime? // when billing credits were applied to both
+
+  referrerBusiness Business  @relation("ReferrerReferrals", fields: [referrerBusinessId], references: [id], onDelete: Cascade)
+  referredBusiness Business? @relation("ReferredReferrals", fields: [referredBusinessId], references: [id], onDelete: SetNull)
+
+  @@map("referrals")
+}
+
+enum ReferralStatus {
+  PENDING    // Referral link created, referred user may or may not have signed up
+  CONVERTED  // Referred user completed first paid billing cycle
+  REWARDED   // Credits applied to both parties
+  EXPIRED    // Code expired or invalid
+}
+
+// ============================================================
+// REFERRAL CODES: Per-user referral code (one per business)
+// ============================================================
+
+model ReferralCode {
+  id         String   @id @default(cuid())
+  businessId String   @unique
+  code       String   @unique // 8-char URL-safe code
+
+  createdAt  DateTime @default(now())
+
+  business   Business @relation(fields: [businessId], references: [id], onDelete: Cascade)
+
+  @@map("referral_codes")
 }

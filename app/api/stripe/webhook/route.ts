@@ -185,6 +185,8 @@ async function handleInvoicePaid(invoice: Stripe.Invoice) {
     return;
   }
 
+  const previousStatus = business.subscriptionStatus;
+
   await prisma.business.update({
     where: { id: business.id },
     data: {
@@ -192,6 +194,15 @@ async function handleInvoicePaid(invoice: Stripe.Invoice) {
       stripeCurrentPeriodEnd: currentPeriodEnd,
     },
   });
+
+  // Referral reward: trigger on the first paid invoice after conversion from trial
+  // (status was TRIAL or PENDING, now transitioning to ACTIVE with a paid invoice).
+  const wasOnTrial = previousStatus === "TRIAL" || previousStatus == null;
+  if (wasOnTrial && business.stripeCustomerId) {
+    await processReferralCredits(business.id, business.stripeCustomerId).catch((err) =>
+      console.error("[stripe/webhook] referral credit processing failed:", err)
+    );
+  }
 }
 
 async function handleSubscriptionUpdated(subscription: Stripe.Subscription) {
@@ -296,4 +307,77 @@ async function handlePaymentFailed(invoice: Stripe.Invoice) {
     where: { id: business.id },
     data: { subscriptionStatus: "PAST_DUE" },
   });
+}
+
+/**
+ * Apply billing credits to both the referred user and the referrer when
+ * the referred user completes their first paid billing cycle.
+ *
+ * Mechanic: Give 1 month free / Get 1 month free (bi-directional).
+ * Credit amount: $49 (4900 cents) — one month of Starter plan.
+ */
+async function processReferralCredits(
+  referredBusinessId: string,
+  referredStripeCustomerId: string
+) {
+  // Find a pending referral for this business
+  const referral = await prisma.referral.findFirst({
+    where: {
+      referredBusinessId,
+      status: "PENDING",
+    },
+    include: {
+      referrerBusiness: {
+        select: { id: true, stripeCustomerId: true, name: true, email: true },
+      },
+      referredBusiness: {
+        select: { id: true, name: true, email: true },
+      },
+    },
+  });
+
+  if (!referral) return; // No referral to process
+
+  // Credit amount: $49 (one month Starter)
+  const CREDIT_AMOUNT = 4900; // cents
+  const CREDIT_CURRENCY = "usd";
+
+  // Apply credit to referred user
+  await stripe.customers.createBalanceTransaction(referredStripeCustomerId, {
+    amount: -CREDIT_AMOUNT, // negative = credit
+    currency: CREDIT_CURRENCY,
+    description: "Referral reward: 1 free month from joining via referral link",
+  });
+
+  // Apply credit to referrer (if they have a Stripe customer ID)
+  if (referral.referrerBusiness.stripeCustomerId) {
+    await stripe.customers.createBalanceTransaction(
+      referral.referrerBusiness.stripeCustomerId,
+      {
+        amount: -CREDIT_AMOUNT,
+        currency: CREDIT_CURRENCY,
+        description: `Referral reward: 1 free month for referring ${referral.referredBusiness?.name ?? "a new customer"}`,
+      }
+    );
+  }
+
+  // Mark referral as rewarded
+  await prisma.referral.update({
+    where: { id: referral.id },
+    data: {
+      status: "REWARDED",
+      convertedAt: new Date(),
+      rewardedAt: new Date(),
+    },
+  });
+
+  // Fire analytics event
+  track("referral_rewarded", {
+    referrerBusinessId: referral.referrerBusiness.id,
+    referredBusinessId,
+  }).catch(() => {});
+
+  console.log(
+    `[referral] Credits applied — referrer: ${referral.referrerBusiness.id}, referred: ${referredBusinessId}`
+  );
 }

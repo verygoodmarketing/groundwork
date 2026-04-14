@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Globe, Settings, MessageSquare, BarChart3, CreditCard, AlertCircle } from "lucide-react";
 import { isSubscriptionActive } from "@/lib/stripe/client";
 import { TrialNudgeBanner } from "@/components/dashboard/TrialNudgeBanner";
+import { ReferralCard } from "@/components/dashboard/ReferralCard";
 import { computeBannerState } from "@/lib/dashboard/trial-nudge";
 
 /**
@@ -258,6 +259,9 @@ export default async function DashboardPage() {
             </Link>
           </div>
         )}
+
+        {/* Referral card — client component, shows after 7+ days */}
+        <ReferralCard />
 
         {/* Coming soon */}
         <div className="rounded-xl border border-dashed border-surface-700 p-6 text-center">

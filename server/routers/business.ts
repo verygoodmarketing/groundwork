@@ -2,6 +2,7 @@ import { z } from "zod";
 import { router, protectedProcedure, publicProcedure } from "@/server/trpc";
 import { TRPCError } from "@trpc/server";
 import { track } from "@vercel/analytics/server";
+import { linkReferredBusiness, getReferralCodeRecord } from "@/lib/referral/utils";
 
 export const businessRouter = router({
   /**
@@ -69,6 +70,25 @@ export const businessRouter = router({
           },
         },
       });
+
+      // Referral attribution: if a ref_code cookie is present, link this new
+      // business to the referrer. Self-referral is handled inside linkReferredBusiness.
+      try {
+        const refCode = ctx.req.cookies.get("ref_code")?.value;
+        if (refCode) {
+          const codeRecord = await getReferralCodeRecord(refCode);
+          if (codeRecord) {
+            await linkReferredBusiness({
+              referralCode: refCode,
+              referredBusinessId: business.id,
+              referrerBusinessId: codeRecord.business.id,
+            });
+          }
+        }
+      } catch (err) {
+        // Referral attribution failure must never block business creation
+        console.error("[business.create] referral attribution failed:", err);
+      }
 
       return business;
     }),
