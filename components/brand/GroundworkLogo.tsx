@@ -36,7 +36,7 @@ export function GroundworkLogoFull({
       <text
         x="84"
         y="41"
-        fontFamily="Arial Black, Helvetica Neue, sans-serif"
+        fontFamily="Montserrat, Arial Black, sans-serif"
         fontWeight="900"
         fontSize="27"
         letterSpacing="-1"
@@ -47,7 +47,7 @@ export function GroundworkLogoFull({
       <text
         x="86"
         y="60"
-        fontFamily="Arial, Helvetica, sans-serif"
+        fontFamily="Montserrat, Arial, sans-serif"
         fontSize="10.5"
         letterSpacing="3.5"
         fill="#D97706"
@@ -89,7 +89,7 @@ export function GroundworkLogoFullLight({
       <text
         x="84"
         y="41"
-        fontFamily="Arial Black, Helvetica Neue, sans-serif"
+        fontFamily="Montserrat, Arial Black, sans-serif"
         fontWeight="900"
         fontSize="27"
         letterSpacing="-1"
@@ -100,7 +100,7 @@ export function GroundworkLogoFullLight({
       <text
         x="86"
         y="60"
-        fontFamily="Arial, Helvetica, sans-serif"
+        fontFamily="Montserrat, Arial, sans-serif"
         fontSize="10.5"
         letterSpacing="3.5"
         fill="#D97706"
@@ -173,7 +173,7 @@ export function GroundworkWordmark({
       <text
         x="16"
         y="33"
-        fontFamily="Arial Black, Helvetica Neue, sans-serif"
+        fontFamily="Montserrat, Arial Black, sans-serif"
         fontWeight="900"
         fontSize="27"
         letterSpacing="-1"

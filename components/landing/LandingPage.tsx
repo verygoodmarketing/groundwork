@@ -536,7 +536,7 @@ function HeroSection() {
               <div className="flex flex-col">
                 <span
                   className="text-2xl font-black text-white leading-none tracking-tight"
-                  style={{ fontFamily: "Arial Black, sans-serif", letterSpacing: "-0.04em" }}
+                  style={{ fontFamily: "Montserrat, Arial Black, sans-serif", letterSpacing: "-0.04em" }}
                 >
                   Groundwork
                 </span>

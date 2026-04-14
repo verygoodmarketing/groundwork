@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Inter } from "next/font/google";
+import { Plus_Jakarta_Sans, Inter, Montserrat } from "next/font/google";
 import "./globals.css";
 import { TRPCProvider } from "@/lib/trpc/provider";
 import { Analytics } from "@vercel/analytics/react";
@@ -15,6 +15,13 @@ const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   variable: "--font-body",
+  display: "swap",
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "900"],
+  variable: "--font-brand",
   display: "swap",
 });
 
@@ -102,7 +109,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${jakartaSans.variable} ${inter.variable} h-full antialiased`}
+      className={`${jakartaSans.variable} ${inter.variable} ${montserrat.variable} h-full antialiased`}
     >
       <head>
         <script
