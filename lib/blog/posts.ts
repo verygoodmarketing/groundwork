@@ -1258,6 +1258,415 @@ const hvacDispatchPost: BlogPost = {
   ],
 };
 
+const bestWebsiteBuilderForContractorsPost: BlogPost = {
+  slug: "best-website-builder-for-contractors",
+  title: "Best Website Builder for Contractors (2026)",
+  metaTitle: "Best Website Builder for Contractors (2026) | Groundwork",
+  metaDescription:
+    "Comparing Wix, Squarespace, GoDaddy, and Groundwork for contractors \u2014 find out which website builder is actually built for the trades.",
+  publishedAt: "2026-04-13",
+  excerpt:
+    "You\u2019re good at your craft. You show up on time, do solid work, and your customers refer you to their neighbors. But if a potential customer searches for a contractor in your area and your name doesn\u2019t show up \u2014 or they land on a website that looks like it was built in 2009 \u2014 you\u2019re losing jobs.",
+  sections: [
+    {
+      type: "paragraph",
+      text: "You\u2019re good at your craft. You show up on time, do solid work, and your customers refer you to their neighbors. But if a potential customer searches for a contractor in your area and your name doesn\u2019t show up \u2014 or they land on a website that looks like it was built in 2009 \u2014 you\u2019re losing jobs.",
+    },
+    {
+      type: "paragraph",
+      text: "The good news: building a professional website in 2026 doesn\u2019t require a designer, a developer, or a big budget. But the tool you choose matters.",
+    },
+    {
+      type: "paragraph",
+      text: "Here\u2019s an honest comparison of the most popular website builders and what actually works for contractors.",
+    },
+    {
+      type: "heading2",
+      text: "What Contractors Actually Need in a Website",
+    },
+    {
+      type: "paragraph",
+      text: "Before comparing tools, let\u2019s be clear on what matters for a trades business:",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "Service area visibility",
+          rest: " \u2014 your site needs to rank when someone searches \u201celectrician in [city]\u201d",
+        },
+        {
+          bold: "License and insurance display",
+          rest: " \u2014 customers want proof before they call",
+        },
+        {
+          bold: "Mobile-first design",
+          rest: " \u2014 most customers search from their phones",
+        },
+        {
+          bold: "Fast load speed",
+          rest: " \u2014 slow sites kill conversions and hurt SEO",
+        },
+        {
+          bold: "Lead capture",
+          rest: " \u2014 a quote form or click-to-call front and center",
+        },
+        {
+          bold: "Review integration",
+          rest: " \u2014 showing your Google or Yelp reviews builds trust fast",
+        },
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "General-purpose website builders weren\u2019t designed with these needs in mind. You\u2019ll often spend hours wrestling with templates that were built for photographers or restaurants.",
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "Why Generic Builders Fall Short for Contractors",
+    },
+    {
+      type: "paragraph",
+      text: "Wix gives you a lot of flexibility \u2014 maybe too much. You can build almost anything, but you\u2019ll spend significant time on setup. Local SEO requires third-party apps. Quote forms are an add-on.",
+    },
+    {
+      type: "paragraph",
+      text: "Squarespace is beautifully designed, but it\u2019s built for creatives and small retailers. Service area pages are hard to optimize. The templates don\u2019t translate well for plumbers or roofers.",
+    },
+    {
+      type: "paragraph",
+      text: "GoDaddy gets you online fast with its ADI (AI website builder), but the result tends to be generic. Local SEO tools are limited unless you upgrade to higher tiers.",
+    },
+    {
+      type: "paragraph",
+      text: "All three tools were designed for broad audiences. That means you\u2019ll be adapting generic features to fit trade-specific needs \u2014 which costs time and often money.",
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "What Makes Groundwork Different",
+    },
+    {
+      type: "paragraph",
+      text: "Groundwork was built specifically for trade and home service businesses. That means you\u2019re not adapting a generic template \u2014 you\u2019re starting with a structure that\u2019s already optimized for how contractors get found and how customers make hiring decisions.",
+    },
+    {
+      type: "list",
+      items: [
+        "Templates include service pages, service area pages, and review sections by default",
+        "Built-in quote request forms send leads directly to your inbox or phone",
+        "Local SEO structure is baked in \u2014 no plugins required",
+        "Launch in under 30 minutes with a guided setup",
+      ],
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "The Bottom Line",
+    },
+    {
+      type: "paragraph",
+      text: "If you\u2019re a contractor looking to get found online and convert visitors into quote requests, a purpose-built tool will outperform a generic builder every time. Less time setting up means more time on the job.",
+    },
+    {
+      type: "cta",
+      linkText: "Try Groundwork free \u2014 no credit card required, live in under 30 minutes.",
+      href: "/for/contractors",
+    },
+  ],
+};
+
+const howToGetMorePlumbingCustomersPost: BlogPost = {
+  slug: "how-to-get-more-plumbing-customers",
+  title: "How to Get More Customers as a Local Plumber",
+  metaTitle: "How to Get More Customers as a Local Plumber | Groundwork",
+  metaDescription:
+    "A practical 5-step guide for plumbers who want more calls, more bookings, and more word-of-mouth \u2014 without spending a fortune on ads.",
+  publishedAt: "2026-04-13",
+  excerpt:
+    "Most plumbers get their first customers through word of mouth. That\u2019s a great start \u2014 but referrals alone are unpredictable. If you want to grow your business on your terms, you need to show up where customers are looking before they ask their neighbors.",
+  sections: [
+    {
+      type: "paragraph",
+      text: "Most plumbers get their first customers through word of mouth. That\u2019s a great start \u2014 but referrals alone are unpredictable. If you want to grow your business on your terms, you need to show up where customers are looking before they ask their neighbors.",
+    },
+    {
+      type: "paragraph",
+      text: "Here\u2019s the five-step system local plumbers are using to fill their schedule with quality jobs.",
+    },
+    {
+      type: "heading2",
+      text: "Step 1: Claim and Optimize Your Google Business Profile",
+    },
+    {
+      type: "paragraph",
+      text: "When someone searches \u201cplumber near me,\u201d the first results they see are Google Business Profiles \u2014 not websites. If you haven\u2019t claimed yours, you\u2019re invisible to a huge chunk of potential customers.",
+    },
+    {
+      type: "paragraph",
+      text: "How to do it:",
+    },
+    {
+      type: "list",
+      items: [
+        "Go to business.google.com and claim your profile",
+        "Add your service area (not just your address)",
+        "Upload photos of your work, your truck, your team",
+        "Choose the right categories (Plumber, Emergency Plumber, etc.)",
+        "Add your hours, phone number, and a link to your website",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Once claimed, keep it active. Respond to reviews. Post updates when you add a new service.",
+    },
+    {
+      type: "heading2",
+      text: "Step 2: Get a Professional Website Built for Your Business",
+    },
+    {
+      type: "paragraph",
+      text: "Your Google Business Profile drives calls. Your website builds credibility. When a customer finds you online, they\u2019ll click through to your site to decide if they want to call.",
+    },
+    {
+      type: "paragraph",
+      text: "What your plumbing website needs:",
+    },
+    {
+      type: "list",
+      items: [
+        "Clear service list (drain cleaning, water heaters, pipe repair, etc.)",
+        "Your service area spelled out (city, county, neighborhood names help SEO)",
+        "License number and insurance details \u2014 customers need this",
+        "A simple quote form or click-to-call button",
+        "Google Reviews embedded or linked",
+      ],
+    },
+    {
+      type: "cta",
+      linkText: "Groundwork gives plumbers a professional website with all of this built in \u2192",
+      href: "/for/plumbers",
+    },
+    {
+      type: "heading2",
+      text: "Step 3: Ask Every Happy Customer for a Review",
+    },
+    {
+      type: "paragraph",
+      text: "Reviews drive more new business than almost any other factor. A plumber with 50 Google reviews at 4.8 stars will win jobs over a plumber with a nicer truck and no reviews.",
+    },
+    {
+      type: "paragraph",
+      text: "The trick is timing: ask right after the job is done, while the customer is still happy.",
+    },
+    {
+      type: "list",
+      items: [
+        "Send a simple text: \u201cGlad we could help! If you have a minute, a Google review means a lot to small businesses like ours: [link]\u201d",
+        "Include the review link in your invoice email",
+        "Make it one tap, not a multi-step process",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "You can automate this process with a review request tool \u2014 set it and forget it.",
+    },
+    {
+      type: "heading2",
+      text: "Step 4: Build a Referral System",
+    },
+    {
+      type: "paragraph",
+      text: "Word of mouth doesn\u2019t have to be passive. You can engineer it.",
+    },
+    {
+      type: "list",
+      items: [
+        "Tell customers directly: \u201cWe grow through referrals. If you know anyone who needs a plumber, I\u2019d appreciate a mention.\u201d",
+        "Partner with adjacent trades \u2014 remodelers, general contractors, HVAC techs. You refer each other.",
+        "Consider a small referral incentive: a discount on the next job, a gift card, a thank-you note.",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Referrals from happy customers cost you almost nothing and convert at extremely high rates.",
+    },
+    {
+      type: "heading2",
+      text: "Step 5: Add Online Booking",
+    },
+    {
+      type: "paragraph",
+      text: "The easier it is to hire you, the more customers you\u2019ll get. A lot of potential customers don\u2019t want to call \u2014 they want to request a quote or schedule a time online, especially outside business hours.",
+    },
+    {
+      type: "paragraph",
+      text: "Adding a simple online booking or quote request form to your website captures after-hours leads that would otherwise go to a competitor.",
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "Putting It Together",
+    },
+    {
+      type: "paragraph",
+      text: "You don\u2019t need to do all five steps at once. Start with Google Business Profile and a professional website \u2014 those two alone will put you ahead of most local competitors. Then layer in reviews, referrals, and booking as you grow.",
+    },
+    {
+      type: "paragraph",
+      text: "The plumbers who grow fastest aren\u2019t running expensive ads. They\u2019re consistently doing these basics while their competitors ignore them.",
+    },
+    {
+      type: "cta",
+      linkText: "See how Groundwork works for plumbers \u2192",
+      href: "/for/plumbers",
+    },
+  ],
+};
+
+const doesCleaningBusinessNeedWebsitePost: BlogPost = {
+  slug: "does-a-cleaning-business-need-a-website",
+  title: "Does My Cleaning Business Need a Website?",
+  metaTitle: "Does My Cleaning Business Need a Website? | Groundwork",
+  metaDescription:
+    "Short answer: yes. Here\u2019s why a website is the single most important marketing asset for your cleaning business \u2014 and how to get one without the hassle.",
+  publishedAt: "2026-04-13",
+  excerpt:
+    "If you\u2019re running a house cleaning or commercial cleaning business and wondering whether you really need a website \u2014 the short answer is yes. The longer answer is that not having one is actively costing you customers right now.",
+  sections: [
+    {
+      type: "paragraph",
+      text: "If you\u2019re running a house cleaning or commercial cleaning business and wondering whether you really need a website \u2014 the short answer is yes. The longer answer is that not having one is actively costing you customers right now.",
+    },
+    {
+      type: "heading2",
+      text: "How Customers Find Cleaning Services Today",
+    },
+    {
+      type: "paragraph",
+      text: "When someone needs a cleaning service, here\u2019s what typically happens:",
+    },
+    {
+      type: "orderedList",
+      items: [
+        "They search Google \u2014 \u201chouse cleaning service [city]\u201d or \u201ccleaning company near me\u201d",
+        "They look at Google Business Profiles \u2014 star ratings, photos, reviews",
+        "They click through to the websites of the top 2\u20133 results",
+        "They call or fill out a contact form on the one they trust most",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "If you don\u2019t have a website, you get filtered out in step 3. Even if your Google Business Profile is solid, many customers won\u2019t call a business that doesn\u2019t have a real website. It signals that you might be too small, too informal, or too hard to communicate with.",
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "The Objections \u2014 and Why They Don\u2019t Hold Up",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "\u201cI get most of my customers through referrals.\u201d",
+          rest: " Referrals are great. But even referred customers check your website before they call. If a friend says \u201cuse Maria\u2019s Cleaning \u2014 she\u2019s fantastic,\u201d the first thing the friend does is Google you. A professional website converts that referral into a paying customer. Without one, you\u2019re relying on that friend to do all the selling.",
+        },
+        {
+          bold: "\u201cI don\u2019t have the budget.\u201d",
+          rest: " Professional websites used to cost thousands. Today, tools like Groundwork let you launch a professional cleaning business website for free. No developer, no designer, no big upfront cost.",
+        },
+        {
+          bold: "\u201cI don\u2019t have time to deal with tech.\u201d",
+          rest: " Modern website builders are built for business owners, not developers. You can have a live, professional site in under 30 minutes. Once it\u2019s live, you barely have to touch it.",
+        },
+        {
+          bold: "\u201cI already have a Facebook page.\u201d",
+          rest: " A Facebook page is not a substitute for a website. You don\u2019t own it \u2014 Facebook can change the algorithm, limit your reach, or disappear. A website is yours. It also ranks in Google search results; Facebook pages typically don\u2019t.",
+        },
+      ],
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "What a Cleaning Business Website Should Include",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "List of services",
+          rest: " \u2014 residential, commercial, deep clean, move-out clean, etc.",
+        },
+        {
+          bold: "Service area",
+          rest: " \u2014 which cities, neighborhoods, or zip codes you cover",
+        },
+        {
+          bold: "Pricing or a quote request form",
+          rest: " \u2014 give customers a way to get a number without calling",
+        },
+        {
+          bold: "Photos",
+          rest: " \u2014 before/after shots, your team, your equipment",
+        },
+        {
+          bold: "Google reviews",
+          rest: " \u2014 embedded or linked, prominently displayed",
+        },
+        {
+          bold: "Contact info",
+          rest: " \u2014 phone, email, and a simple contact form",
+        },
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "You don\u2019t need anything fancy. Clean, professional, and easy to navigate is enough to convert visitors into customers.",
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "How to Get Started",
+    },
+    {
+      type: "paragraph",
+      text: "Getting a website doesn\u2019t have to be a project. Here\u2019s the simplest path:",
+    },
+    {
+      type: "orderedList",
+      items: [
+        "Sign up for Groundwork \u2014 free, no credit card required",
+        "Choose a cleaning business template \u2014 pre-built for your industry",
+        "Fill in your business details \u2014 name, services, location, contact info",
+        "Go live \u2014 your site is published and ready in under 30 minutes",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Groundwork includes a quote request form, local SEO structure, and review integration out of the box \u2014 everything a cleaning business needs to start showing up online.",
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "The Bottom Line",
+    },
+    {
+      type: "paragraph",
+      text: "A website is the single most important marketing asset your cleaning business can have. It works 24/7, converts referrals, and gives you a presence in Google search \u2014 the channel where most new customers start their search.",
+    },
+    {
+      type: "paragraph",
+      text: "You don\u2019t need a big budget or a tech team. You need 30 minutes and the right tool.",
+    },
+    {
+      type: "cta",
+      linkText: "Start your free Groundwork website today \u2192",
+      href: "/for/cleaners",
+    },
+  ],
+};
+
 export const allPosts: BlogPost[] = [
   plumbersPost,
   landscapersPost,
@@ -1267,6 +1676,9 @@ export const allPosts: BlogPost[] = [
   contractorsPost,
   plumberSchedulingPost,
   hvacDispatchPost,
+  bestWebsiteBuilderForContractorsPost,
+  howToGetMorePlumbingCustomersPost,
+  doesCleaningBusinessNeedWebsitePost,
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
