@@ -1,4 +1,3 @@
-import { notFound } from "next/navigation";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { getReferralCodeRecord } from "@/lib/referral/utils";

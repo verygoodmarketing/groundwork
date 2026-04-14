@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import {
   Globe,
@@ -1086,7 +1087,7 @@ function Footer() {
               <h4 className="text-sm font-semibold text-surface-50 mb-4">Company</h4>
               <ul className="space-y-2.5 text-sm">
                 <li><a href="/about" className="hover:text-brand-400 transition-colors">About</a></li>
-                <li><a href="/blog" className="hover:text-brand-400 transition-colors">Blog</a></li>
+                <li><Link href="/blog" className="hover:text-brand-400 transition-colors">Blog</Link></li>
                 <li><a href="#waitlist" className="hover:text-brand-400 transition-colors">Contact</a></li>
               </ul>
             </div>
