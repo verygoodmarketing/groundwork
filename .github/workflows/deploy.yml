@@ -50,17 +50,13 @@ jobs:
           DEPLOY_EXIT=$?
           echo "$DEPLOY_OUTPUT"
           if [ $DEPLOY_EXIT -ne 0 ]; then
-            # Check if this is a P3009 "failed migration" error and resolve it
-            FAILED_MIGRATION=$(echo "$DEPLOY_OUTPUT" | python3 -c "
-import sys, re
-text = sys.stdin.read()
-m = re.search(r'The \x60([^\x60]+)\x60 migration', text)
-if m: print(m.group(1))
-" 2>/dev/null || true)
+            # Check if this is a P3009 "failed migration" error and resolve it.
+            # Extract migration name from: The `<name>` migration ... failed
+            FAILED_MIGRATION=$(echo "$DEPLOY_OUTPUT" | sed -n "s/.*The \`\([^\`]*\)\` migration.*/\1/p" | head -1)
             if [ -n "$FAILED_MIGRATION" ]; then
               echo "::warning::Resolving previously-failed migration: $FAILED_MIGRATION"
               npx prisma migrate resolve --rolled-back "$FAILED_MIGRATION"
-              # Retry deploy after resolving
+              # Retry deploy after resolving the stuck migration
               npx prisma migrate deploy
             else
               exit $DEPLOY_EXIT
