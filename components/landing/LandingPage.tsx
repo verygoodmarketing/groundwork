@@ -23,6 +23,7 @@ import {
   Store,
   CreditCard,
 } from "lucide-react";
+import Image from "next/image";
 import { useInView } from "@/hooks/useInView";
 import {
   GroundworkLogoFullLight,
@@ -439,21 +440,14 @@ function HeroSection() {
           {/* Left: copy */}
           <div>
             {/* Brand lockup above headline */}
-            <div className="mb-6 flex items-center gap-3">
-              <GroundworkIcon width={52} height={52} />
-              <div className="flex flex-col">
-                <span
-                  className="text-2xl font-black text-white leading-none tracking-tight"
-                  style={{ fontFamily: "Montserrat, Arial Black, sans-serif", letterSpacing: "-0.04em" }}
-                >
-                  Groundwork
-                </span>
-                <span
-                  className="text-[9px] font-semibold tracking-[0.28em] text-[#D97706] uppercase mt-0.5"
-                >
-                  FOR LOCAL BUSINESS
-                </span>
-              </div>
+            <div className="mb-6">
+              <Image
+                src="/brand/logo-horizontal-with-tagline-light.png"
+                alt="GroundWork — Show up first. Win more work."
+                width={320}
+                height={80}
+                priority
+              />
             </div>
 
             <div className="inline-flex items-center gap-2 bg-brand-500/15 text-brand-300 text-xs font-semibold px-3 py-1.5 rounded-full mb-6 ring-1 ring-brand-500/30">

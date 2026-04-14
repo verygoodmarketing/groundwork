@@ -50,10 +50,10 @@ export const metadata: Metadata = {
   ],
   icons: {
     icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon.ico", sizes: "any" },
+      { url: "/brand/logo-icon-only.png", sizes: "32x32" },
+      { url: "/brand/logo-icon-only.png", sizes: "192x192" },
     ],
-    apple: "/favicon.svg",
+    apple: "/brand/logo-icon-only.png",
   },
   openGraph: {
     title: "Groundwork — Get Found Online. Get More Customers.",

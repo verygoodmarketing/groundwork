@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { FileX, RefreshCcw, Clock } from "lucide-react";
 import { trpc } from "@/lib/trpc/client";
@@ -237,23 +238,16 @@ export function PricingPage({ plans }: Props) {
           <div className="flex items-center justify-between h-16">
             <Link
               href="/"
-              className="flex items-center gap-2"
+              className="flex items-center"
               aria-label="Groundwork home"
             >
-              <div className="w-8 h-8 bg-brand-50 rounded-lg flex items-center justify-center">
-                <span
-                  className="text-brand-700 text-sm font-bold"
-                  style={{ fontFamily: "var(--font-display)" }}
-                >
-                  V
-                </span>
-              </div>
-              <span
-                className="text-xl font-bold text-white tracking-tight"
-                style={{ fontFamily: "var(--font-display)" }}
-              >
-                Groundwork
-              </span>
+              <Image
+                src="/brand/logo-horizontal-dark.png"
+                alt="GroundWork"
+                width={160}
+                height={40}
+                priority
+              />
             </Link>
             <Link
               href="/onboarding/step-1"

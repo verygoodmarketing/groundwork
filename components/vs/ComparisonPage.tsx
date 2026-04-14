@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const APP_URL =
   process.env.NEXT_PUBLIC_APP_URL ?? "https://groundworklocal.com";
@@ -47,14 +48,13 @@ export interface ComparisonPageData {
 
 function LogoMark() {
   return (
-    <div className="w-8 h-8 bg-brand-50 rounded-lg flex items-center justify-center flex-shrink-0">
-      <span
-        className="text-brand-700 text-sm font-bold"
-        style={{ fontFamily: "var(--font-display)" }}
-      >
-        V
-      </span>
-    </div>
+    <Image
+      src="/brand/logo-horizontal-dark.png"
+      alt="GroundWork"
+      width={160}
+      height={40}
+      priority
+    />
   );
 }
 
@@ -65,14 +65,8 @@ function Navbar() {
     <nav className="sticky top-0 z-50 bg-[#161b22]/95 backdrop-blur-md border-b border-white/5">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center">
             <LogoMark />
-            <span
-              className="text-xl font-bold text-white tracking-tight"
-              style={{ fontFamily: "var(--font-display)" }}
-            >
-              Groundwork
-            </span>
           </Link>
           <div className="hidden md:flex items-center gap-6">
             <Link
@@ -410,12 +404,6 @@ function Footer() {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
         <div className="flex items-center gap-2">
           <LogoMark />
-          <span
-            className="text-white font-bold"
-            style={{ fontFamily: "var(--font-display)" }}
-          >
-            Groundwork
-          </span>
         </div>
         <div className="flex gap-6 flex-wrap justify-center">
           <Link href="/" className="hover:text-brand-400 transition-colors">
