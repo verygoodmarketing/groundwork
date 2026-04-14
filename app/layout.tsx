@@ -31,11 +31,11 @@ const APP_URL =
 export const metadata: Metadata = {
   metadataBase: new URL(APP_URL),
   title: {
-    default: "Groundwork — Websites & Marketing for Local Service Businesses",
+    default: "Groundwork — Show up first. Win more work.",
     template: "%s | Groundwork",
   },
   description:
-    "Groundwork helps plumbers, electricians, cleaners, and contractors get a professional website live in under an hour — with built-in local SEO, lead capture, email marketing, and review tools. Free to try.",
+    "Show up first. Win more work. Groundwork helps plumbers, electricians, cleaners, and contractors get a professional website live in under an hour — with built-in local SEO, lead capture, email marketing, and review tools. Free to try.",
   keywords: [
     "website builder for small businesses",
     "local SEO for service businesses",
@@ -56,9 +56,9 @@ export const metadata: Metadata = {
     apple: "/brand/logo-icon-only.png",
   },
   openGraph: {
-    title: "Groundwork — Get Found Online. Get More Customers.",
+    title: "Groundwork — Show up first. Win more work.",
     description:
-      "The all-in-one marketing platform for local service businesses. Website builder, local SEO, lead capture, review requests, and email marketing — in one simple tool.",
+      "Show up first. Win more work. The all-in-one marketing platform for local service businesses. Website builder, local SEO, lead capture, review requests, and email marketing — in one simple tool.",
     type: "website",
     url: APP_URL,
     siteName: "Groundwork",
@@ -68,15 +68,15 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Groundwork — Get Found Online. Get More Customers.",
+        alt: "Groundwork — Show up first. Win more work.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Groundwork — Get Found Online. Get More Customers.",
+    title: "Groundwork — Show up first. Win more work.",
     description:
-      "The all-in-one marketing platform for local service businesses. Website builder, local SEO, lead capture, review requests, and email marketing — in one simple tool.",
+      "Show up first. Win more work. The all-in-one marketing platform for local service businesses. Website builder, local SEO, lead capture, review requests, and email marketing — in one simple tool.",
     images: ["/og-image.png"],
   },
   robots: {

@@ -36,7 +36,7 @@ import { UrgencyBanner } from "@/components/UrgencyBanner";
 
 const BRAND = {
   name: "Groundwork",
-  tagline: "Websites & marketing for local service businesses",
+  tagline: "Show up first. Win more work.",
 };
 
 const NAV_LINKS = [
