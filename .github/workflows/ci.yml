@@ -79,6 +79,7 @@ jobs:
       NEXT_PUBLIC_APP_URL: https://stub.example.com
       NEXT_PUBLIC_APP_DOMAIN: stub.example.com
       NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: pk_test_stub
+      STRIPE_SECRET_KEY: sk_test_stub
 
     steps:
       - name: Checkout code
