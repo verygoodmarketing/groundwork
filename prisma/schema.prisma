@@ -297,6 +297,19 @@ model WaitlistSignup {
 }
 
 // ============================================================
+// LEADS: Email captures from lead magnet opt-in forms
+// ============================================================
+
+model Lead {
+  id         String   @id @default(uuid()) @db.Uuid
+  email      String
+  sourcePage String?
+  createdAt  DateTime @default(now())
+
+  @@map("leads")
+}
+
+// ============================================================
 // REFERRALS: Referral program tracking
 // ============================================================
 

@@ -27,6 +27,7 @@ import {
   GroundworkLogoFullLight,
   GroundworkIcon,
 } from "@/components/brand/GroundworkLogo";
+import { LeadMagnetOptIn } from "@/components/landing/LeadMagnetOptIn";
 
 // ─── Copy constants (easy for CMO/UX to update later) ────────────────────────
 
@@ -1116,6 +1117,12 @@ export function LandingPage() {
         <WhoWeHelpSection />
         <HowItWorksSection />
         <TestimonialsSection />
+        {/* Lead magnet opt-in — between social proof and pricing/footer CTA */}
+        <section className="py-16 bg-gray-50 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <LeadMagnetOptIn sourcePage="/" />
+          </div>
+        </section>
         <PricingSection />
         <WaitlistSection />
       </main>

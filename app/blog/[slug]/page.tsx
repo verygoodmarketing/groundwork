@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import type React from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { allPosts, getPostBySlug, type BlogPostSection } from "@/lib/blog/posts";
+import { LeadMagnetOptIn } from "@/components/landing/LeadMagnetOptIn";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -142,6 +144,28 @@ export default async function BlogPostPage({ params }: Props) {
     notFound();
   }
 
+  // Build rendered sections, injecting the lead magnet opt-in after the 3rd paragraph
+  let paragraphCount = 0;
+  const renderedSections: React.ReactNode[] = [];
+
+  for (let i = 0; i < post.sections.length; i++) {
+    const section = post.sections[i];
+    const sectionKey = section.id ?? `${section.type}-${section.text?.slice(0, 20) ?? i}`;
+
+    renderedSections.push(
+      <RenderSection key={sectionKey} section={section} index={i} />
+    );
+
+    if (section.type === "paragraph") {
+      paragraphCount += 1;
+      if (paragraphCount === 3) {
+        renderedSections.push(
+          <LeadMagnetOptIn key="lead-magnet-optin" sourcePage={`/blog/${slug}`} />
+        );
+      }
+    }
+  }
+
   return (
     <main className="min-h-screen bg-white">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
@@ -172,10 +196,7 @@ export default async function BlogPostPage({ params }: Props) {
           </header>
 
           <div className="text-base">
-            {post.sections.map((section, i) => {
-              const sectionKey = section.id ?? `${section.type}-${section.text?.slice(0, 20) ?? i}`;
-              return <RenderSection key={sectionKey} section={section} index={i} />;
-            })}
+            {renderedSections}
           </div>
         </article>
 

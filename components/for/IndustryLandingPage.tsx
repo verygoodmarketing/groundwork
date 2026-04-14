@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { type LucideIcon } from "lucide-react";
+import { LeadMagnetOptIn } from "@/components/landing/LeadMagnetOptIn";
 
 // ─── JSON-LD ──────────────────────────────────────────────────────────────────
 
@@ -496,6 +497,12 @@ export function IndustryLandingPage({ data }: { data: IndustryPageData }) {
           <HowItWorksSection data={data} />
           <TestimonialSection data={data} />
           <FAQSection data={data} />
+          {/* Lead magnet opt-in — before final CTA */}
+          <section className="py-16 bg-gray-50 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto">
+              <LeadMagnetOptIn sourcePage={`/for/${data.slug}`} />
+            </div>
+          </section>
           <CtaSection data={data} />
         </main>
         <Footer data={data} />
