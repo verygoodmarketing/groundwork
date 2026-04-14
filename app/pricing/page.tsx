@@ -1,10 +1,76 @@
 import type { Metadata } from "next";
 import { PricingPage } from "@/components/pricing/PricingPage";
 
+const APP_URL =
+  process.env.NEXT_PUBLIC_APP_URL ?? "https://groundworklocal.com";
+
 export const metadata: Metadata = {
   title: "Pricing — Groundwork",
   description:
     "Simple, transparent pricing for local service businesses. Get your professional website, lead capture, and marketing tools starting at $49/month. 14-day free trial.",
+};
+
+const pricingJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: "Groundwork",
+  description:
+    "All-in-one marketing platform for local service businesses — website builder, local SEO, lead capture, review requests, and email marketing.",
+  url: `${APP_URL}/pricing`,
+  brand: {
+    "@type": "Brand",
+    name: "Groundwork",
+  },
+  offers: [
+    {
+      "@type": "Offer",
+      name: "Starter",
+      price: "49.00",
+      priceCurrency: "USD",
+      priceSpecification: {
+        "@type": "UnitPriceSpecification",
+        price: "49.00",
+        priceCurrency: "USD",
+        unitCode: "MON",
+      },
+      description:
+        "Get your business online and start capturing leads from day one.",
+      url: `${APP_URL}/pricing`,
+      availability: "https://schema.org/InStock",
+    },
+    {
+      "@type": "Offer",
+      name: "Pro",
+      price: "99.00",
+      priceCurrency: "USD",
+      priceSpecification: {
+        "@type": "UnitPriceSpecification",
+        price: "99.00",
+        priceCurrency: "USD",
+        unitCode: "MON",
+      },
+      description:
+        "The full toolkit for service businesses that want to grow — more leads, more reviews, more repeat jobs.",
+      url: `${APP_URL}/pricing`,
+      availability: "https://schema.org/InStock",
+    },
+    {
+      "@type": "Offer",
+      name: "Business",
+      price: "199.00",
+      priceCurrency: "USD",
+      priceSpecification: {
+        "@type": "UnitPriceSpecification",
+        price: "199.00",
+        priceCurrency: "USD",
+        unitCode: "MON",
+      },
+      description:
+        "For established service companies managing multiple locations, teams, or a high volume of jobs.",
+      url: `${APP_URL}/pricing`,
+      availability: "https://schema.org/InStock",
+    },
+  ],
 };
 
 /**
@@ -77,5 +143,13 @@ export default function Pricing() {
     },
   ];
 
-  return <PricingPage plans={plans} />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingJsonLd) }}
+      />
+      <PricingPage plans={plans} />
+    </>
+  );
 }
