@@ -46,7 +46,7 @@ jobs:
           # prisma migrate deploy refuses to proceed if a migration is in "failed"
           # state in the _prisma_migrations table. Running with || true so that
           # on future deploys (when no migrations are stuck) this exits cleanly.
-          DEPLOY_OUTPUT=$(npx prisma migrate deploy 2>&1)
+          DEPLOY_OUTPUT=$(npx prisma migrate deploy 2>&1) || true
           DEPLOY_EXIT=$?
           echo "$DEPLOY_OUTPUT"
           if [ $DEPLOY_EXIT -ne 0 ]; then
