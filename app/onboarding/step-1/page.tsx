@@ -4,7 +4,7 @@ import { Suspense, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 import { OnboardingLayout } from "@/components/onboarding/OnboardingLayout";
-import { Loader2, Eye, EyeOff } from "lucide-react";
+import { Loader2, Eye, EyeOff, Mail } from "lucide-react";
 
 // Light-theme colour tokens (onboarding pages are always light)
 const C = {
@@ -51,6 +51,8 @@ function Step1Form() {
     callbackError ? "Authentication failed. Please try again." : null
   );
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
+  const [resendLoading, setResendLoading] = useState(false);
+  const [resendMessage, setResendMessage] = useState<string | null>(null);
 
   const supabase = createClient();
 
@@ -77,9 +79,7 @@ function Step1Form() {
         if (nextParam) {
           sessionStorage.setItem("postOnboardingNext", nextParam);
         }
-        setSuccessMessage(
-          "Check your email — we sent you a confirmation link. Once confirmed you'll continue to step 2."
-        );
+        setSuccessMessage(email);
       } else {
         const { error } = await supabase.auth.signInWithPassword({ email, password });
         if (error) throw error;
@@ -122,6 +122,27 @@ function Step1Form() {
     }
   }
 
+  async function handleResend() {
+    if (!successMessage) return;
+    setResendLoading(true);
+    setResendMessage(null);
+    try {
+      const { error } = await supabase.auth.resend({
+        type: "signup",
+        email: successMessage,
+        options: {
+          emailRedirectTo: `${window.location.origin}/auth/callback?next=/onboarding/step-2`,
+        },
+      });
+      if (error) throw error;
+      setResendMessage("Email resent! Check your inbox and spam folder.");
+    } catch {
+      setResendMessage("Couldn't resend. Please try again in a moment.");
+    } finally {
+      setResendLoading(false);
+    }
+  }
+
   function formatAuthError(msg: string): string {
     if (msg.toLowerCase().includes("already registered") || msg.toLowerCase().includes("user already exists"))
       return "That email already has an account. Sign in instead?";
@@ -151,10 +172,40 @@ function Step1Form() {
 
         {successMessage ? (
           <div
-            className="rounded-lg border p-4 text-sm font-body"
+            className="rounded-lg border p-5 space-y-4 text-sm font-body"
             style={{ background: C.successBg, borderColor: C.successBorder, color: C.successText }}
           >
-            {successMessage}
+            <div className="flex items-start gap-3">
+              <Mail className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: C.successText }} />
+              <div className="space-y-1">
+                <p className="font-semibold" style={{ color: C.text }}>Almost there!</p>
+                <p style={{ color: C.text }}>
+                  We sent a confirmation link to{" "}
+                  <strong>{successMessage}</strong>.
+                </p>
+                <p style={{ color: C.muted }}>
+                  Open that email and click the link to continue — it takes about 30 seconds.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center gap-3 flex-wrap">
+              <span style={{ color: C.muted }}>Didn&apos;t get it?</span>
+              <button
+                type="button"
+                onClick={handleResend}
+                disabled={resendLoading}
+                className="font-medium underline flex items-center gap-1 disabled:opacity-50"
+                style={{ color: C.successText }}
+              >
+                {resendLoading && <Loader2 className="w-3 h-3 animate-spin" />}
+                Resend email
+              </button>
+              <span style={{ color: C.muted }}>·</span>
+              <span style={{ color: C.muted }}>Check your spam folder</span>
+            </div>
+            {resendMessage && (
+              <p className="text-xs" style={{ color: C.muted }}>{resendMessage}</p>
+            )}
           </div>
         ) : (
           <>

@@ -37,6 +37,12 @@ const SERVICE_CATEGORIES = [
   "Other",
 ];
 
+// All categories as pills (merge and dedupe, quick picks first)
+const ALL_CATEGORY_PILLS = [
+  ...QUICK_PICK_CATEGORIES,
+  ...SERVICE_CATEGORIES.filter((c) => !QUICK_PICK_CATEGORIES.includes(c)),
+];
+
 function toSlug(name: string): string {
   return name
     .toLowerCase()
@@ -229,12 +235,12 @@ export default function Step2Page() {
 
           {/* Business category */}
           <div className="space-y-2">
-            <label htmlFor="biz-category" className="block text-sm font-medium font-body" style={{ color: C.text }}>
+            <label htmlFor="biz-category-hidden" className="block text-sm font-medium font-body" style={{ color: C.text }}>
               Business category <span style={{ color: C.error }}>*</span>
             </label>
-            {/* Quick-pick chips */}
+            {/* All-category pills — no dropdown */}
             <div className="flex flex-wrap gap-2">
-              {QUICK_PICK_CATEGORIES.map((cat) => (
+              {ALL_CATEGORY_PILLS.map((cat) => (
                 <button
                   key={cat}
                   type="button"
@@ -256,19 +262,18 @@ export default function Step2Page() {
                 </button>
               ))}
             </div>
-            {/* Full dropdown */}
+            {/* Hidden native select for form validation */}
             <select
-              id="biz-category"
+              id="biz-category-hidden"
               required
               value={form.category}
               onChange={(e) => setForm((f) => ({ ...f, category: e.target.value }))}
-              className={inputCls}
-              style={{ borderColor: C.border, background: C.bg, color: form.category ? C.text : C.muted }}
-              onFocus={(e) => (e.currentTarget.style.borderColor = C.borderFocus)}
-              onBlur={(e) => (e.currentTarget.style.borderColor = C.border)}
+              aria-hidden="true"
+              tabIndex={-1}
+              className="sr-only"
             >
-              <option value="">Select your trade</option>
-              {SERVICE_CATEGORIES.map((cat) => (
+              <option value="" />
+              {ALL_CATEGORY_PILLS.map((cat) => (
                 <option key={cat} value={cat}>{cat}</option>
               ))}
             </select>
@@ -296,7 +301,7 @@ export default function Step2Page() {
           {/* Slug with live availability */}
           <div className="space-y-1">
             <label htmlFor="biz-slug" className="block text-sm font-medium font-body" style={{ color: C.text }}>
-              Your website address <span style={{ color: C.error }}>*</span>
+              Your free web address <span style={{ color: C.error }}>*</span>
             </label>
             <div
               className="flex items-center rounded-lg border overflow-hidden transition-colors focus-within:ring-2"
@@ -331,7 +336,8 @@ export default function Step2Page() {
               </div>
             </div>
             <p className="text-xs font-body" style={{ color: C.muted }}>
-              Letters, numbers and hyphens only
+              This is your free address to start. Want your own domain like{" "}
+              <em>johnsmithplumbing.com</em>? Connect it in Settings — takes 2 minutes.
             </p>
             {isSlugAvailable && (
               <p className="text-xs font-body" style={{ color: C.brandText }}>

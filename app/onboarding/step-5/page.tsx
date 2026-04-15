@@ -241,7 +241,13 @@ export default function Step5Page() {
   const [published, setPublished] = useState(false);
 
   const updateStep = trpc.business.updateOnboardingStep.useMutation({
-    onSuccess: () => setPublished(true),
+    onSuccess: () => {
+      // Auto-open the live site in a new tab on publish success
+      if (siteUrl) {
+        window.open(siteUrl, "_blank", "noopener,noreferrer");
+      }
+      setPublished(true);
+    },
   });
 
   const siteUrl = business?.slug ? `https://${business.slug}.groundworklocal.com` : null;

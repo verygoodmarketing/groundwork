@@ -41,6 +41,16 @@ export default async function DashboardPage() {
   const hasActiveSub = isSubscriptionActive(business.subscriptionStatus);
   const isPastDue = business.subscriptionStatus === "PAST_DUE";
 
+  // Trial days remaining — trial is 14 days from business creation, no subscription yet
+  const TRIAL_LENGTH_DAYS = 14;
+  const isOnTrial = !hasActiveSub && !isPastDue;
+  const msElapsed = Date.now() - business.createdAt.getTime();
+  const daysElapsed = Math.floor(msElapsed / (1000 * 60 * 60 * 24));
+  const trialDaysRemaining = Math.max(0, TRIAL_LENGTH_DAYS - daysElapsed);
+  const trialStatusLabel = isOnTrial
+    ? `Free trial — ${trialDaysRemaining} day${trialDaysRemaining === 1 ? "" : "s"} remaining`
+    : null;
+
   const nudgeBannerState = computeBannerState({
     onboardingComplete: business.onboardingComplete,
     onboardingStep: business.onboardingStep,
@@ -207,7 +217,7 @@ export default async function DashboardPage() {
             />
             <span className="text-sm font-body text-[var(--foreground)]">
               {!hasActiveSub
-                ? "No active subscription"
+                ? (trialStatusLabel ?? "No active subscription")
                 : business.site?.isPublished
                 ? "Live"
                 : "Offline"}
