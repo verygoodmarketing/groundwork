@@ -2604,6 +2604,1016 @@ const howToAdvertisePressureWashingForFreePost: BlogPost = {
   ],
 };
 
+const howMuchDoesAPlumberWebsiteCostPost: BlogPost = {
+  slug: "how-much-does-a-plumber-website-cost",
+  title: "How Much Does a Plumber Website Cost? (Honest Breakdown for 2026)",
+  metaTitle: "How Much Does a Plumber Website Cost? (Honest Breakdown for 2026)",
+  metaDescription:
+    "What does a professional plumber website actually cost? From DIY builders to agency-built sites, here\u2019s a real breakdown \u2014 including one option that\u2019s free.",
+  publishedAt: "2026-04-15",
+  excerpt:
+    "If you\u2019re a plumber shopping for a website, you\u2019ve probably already discovered that the answer to \u201chow much does this cost?\u201d depends heavily on who you ask. Here\u2019s a breakdown of what a plumber website actually costs in 2026.",
+  sections: [
+    {
+      type: "paragraph",
+      text: "If you\u2019re a plumber shopping for a website, you\u2019ve probably already discovered that the answer to \u201chow much does this cost?\u201d depends heavily on who you ask.",
+    },
+    {
+      type: "paragraph",
+      text: "Ask a local web agency and they\u2019ll quote you $2,000\u2013$8,000. Ask a freelancer and they might say $800\u2013$2,500. Ask a DIY website builder and the starting price looks like $0.",
+    },
+    {
+      type: "paragraph",
+      text: "All of those answers are technically true \u2014 and none of them tell the full story. Here\u2019s a breakdown of what a plumber website actually costs in 2026, what drives the price, and where your money is well-spent versus wasted.",
+    },
+    { type: "divider" },
+    { type: "heading2", text: "Why Website Pricing Varies So Much" },
+    {
+      type: "paragraph",
+      text: "The range is so wide because \u201ca website\u201d can mean very different things:",
+    },
+    {
+      type: "list",
+      items: [
+        "A one-page placeholder with your name and phone number",
+        "A 5-page professional site with service pages, reviews, and a quote form",
+        "A fully custom build with online booking, customer portal, and CRM integration",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "For most plumbers, what you need is in the middle. Let\u2019s price that out.",
+    },
+    { type: "divider" },
+    { type: "heading2", text: "Option 1: DIY Website Builder ($0\u2013$35/month)" },
+    {
+      type: "paragraph",
+      text: "Tools like Wix, Squarespace, GoDaddy, and Groundwork let you build a website yourself without writing code.",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "What you get:",
+          rest: " Templates, drag-and-drop editing, hosting included.",
+        },
+        {
+          bold: "What you pay:",
+          rest: " Monthly subscription fees \u2014 typically $0\u2013$35/month depending on the plan.",
+        },
+        {
+          bold: "Hidden costs:",
+          rest: " Your time. Setting up a website that actually looks professional and ranks in Google search takes 5\u201315 hours if you\u2019re not doing it every day. Generic builders also require you to configure local SEO manually, which most business owners skip \u2014 leaving you with a site that looks nice but doesn\u2019t get traffic.",
+        },
+        {
+          bold: "Best for:",
+          rest: " Plumbers who want to control costs, are comfortable with technology, and have time to invest in setup.",
+        },
+      ],
+    },
+    { type: "divider" },
+    { type: "heading2", text: "Option 2: Trade-Specific Website Builder (Free\u2013$50/month)" },
+    {
+      type: "paragraph",
+      text: "Groundwork is built specifically for plumbers and home service businesses. Unlike general-purpose builders, the templates start with plumbing-specific structure: service pages, license and insurance fields, quote request forms, and local SEO baked in.",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "What you pay:",
+          rest: " Free to start. Paid plans available as you grow.",
+        },
+        {
+          bold: "What you get:",
+          rest: " A professional plumber website live in under 30 minutes, with the SEO foundations already in place.",
+        },
+        {
+          bold: "Hidden costs:",
+          rest: " Minimal. You\u2019re not retrofitting a generic template or adding third-party plugins.",
+        },
+        {
+          bold: "Best for:",
+          rest: " Plumbers who want to launch fast, show up in local search, and avoid paying agency prices.",
+        },
+      ],
+    },
+    { type: "divider" },
+    { type: "heading2", text: "Option 3: Freelance Web Designer ($800\u2013$3,000 one-time)" },
+    {
+      type: "paragraph",
+      text: "A freelance designer can build a custom website tailored to your business. This is a good option if you want a unique look and have specific requirements.",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "What you pay:",
+          rest: " $800\u2013$3,000 upfront (often more). Plus ongoing hosting fees ($15\u2013$50/month) and maintenance costs when things need updating.",
+        },
+        {
+          bold: "What you get:",
+          rest: " A custom design, hands-on guidance, and a site built to your specifications.",
+        },
+        {
+          bold: "Hidden costs:",
+          rest: " Revisions often cost extra. Updating content yourself is possible but depends on the platform they build on. If you need SEO work done later, that\u2019s typically a separate cost.",
+        },
+        {
+          bold: "Best for:",
+          rest: " Plumbers with a larger budget who want a one-of-a-kind site and can afford the ongoing maintenance relationship.",
+        },
+      ],
+    },
+    { type: "divider" },
+    { type: "heading2", text: "Option 4: Local or Regional Web Agency ($2,000\u2013$8,000+)" },
+    {
+      type: "paragraph",
+      text: "Agencies offer more hands-on service and often include SEO strategy, content writing, and ongoing support. You\u2019re paying for expertise and a team.",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "What you pay:",
+          rest: " $2,000\u2013$8,000+ to build the site. Ongoing monthly retainers for SEO and maintenance are common ($500\u2013$2,000/month).",
+        },
+        {
+          bold: "Hidden costs:",
+          rest: " Long timelines (weeks to months to launch). Contracts that lock you in. High recurring fees. Agency-designed sites are often built on platforms that are hard to update without them.",
+        },
+        {
+          bold: "Best for:",
+          rest: " Plumbing businesses doing $500K+ revenue who have budget for ongoing marketing services and want someone else to manage it.",
+        },
+      ],
+    },
+    { type: "divider" },
+    { type: "heading2", text: "What Should a Plumber Website Actually Include?" },
+    {
+      type: "paragraph",
+      text: "Regardless of what you spend, your website needs to do a few things to justify the investment:",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "Show up in local search",
+          rest: " \u2014 it should rank for \u201cplumber in [your city]\u201d and related terms",
+        },
+        {
+          bold: "Build trust quickly",
+          rest: " \u2014 license number, insurance status, reviews front and center",
+        },
+        {
+          bold: "Make it easy to contact you",
+          rest: " \u2014 click-to-call button, simple quote form, fast load on mobile",
+        },
+        {
+          bold: "List your services clearly",
+          rest: " \u2014 drain cleaning, water heaters, pipe repair, emergency calls, etc.",
+        },
+        {
+          bold: "Show your service area",
+          rest: " \u2014 mention every city and neighborhood you serve",
+        },
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "A beautiful website that doesn\u2019t rank and doesn\u2019t convert is just an expensive business card. Keep that in mind when comparing options.",
+    },
+    { type: "divider" },
+    { type: "heading2", text: "What\u2019s the Right Budget for Most Plumbers?" },
+    {
+      type: "paragraph",
+      text: "If you\u2019re a solo plumber or small crew doing under $300K/year, the math is simple: don\u2019t pay agency prices. A trade-specific builder like Groundwork gets you everything you need for free or a small monthly fee.",
+    },
+    {
+      type: "paragraph",
+      text: "If you\u2019re doing $300K\u2013$1M, consider a freelancer for a custom design, but pair it with a clear SEO strategy from the start \u2014 or you\u2019ll have a good-looking site that nobody finds.",
+    },
+    {
+      type: "paragraph",
+      text: "If you\u2019re at $1M+, ongoing agency-level investment in SEO and marketing starts to make financial sense. The ROI is there if the foundation is solid.",
+    },
+    { type: "divider" },
+    { type: "heading2", text: "The Bottom Line" },
+    {
+      type: "paragraph",
+      text: "A plumber website can cost anywhere from $0 to $10,000+. For most plumbers, the answer is somewhere between free and a few hundred dollars a year \u2014 if you use the right tool.",
+    },
+    {
+      type: "paragraph",
+      text: "The key is picking a tool built for your trade, not retrofitting a generic builder.",
+    },
+    {
+      type: "cta",
+      linkText: "Start free with Groundwork \u2014 built for plumbers, live in under 30 minutes \u2192",
+      href: "/for/plumbers",
+    },
+  ],
+};
+
+const bestWebsiteBuilderForHvacPost: BlogPost = {
+  slug: "best-website-builder-for-hvac-companies",
+  title: "Best Website Builder for HVAC Companies (2026)",
+  metaTitle: "Best Website Builder for HVAC Companies (2026)",
+  metaDescription:
+    "Comparing Wix, Squarespace, GoDaddy, and Groundwork for HVAC businesses. Find out which website builder actually helps HVAC contractors get found and booked.",
+  publishedAt: "2026-04-15",
+  excerpt:
+    "HVAC is a high-demand, high-competition trade. Most website builders weren\u2019t built for HVAC companies \u2014 they were built for photographers, restauranteurs, and online stores. Here\u2019s a straight comparison of what actually works.",
+  sections: [
+    {
+      type: "paragraph",
+      text: "HVAC is a high-demand, high-competition trade. When a homeowner\u2019s AC goes out in July or their furnace fails in January, they pull out their phone and search Google. The business that shows up \u2014 and looks credible \u2014 gets the call.",
+    },
+    {
+      type: "paragraph",
+      text: "But most website builders weren\u2019t built for HVAC companies. They were built for photographers, restauranteurs, and online stores. If you pick the wrong tool, you\u2019ll spend hours adapting a template that was never meant for your trade \u2014 and end up with a site that doesn\u2019t rank or convert.",
+    },
+    {
+      type: "paragraph",
+      text: "Here\u2019s a straight comparison of the most popular website builders for HVAC contractors and what actually works.",
+    },
+    { type: "divider" },
+    { type: "heading2", text: "What HVAC Companies Need From a Website" },
+    {
+      type: "paragraph",
+      text: "Before comparing tools, it\u2019s worth being specific about what an HVAC business website needs to accomplish:",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "Local SEO performance",
+          rest: " \u2014 rank when someone searches \u201cHVAC company near me\u201d or \u201cAC repair [city]\u201d",
+        },
+        {
+          bold: "Emergency availability",
+          rest: " \u2014 make it immediately obvious you offer 24/7 or same-day service",
+        },
+        {
+          bold: "Trust signals",
+          rest: " \u2014 NATE certification, license number, insurance, manufacturer partnerships",
+        },
+        {
+          bold: "Service-specific pages",
+          rest: " \u2014 AC repair, furnace installation, heat pumps, duct cleaning, etc.",
+        },
+        {
+          bold: "Lead capture",
+          rest: " \u2014 a prominent call button and a quote request form that works on mobile",
+        },
+        {
+          bold: "Service area coverage",
+          rest: " \u2014 clearly show which cities and zip codes you serve",
+        },
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Generic website builders give you the tools to build these features \u2014 but you have to build them yourself. That\u2019s hours of work that most HVAC business owners don\u2019t have.",
+    },
+    { type: "divider" },
+    { type: "heading2", text: "The Options Compared" },
+    { type: "heading2", text: "Wix" },
+    {
+      type: "paragraph",
+      text: "Wix is the most popular general-purpose website builder. It offers hundreds of templates and a drag-and-drop editor. For HVAC companies, the flexibility is both an advantage and a trap: you can build anything, but you have to build everything yourself.",
+    },
+    {
+      type: "paragraph",
+      text: "Local SEO requires third-party apps. Certification and license fields don\u2019t exist by default. Emergency availability callouts are manual. The free plan puts Wix branding on your site.",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "Best for:",
+          rest: " HVAC businesses with technical staff who want full design control and have the time to invest in setup.",
+        },
+        {
+          bold: "Not ideal for:",
+          rest: " Contractors who want to get online quickly with a site tuned for local search.",
+        },
+        {
+          bold: "Price:",
+          rest: " $17\u2013$159/month.",
+        },
+      ],
+    },
+    { type: "heading2", text: "Squarespace" },
+    {
+      type: "paragraph",
+      text: "Squarespace makes beautiful websites. The design quality is genuinely excellent. But it\u2019s built for creative businesses and e-commerce \u2014 not HVAC service companies.",
+    },
+    {
+      type: "paragraph",
+      text: "Service area targeting requires manual page creation. There\u2019s no native emergency callout section. Review integrations are third-party. The templates are designed for visual portfolios, not service businesses that need to generate calls.",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "Best for:",
+          rest: " HVAC companies where aesthetics are a priority and budget is not a concern.",
+        },
+        {
+          bold: "Not ideal for:",
+          rest: " Contractors focused on local search rankings and call volume.",
+        },
+        {
+          bold: "Price:",
+          rest: " $23\u2013$65/month.",
+        },
+      ],
+    },
+    { type: "heading2", text: "GoDaddy" },
+    {
+      type: "paragraph",
+      text: "GoDaddy\u2019s AI website builder is fast \u2014 you can have a basic site live in under an hour. It\u2019s also the most affordable of the general-purpose options. But the results tend to be generic, and the local SEO tools are limited unless you\u2019re on higher-tier plans.",
+    },
+    {
+      type: "paragraph",
+      text: "Many HVAC contractors use GoDaddy because they already use it for domain registration. That\u2019s a fine reason to buy a domain \u2014 not a great reason to build your website there.",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "Best for:",
+          rest: " HVAC contractors who want something live quickly with minimal effort.",
+        },
+        {
+          bold: "Not ideal for:",
+          rest: " Companies targeting specific local keywords or building for long-term organic traffic.",
+        },
+        {
+          bold: "Price:",
+          rest: " $10\u2013$30/month.",
+        },
+      ],
+    },
+    { type: "heading2", text: "Groundwork" },
+    {
+      type: "paragraph",
+      text: "Groundwork was designed specifically for trade and home service businesses, including HVAC contractors. That means the starting point is already configured for how HVAC customers search and what they need to see before they call.",
+    },
+    {
+      type: "paragraph",
+      text: "What\u2019s built in:",
+    },
+    {
+      type: "list",
+      items: [
+        "Service pages pre-structured for local SEO (AC repair, furnace installation, heat pumps, etc.)",
+        "Emergency availability sections built into the template",
+        "License, certification, and insurance display fields",
+        "Quote request forms that route to your inbox or phone",
+        "Automated review request tool to build your Google reputation",
+        "Google Business Profile sync",
+        "Mobile-first design that loads fast on every device",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "You\u2019re not adapting a wedding photographer\u2019s template. You\u2019re starting from a structure built for HVAC.",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "Price:",
+          rest: " Free to start, paid plans available.",
+        },
+      ],
+    },
+    { type: "divider" },
+    { type: "heading2", text: "The Bottom Line for HVAC Companies" },
+    {
+      type: "paragraph",
+      text: "If you\u2019re a heating and cooling contractor who wants to get found by customers when they need you \u2014 during a heat wave, in the middle of a cold snap, the day after a thunderstorm \u2014 your website needs to be built for that reality.",
+    },
+    {
+      type: "paragraph",
+      text: "Generic builders give you flexibility you don\u2019t need and require you to reconstruct trade-specific features from scratch. A purpose-built solution gets you live faster, ranks better out of the gate, and converts more visitors into booked jobs.",
+    },
+    {
+      type: "cta",
+      linkText: "Try Groundwork free \u2014 built for HVAC contractors, live in under 30 minutes \u2192",
+      href: "/for/hvac",
+    },
+  ],
+};
+
+const howToGetMoreCallsFromPlumbingWebsitePost: BlogPost = {
+  slug: "how-to-get-more-calls-from-your-plumbing-website",
+  title: "How to Get More Calls From Your Plumbing Website",
+  metaTitle: "How to Get More Calls From Your Plumbing Website",
+  metaDescription:
+    "Your plumbing website gets visitors but not enough calls. Here\u2019s what\u2019s actually stopping people from picking up the phone \u2014 and how to fix it.",
+  publishedAt: "2026-04-15",
+  excerpt:
+    "Having a website isn\u2019t enough. What you actually need from your plumbing website is calls. If your site isn\u2019t generating the calls you expected, the problem is almost certainly fixable \u2014 and it usually comes down to a handful of specific issues.",
+  sections: [
+    {
+      type: "paragraph",
+      text: "Having a website isn\u2019t enough. What you actually need from your plumbing website is calls \u2014 customers picking up the phone to schedule a service.",
+    },
+    {
+      type: "paragraph",
+      text: "If you already have a website but it isn\u2019t generating the calls you expected, the problem isn\u2019t that the internet doesn\u2019t work for plumbers. The problem is almost certainly fixable, and it usually comes down to a handful of specific issues that are easy to miss.",
+    },
+    { type: "divider" },
+    { type: "heading2", text: "The Visitors-to-Calls Funnel" },
+    {
+      type: "paragraph",
+      text: "Before diagnosing the problem, it helps to understand the steps a customer takes:",
+    },
+    {
+      type: "orderedList",
+      items: [
+        "They search for a plumber on Google",
+        "They find your website (or don\u2019t)",
+        "They look at your site and decide whether to trust you",
+        "They take action \u2014 call, fill out a form, or leave",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Each step can break down. The fixes are different depending on where you\u2019re losing people.",
+    },
+    { type: "divider" },
+    { type: "heading2", text: "Problem 1: You\u2019re Not Getting Found (Traffic Problem)" },
+    {
+      type: "paragraph",
+      text: "If no one is visiting your site, no one can call. Low traffic is an SEO problem.",
+    },
+    {
+      type: "paragraph",
+      text: "Signs of this: Google Analytics shows under 50 visitors per month. You can\u2019t find your site when you search for \u201cplumber [your city].\u201d",
+    },
+    {
+      type: "paragraph",
+      text: "How to fix it:",
+    },
+    {
+      type: "list",
+      items: [
+        "Make sure each page has a title tag that includes your target keyword and location (e.g., \u201cPlumber in [City Name] | [Your Business Name]\u201d)",
+        "Create a dedicated page for each city you serve \u2014 a page titled \u201cPlumber in [City]\u201d will rank better for that city than a single generic homepage",
+        "Create individual service pages for your main services: drain cleaning, water heater installation, pipe repair, sewer line, etc.",
+        "Add your business to Google Business Profile if you haven\u2019t already \u2014 many local searches show GBP listings before websites",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Groundwork builds all of this into your site structure automatically, so you\u2019re not starting from scratch.",
+    },
+    { type: "divider" },
+    { type: "heading2", text: "Problem 2: Your Site Looks Unprofessional (Trust Problem)" },
+    {
+      type: "paragraph",
+      text: "If people visit but don\u2019t call, the most common cause is that your site doesn\u2019t communicate trustworthiness fast enough.",
+    },
+    {
+      type: "paragraph",
+      text: "Signs of this: You have website traffic but few or no form submissions or calls.",
+    },
+    {
+      type: "paragraph",
+      text: "The trust checklist:",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "License number visible",
+          rest: " \u2014 don\u2019t make customers hunt for it. Put it in your header or footer.",
+        },
+        {
+          bold: "Insurance status",
+          rest: " \u2014 \u201cFully Licensed & Insured\u201d should be easy to see on your homepage.",
+        },
+        {
+          bold: "Reviews",
+          rest: " \u2014 embed Google reviews or display your star rating. A plumber with 40 reviews at 4.8 stars gets more calls than the same plumber with no reviews visible.",
+        },
+        {
+          bold: "Professional photos",
+          rest: " \u2014 a photo of your truck, your team, or your work makes a meaningful difference. A stock photo site looks fake.",
+        },
+        {
+          bold: "Real address or service area",
+          rest: " \u2014 customers want to know you\u2019re local, not a national call center.",
+        },
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "If your site is missing any of these, fix them first. They have the highest impact.",
+    },
+    { type: "divider" },
+    { type: "heading2", text: "Problem 3: The Call-to-Action Is Weak or Hard to Find (Friction Problem)" },
+    {
+      type: "paragraph",
+      text: "Even a customer who trusts you won\u2019t call if you make it hard.",
+    },
+    {
+      type: "paragraph",
+      text: "Signs of this: People browse multiple pages but don\u2019t submit a form or call.",
+    },
+    {
+      type: "paragraph",
+      text: "How to fix it:",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "Put your phone number at the top of every page",
+          rest: " \u2014 in the header, clickable on mobile. Not in the footer. Not on a contact page only. Right at the top.",
+        },
+        {
+          bold: "Use a click-to-call button on mobile",
+          rest: " \u2014 a phone number that requires customers to manually dial is a barrier. A click-to-call button removes that barrier completely.",
+        },
+        {
+          bold: "Add a quote request form to your homepage",
+          rest: " \u2014 a simple form (\u201cName, phone, what do you need?\u201d) gives customers who don\u2019t want to call a way to reach you. Some people just don\u2019t like calling; don\u2019t lose them.",
+        },
+        {
+          bold: "Add urgency language for emergency services",
+          rest: " \u2014 if you offer emergency or same-day service, say so prominently. \u201cSame-day service available\u201d and \u201c24/7 emergency calls\u201d are conversion triggers.",
+        },
+      ],
+    },
+    { type: "divider" },
+    { type: "heading2", text: "Problem 4: Your Site Is Slow or Broken on Mobile (Technical Problem)" },
+    {
+      type: "paragraph",
+      text: "Most people searching for a plumber are on their phone \u2014 often in the middle of a problem. If your site loads slowly or doesn\u2019t work properly on mobile, they\u2019ll leave before they call.",
+    },
+    {
+      type: "paragraph",
+      text: "How to check:",
+    },
+    {
+      type: "list",
+      items: [
+        "Open your site on your phone. Does it load in under 3 seconds?",
+        "Are the text and buttons easy to tap?",
+        "Does the phone number link work when you tap it?",
+        "Is the form easy to fill out on a small screen?",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "If any of these are broken, fixing them will directly increase your call volume.",
+    },
+    { type: "divider" },
+    { type: "heading2", text: "Problem 5: You\u2019re Not Showing Up for the Right Searches (Keyword Problem)" },
+    {
+      type: "paragraph",
+      text: "Your site might be ranking \u2014 just for the wrong terms. Ranking for your business name isn\u2019t helpful. Ranking for \u201cplumber in [city]\u201d is.",
+    },
+    {
+      type: "paragraph",
+      text: "How to diagnose:",
+    },
+    {
+      type: "list",
+      items: [
+        "Search for \u201cplumber [your city]\u201d in an incognito browser window. Do you appear?",
+        "Search for your top services: \u201cdrain cleaning [city],\u201d \u201cwater heater replacement [city],\u201d etc.",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "If you\u2019re not showing up for service + location searches, your content isn\u2019t targeting those terms clearly enough. Add them explicitly to page titles, headings, and body copy.",
+    },
+    { type: "divider" },
+    { type: "heading2", text: "The Highest-Impact Changes You Can Make Today" },
+    {
+      type: "paragraph",
+      text: "If you\u2019re pressed for time and want the biggest immediate returns:",
+    },
+    {
+      type: "orderedList",
+      items: [
+        "Add your phone number to every page header \u2014 clickable on mobile",
+        "Display your license, insurance, and reviews on your homepage",
+        "Add a simple quote request form to your homepage",
+        "Make sure your page titles include your city name and service",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "These four changes alone will meaningfully move call volume on most plumbing websites.",
+    },
+    {
+      type: "cta",
+      linkText: "Try Groundwork free \u2014 built for plumbers who want their website to work \u2192",
+      href: "/for/plumbers",
+    },
+  ],
+};
+
+const freeWebsiteForSmallBusinessWhatIsTheCatchPost: BlogPost = {
+  slug: "free-website-for-small-business-what-is-the-catch",
+  title: "Free Website for Small Business: What\u2019s the Catch?",
+  metaTitle: "Free Website for Small Business: What\u2019s the Catch?",
+  metaDescription:
+    "Free website builders sound great \u2014 but they come with trade-offs. Here\u2019s what \u201cfree\u201d actually means, what the real limitations are, and when free is genuinely good enough.",
+  publishedAt: "2026-04-15",
+  excerpt:
+    "Every website builder offers a free plan now. So what\u2019s the catch? The honest answer is: it depends on which tool you\u2019re talking about. Some free plans are genuinely useful; others are so limited they\u2019re barely worth setting up.",
+  sections: [
+    {
+      type: "paragraph",
+      text: "Every website builder offers a free plan now. Wix. GoDaddy. Squarespace. Groundwork. They all say you can get started for free. So what\u2019s the catch?",
+    },
+    {
+      type: "paragraph",
+      text: "The honest answer is: it depends on which tool you\u2019re talking about. Some free plans are genuinely useful; others are so limited they\u2019re barely worth setting up. Knowing the difference will save you time and money.",
+    },
+    { type: "divider" },
+    { type: "heading2", text: "The Common Catches in Free Website Plans" },
+    { type: "heading2", text: "1. Your URL Has the Builder\u2019s Name in It" },
+    {
+      type: "paragraph",
+      text: "Most free plans give you a subdomain like yourbusiness.wix.com or yourbusiness.squarespace.com instead of yourbusiness.com.",
+    },
+    {
+      type: "paragraph",
+      text: "A branded subdomain looks unprofessional and can hurt customer trust. A plumber with johnsmithplumbing.wix.com appears less established than one with johnsmithplumbing.com. It also signals to Google that you\u2019re on a free plan, which can affect how the site is perceived.",
+    },
+    {
+      type: "paragraph",
+      text: "The fix: Most builders let you connect your own domain for $10\u2013$20/year. If you want a professional URL, budget for a domain name even on a free plan.",
+    },
+    { type: "heading2", text: "2. The Builder\u2019s Branding Is on Your Site" },
+    {
+      type: "paragraph",
+      text: "Many free plans display the platform\u2019s logo or a \u201cMade with [Builder]\u201d banner at the bottom of your site. This isn\u2019t a deal-breaker, but it can undermine the professional impression you\u2019re trying to make.",
+    },
+    {
+      type: "paragraph",
+      text: "Groundwork\u2019s free plan does not place Groundwork branding on your site \u2014 your site looks professional from day one.",
+    },
+    { type: "heading2", text: "3. Limited Features or Storage" },
+    {
+      type: "paragraph",
+      text: "Free plans often restrict the number of pages you can have, the amount of storage for images, or access to specific features like contact forms, analytics, or e-commerce.",
+    },
+    {
+      type: "paragraph",
+      text: "For a small service business, the most common limitation that actually matters is the contact/quote form. If you can\u2019t add a lead capture form on the free plan, you\u2019ll need to upgrade to get leads.",
+    },
+    { type: "heading2", text: "4. No SEO Tools" },
+    {
+      type: "paragraph",
+      text: "Some free plans limit access to SEO settings \u2014 meta titles, descriptions, alt tags, sitemap submission. Without these, your site is essentially invisible to Google.",
+    },
+    {
+      type: "paragraph",
+      text: "For a service business, SEO is the whole point of having a website. A site that doesn\u2019t rank doesn\u2019t generate calls.",
+    },
+    {
+      type: "paragraph",
+      text: "Groundwork\u2019s free plan includes the full local SEO structure: location-targeted page titles, service pages, and sitemap submission. You don\u2019t have to upgrade to use it.",
+    },
+    { type: "heading2", text: "5. Limited Support" },
+    {
+      type: "paragraph",
+      text: "Free plans typically mean community forums and documentation, not live support. If something breaks or you get stuck, you\u2019re on your own.",
+    },
+    {
+      type: "paragraph",
+      text: "For most business owners, this is an acceptable trade-off on a free plan \u2014 especially if the builder is simple and purpose-built.",
+    },
+    { type: "divider" },
+    { type: "heading2", text: "When Free Is Genuinely Enough" },
+    {
+      type: "paragraph",
+      text: "The \u201cfree tier is just a trap to upsell you\u201d narrative isn\u2019t always true. For some service businesses, a free plan covers everything they need.",
+    },
+    {
+      type: "paragraph",
+      text: "Free is enough if you:",
+    },
+    {
+      type: "list",
+      items: [
+        "Have your own custom domain already (or will buy one separately for $10\u2013$15/year)",
+        "Don\u2019t need advanced e-commerce or scheduling features",
+        "Primarily use Google Business Profile and social media for leads, and just need a website as a credibility signal",
+        "Are in an early stage and want to prove the concept before investing",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "You should probably upgrade if you:",
+    },
+    {
+      type: "list",
+      items: [
+        "Want to rank in Google search for competitive local keywords (advanced SEO tools help)",
+        "Need high volume of lead forms (some free plans limit form submissions)",
+        "Want to remove any platform branding",
+        "Need priority support",
+      ],
+    },
+    { type: "divider" },
+    { type: "heading2", text: "What Does Groundwork\u2019s Free Plan Actually Include?" },
+    {
+      type: "paragraph",
+      text: "Since Groundwork is built specifically for small service businesses, it\u2019s worth being specific about what the free tier covers:",
+    },
+    {
+      type: "list",
+      items: [
+        "Full professional website with trade-specific templates",
+        "Custom pages: homepage, services, about, contact",
+        "Quote request form (lead capture)",
+        "Local SEO structure built in",
+        "No Groundwork branding on your site",
+        "Mobile-optimized and fast-loading",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "You can connect your own domain for the standard registration cost through your domain registrar.",
+    },
+    {
+      type: "paragraph",
+      text: "The paid plans add features like automated review requests, advanced analytics, and priority support \u2014 but the free tier is a real, functional website, not a teaser.",
+    },
+    { type: "divider" },
+    { type: "heading2", text: "The Bottom Line" },
+    {
+      type: "paragraph",
+      text: "Free website plans are real \u2014 but they come with trade-offs. The most important questions to ask are:",
+    },
+    {
+      type: "orderedList",
+      items: [
+        "Will the site look professional? (Does it put the builder\u2019s branding on my site?)",
+        "Will it show up on Google? (Does the free plan include SEO tools?)",
+        "Can I capture leads? (Does the free plan include contact forms?)",
+        "Can I use my own domain name?",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "If a free plan checks those boxes for your business, there\u2019s no catch \u2014 it\u2019s a genuinely good deal.",
+    },
+    {
+      type: "cta",
+      linkText: "Start for free with Groundwork \u2014 designed for small service businesses \u2192",
+      href: "https://groundworklocal.com",
+    },
+  ],
+};
+
+const howLandscapingCompaniesGetCustomersOnlinePost: BlogPost = {
+  slug: "how-landscaping-companies-get-customers-online",
+  title: "How Landscaping Companies Get Customers Online",
+  metaTitle: "How Landscaping Companies Get Customers Online",
+  metaDescription:
+    "A practical guide for landscaping and lawn care businesses who want more customers from Google \u2014 without paying for ads every month.",
+  publishedAt: "2026-04-15",
+  excerpt:
+    "Most landscaping businesses start with referrals and neighborhood word of mouth. The landscaping businesses that grow most consistently have figured out how to turn Google into a steady source of new customers. Here\u2019s how they do it.",
+  sections: [
+    {
+      type: "paragraph",
+      text: "Most landscaping businesses start with referrals and neighborhood word of mouth. That\u2019s a great foundation \u2014 but it has limits. Your best customers move, your referral network fluctuates, and word of mouth alone can\u2019t fill a schedule predictably.",
+    },
+    {
+      type: "paragraph",
+      text: "The landscaping businesses that grow most consistently have figured out how to turn Google into a steady source of new customers. Here\u2019s how they do it.",
+    },
+    { type: "divider" },
+    { type: "heading2", text: "Why Landscaping Is a Great Fit for Local SEO" },
+    {
+      type: "paragraph",
+      text: "Local SEO (getting found in Google search for geographic queries) is especially powerful for landscaping businesses because:",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "Searches are highly intent-driven",
+          rest: " \u2014 \u201clawn mowing service [city]\u201d or \u201clandscaping company near me\u201d are searches by people ready to hire, not just browsing",
+        },
+        {
+          bold: "Seasonality creates demand spikes",
+          rest: " \u2014 in spring and fall, your potential customer base is actively looking",
+        },
+        {
+          bold: "Geographic density",
+          rest: " \u2014 you serve a defined area, which means ranking well in a specific city or neighborhood makes an outsized difference",
+        },
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "The basics of local SEO for landscaping aren\u2019t complicated. They just need to be done consistently.",
+    },
+    { type: "divider" },
+    { type: "heading2", text: "Step 1: Get Your Google Business Profile Right" },
+    {
+      type: "paragraph",
+      text: "Your Google Business Profile (GBP) is what shows up when someone searches \u201clandscaping near me\u201d \u2014 it\u2019s the listing with stars, photos, and a phone number that appears before organic website results.",
+    },
+    {
+      type: "paragraph",
+      text: "If you haven\u2019t claimed your profile at business.google.com, do it now. It\u2019s free and takes 10 minutes.",
+    },
+    {
+      type: "paragraph",
+      text: "Once claimed, make it complete:",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "Primary category:",
+          rest: " Landscaper or Lawn Care Service",
+        },
+        {
+          bold: "Additional categories:",
+          rest: " Lawn Mowing Service, Gardening Service, Tree Service, Snow Removal (if seasonal)",
+        },
+        {
+          bold: "Service area:",
+          rest: " Every city and neighborhood you serve \u2014 don\u2019t just list your business address",
+        },
+        {
+          bold: "Photos:",
+          rest: " Upload 10\u201320 photos minimum. Before/after shots of landscaping work, photos of your crew, your equipment, and finished yards",
+        },
+        {
+          bold: "Services list:",
+          rest: " Lawn mowing, spring/fall cleanup, mulching, planting, sod installation, irrigation, etc.",
+        },
+        {
+          bold: "Hours:",
+          rest: " Keep current \u2014 especially if you\u2019re seasonal",
+        },
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Your GBP listing appears in Google Maps and in the local pack at the top of search results. A fully optimized profile routinely outperforms a website for local traffic.",
+    },
+    { type: "divider" },
+    { type: "heading2", text: "Step 2: Build a Website With Location-Targeted Content" },
+    {
+      type: "paragraph",
+      text: "A GBP listing drives immediate calls. A website builds credibility, captures customers doing research, and ranks for longer-tail keywords your GBP won\u2019t cover.",
+    },
+    {
+      type: "paragraph",
+      text: "A landscaping website that ranks well needs:",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "Location-specific pages.",
+          rest: " If you serve 5 cities, have a dedicated page for each one. A page titled \u201cLawn Care in [City Name]\u201d will rank for searches in that city in a way that a single generic homepage won\u2019t.",
+        },
+        {
+          bold: "Service-specific pages.",
+          rest: " Each major service (lawn mowing, landscaping design, seasonal cleanup, irrigation) deserves its own page. This helps Google match your site to specific searches, and it gives customers clear information about what you offer.",
+        },
+        {
+          bold: "Customer reviews visible on-site.",
+          rest: " Embed your Google reviews or display your star rating. Social proof converts fence-sitters.",
+        },
+        {
+          bold: "Fast mobile performance.",
+          rest: " Most searches happen on phones. If your site takes more than 3 seconds to load on mobile, you\u2019re losing customers.",
+        },
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Groundwork includes location pages, service pages, and local SEO structure pre-built for landscaping businesses. You\u2019re not building from scratch.",
+    },
+    { type: "divider" },
+    { type: "heading2", text: "Step 3: Accumulate Google Reviews" },
+    {
+      type: "paragraph",
+      text: "Reviews are a dual asset: they help you rank higher in local search, and they convince potential customers who find you to call.",
+    },
+    {
+      type: "paragraph",
+      text: "A landscaping company with 35 reviews at 4.9 stars will consistently win against a competitor with better equipment and no online reviews.",
+    },
+    {
+      type: "paragraph",
+      text: "The review system for landscaping businesses:",
+    },
+    {
+      type: "orderedList",
+      items: [
+        "Ask right after the job \u2014 before you leave, or within the same day while the customer is still happy",
+        "Use a direct link \u2014 get your Google Review link from your GBP and send it by text or email. Make it one tap for the customer.",
+        "Guide what they say \u2014 \u201cIf you mention the lawn cleanup we did and how it looked afterward, that really helps other homeowners decide\u201d gets you better reviews",
+        "Be consistent \u2014 one review per week compounds over a season into a dominant position",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "You can automate the review request step if you\u2019re doing enough volume \u2014 Groundwork includes this as a built-in feature.",
+    },
+    { type: "divider" },
+    { type: "heading2", text: "Step 4: Target the Right Keywords" },
+    {
+      type: "paragraph",
+      text: "Landscaping has a wide range of search intent. Here are the types of keywords that convert for landscaping businesses:",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "High-intent transactional:",
+          rest: " \u201clawn mowing service [city],\u201d \u201clandscaping company near me,\u201d \u201cspring cleanup [city]\u201d",
+        },
+        {
+          bold: "Comparison:",
+          rest: " \u201cbest landscaping company in [city],\u201d \u201caffordable lawn care [city]\u201d",
+        },
+        {
+          bold: "Informational (lower intent but builds traffic):",
+          rest: " \u201chow much does lawn care cost,\u201d \u201cwhen to aerate lawn in [state]\u201d",
+        },
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "For your main service and location pages, target the high-intent keywords. For a blog or resources section, informational keywords build long-term traffic.",
+    },
+    {
+      type: "paragraph",
+      text: "Use your target keyword naturally in page titles, H1 headings, and the first paragraph of body copy.",
+    },
+    { type: "divider" },
+    { type: "heading2", text: "Step 5: Be Active Where Your Customers Are" },
+    {
+      type: "paragraph",
+      text: "Beyond your website and GBP, a few additional channels consistently produce results for landscaping businesses:",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "Before-and-after photos on social media.",
+          rest: " Landscaping work produces dramatic visual transformations. A yard that goes from overgrown to pristine is genuinely engaging content. Post on Facebook and Instagram, tag your location, and join local neighborhood groups.",
+        },
+        {
+          bold: "Nextdoor.",
+          rest: " Nextdoor is a neighborhood social network where homeowners actively recommend local services. Create a free business page and participate when neighbors ask for landscaping recommendations.",
+        },
+        {
+          bold: "Door hangers after big jobs.",
+          rest: " When you complete a standout job, put door hangers on 20\u201330 nearby homes. \u201cWe just landscaped your neighbor\u2019s yard at [address]. Here\u2019s what we can do for yours.\u201d The proximity is the pitch.",
+        },
+      ],
+    },
+    { type: "divider" },
+    { type: "heading2", text: "Putting It Together" },
+    {
+      type: "paragraph",
+      text: "You don\u2019t need to do all of this at once. Here\u2019s a priority order based on impact:",
+    },
+    {
+      type: "orderedList",
+      items: [
+        "Google Business Profile \u2014 claim and optimize it this week (free, highest ROI)",
+        "Website with location pages \u2014 get one live with proper local SEO structure",
+        "Reviews \u2014 build a consistent habit of asking after every job",
+        "Social media \u2014 post before/after photos regularly",
+        "Content \u2014 layer in blog posts or service area pages over time to compound organic traffic",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Landscaping businesses that do these basics consistently end up with a full schedule and a waitlist. Competitors who ignore them stay dependent on referrals and have unpredictable summers.",
+    },
+    {
+      type: "cta",
+      linkText: "Build your landscaping website for free with Groundwork \u2192",
+      href: "/for/landscapers",
+    },
+  ],
+};
+
 export const allPosts: BlogPost[] = [
   plumbersPost,
   landscapersPost,
@@ -2620,6 +3630,11 @@ export const allPosts: BlogPost[] = [
   bestWebsiteBuilderForElectriciansPost,
   howToGetRoofingBusinessOnGooglePost,
   howToAdvertisePressureWashingForFreePost,
+  howMuchDoesAPlumberWebsiteCostPost,
+  bestWebsiteBuilderForHvacPost,
+  howToGetMoreCallsFromPlumbingWebsitePost,
+  freeWebsiteForSmallBusinessWhatIsTheCatchPost,
+  howLandscapingCompaniesGetCustomersOnlinePost,
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
