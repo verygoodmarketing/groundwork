@@ -250,7 +250,8 @@ export default function Step5Page() {
     },
   });
 
-  const siteUrl = business?.slug ? `https://${business.slug}.groundworklocal.com` : null;
+  const SITE_DOMAIN = process.env.NEXT_PUBLIC_SITE_DOMAIN ?? "verygoodmarketing.com";
+  const siteUrl = business?.slug ? `https://${business.slug}.${SITE_DOMAIN}` : null;
 
   // DNS accordion — opens automatically when a domain is typed
   const showDnsInstructions = customDomain.trim().length > 0;

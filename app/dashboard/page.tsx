@@ -37,7 +37,8 @@ export default async function DashboardPage() {
   }
 
   const { business } = owner;
-  const siteUrl = `https://${business.slug}.groundworklocal.com`;
+  const SITE_DOMAIN = process.env.NEXT_PUBLIC_SITE_DOMAIN ?? "verygoodmarketing.com";
+  const siteUrl = `https://${business.slug}.${SITE_DOMAIN}`;
   const hasActiveSub = isSubscriptionActive(business.subscriptionStatus);
   const isPastDue = business.subscriptionStatus === "PAST_DUE";
 
