@@ -1667,6 +1667,943 @@ const doesCleaningBusinessNeedWebsitePost: BlogPost = {
   ],
 };
 
+const howToGet5StarGoogleReviewsPost: BlogPost = {
+  slug: "how-to-get-5-star-google-reviews-service-business",
+  title: "How to Get 5-Star Google Reviews for Your Service Business",
+  metaTitle: "How to Get 5-Star Google Reviews for Your Service Business",
+  metaDescription:
+    "Reviews are the #1 factor in local search rankings. Here\u2019s a proven system for getting more 5-star Google reviews \u2014 even if you hate asking.",
+  publishedAt: "2026-04-15",
+  excerpt:
+    "A business with 40 reviews at 4.9 stars will consistently win more customers than a competitor with no reviews \u2014 even if the competitor is better, faster, and cheaper. Here\u2019s the system that builds a steady stream of 5-star reviews.",
+  sections: [
+    {
+      type: "paragraph",
+      text: "If you\u2019re a plumber, electrician, cleaner, landscaper, or any other service business owner, your Google reviews are doing more sales work than you probably realize.",
+    },
+    {
+      type: "paragraph",
+      text: "A business with 40 reviews at 4.9 stars will consistently win more customers than a competitor with no reviews \u2014 even if the competitor is better, faster, and cheaper. Online reviews are trust in visible form, and trust closes deals.",
+    },
+    {
+      type: "paragraph",
+      text: "Here\u2019s how to build a steady stream of 5-star reviews without awkward begging or complicated systems.",
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "Why Google Reviews Matter More Than You Think",
+    },
+    {
+      type: "paragraph",
+      text: "Google uses reviews as a primary ranking signal for local search. When someone searches \u201cHVAC company near me\u201d or \u201cwindow cleaner in [city],\u201d Google shows the businesses it trusts most at the top. Reviews \u2014 both quantity and quality \u2014 are a big part of that trust equation.",
+    },
+    {
+      type: "paragraph",
+      text: "Reviews also convert directly. Studies consistently show that the majority of consumers won\u2019t consider a business with fewer than 4 stars and fewer than 10 reviews. Your reviews are your online reputation, and your online reputation determines whether you get the call.",
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "The Core Problem: Timing and Friction",
+    },
+    {
+      type: "paragraph",
+      text: "Most service businesses get reviews sporadically because they ask at the wrong time and make it too hard.",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "Wrong time:",
+          rest: " Following up weeks after the job when the customer has moved on.",
+        },
+        {
+          bold: "Too hard:",
+          rest: " Asking customers to \u201cfind us on Google\u201d without giving them a direct link.",
+        },
+        {
+          bold: "Wrong ask:",
+          rest: " A generic \u201cleave us a review\u201d that gives customers no guidance on what to say.",
+        },
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Fix these three things and your review count will climb on its own.",
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "The System That Works",
+    },
+    {
+      type: "heading2",
+      text: "Step 1: Ask at the Peak Moment",
+    },
+    {
+      type: "paragraph",
+      text: "The best time to ask for a review is immediately after a job well done \u2014 when the customer is still satisfied and the experience is fresh.",
+    },
+    {
+      type: "paragraph",
+      text: "For in-person jobs: ask before you leave. \u201cHey, we really appreciate your business. If you have 2 minutes to leave us a Google review, it means a lot to our small business.\u201d Then pull out your phone and text them the direct link on the spot.",
+    },
+    {
+      type: "paragraph",
+      text: "For scheduled or appointment-based work: send an automated follow-up text or email within 1\u20132 hours of completing the job.",
+    },
+    {
+      type: "heading2",
+      text: "Step 2: Remove Every Bit of Friction",
+    },
+    {
+      type: "paragraph",
+      text: "A customer\u2019s willingness to leave a review drops sharply the harder you make it. Give them a direct link to your Google Review page \u2014 not a link to your Google Business Profile, not a search result. A direct review link lands them immediately on the \u201cWrite a review\u201d screen.",
+    },
+    {
+      type: "paragraph",
+      text: "To get your direct review link:",
+    },
+    {
+      type: "orderedList",
+      items: [
+        "Go to your Google Business Profile",
+        "Click \u201cShare review form\u201d",
+        "Copy the short link",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Put this link everywhere: in your post-job text, your invoice email, your email signature, and your business card.",
+    },
+    {
+      type: "heading2",
+      text: "Step 3: Guide What They Say",
+    },
+    {
+      type: "paragraph",
+      text: "\u201cLeave us a review\u201d produces vague results. Specific prompts produce better reviews.",
+    },
+    {
+      type: "paragraph",
+      text: "Try: \u201cIf you\u2019d be willing to mention [the specific service you did] and how fast we were able to get out, that\u2019s super helpful for people searching for the same thing.\u201d",
+    },
+    {
+      type: "paragraph",
+      text: "This approach gets you keyword-rich reviews that help with SEO and are more persuasive to prospective customers reading them.",
+    },
+    {
+      type: "heading2",
+      text: "Step 4: Automate It",
+    },
+    {
+      type: "paragraph",
+      text: "If you\u2019re doing 3 or more jobs per week, manual follow-up becomes unsustainable. Automate the ask:",
+    },
+    {
+      type: "list",
+      items: [
+        "Use a CRM or service field management tool that sends a review request text or email automatically after a job is marked complete",
+        "Set a 1\u20132 hour delay so it doesn\u2019t feel rushed",
+        "Keep the message short and include the direct link",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Groundwork includes automated review request tools built for service businesses \u2014 no third-party integration required.",
+    },
+    {
+      type: "heading2",
+      text: "Step 5: Respond to Every Review",
+    },
+    {
+      type: "paragraph",
+      text: "Responding to reviews signals to Google that you\u2019re an active, engaged business. It also gives you a chance to reinforce your professionalism to every potential customer reading your reviews.",
+    },
+    {
+      type: "list",
+      items: [
+        "For 5-star reviews: thank the customer by name and mention the specific work if possible.",
+        "For negative reviews: respond calmly, acknowledge the concern, and invite them to contact you directly. Never get defensive. A well-handled negative review can actually build trust.",
+      ],
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "How Many Reviews Do You Need?",
+    },
+    {
+      type: "paragraph",
+      text: "There\u2019s no finish line, but here\u2019s a practical benchmark by trade:",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "Plumbers, electricians, HVAC:",
+          rest: " Aim for 50+ reviews. Competition is high and customers do research.",
+        },
+        {
+          bold: "Cleaners, landscapers:",
+          rest: " 25\u201350 reviews puts you in a strong local position.",
+        },
+        {
+          bold: "Pressure washers, painters, handymen:",
+          rest: " Even 15\u201320 strong reviews can dominate a local market if competitors have fewer.",
+        },
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "The most important thing is consistency. One new review per week compounds fast.",
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "The Bottom Line",
+    },
+    {
+      type: "paragraph",
+      text: "Getting 5-star Google reviews isn\u2019t luck \u2014 it\u2019s a system. Ask at the right moment, make it easy with a direct link, guide what customers say, and automate the follow-up. Do this consistently and reviews will stop being a weak point and start being your strongest marketing asset.",
+    },
+    {
+      type: "cta",
+      linkText: "Start free with Groundwork \u2014 built specifically for service businesses \u2192",
+      href: "https://groundworklocal.com",
+    },
+  ],
+};
+
+const bestWebsiteBuilderForElectriciansPost: BlogPost = {
+  slug: "best-website-builder-for-electricians-2026",
+  title: "Best Website Builder for Electricians (2026)",
+  metaTitle: "Best Website Builder for Electricians (2026)",
+  metaDescription:
+    "Comparing the top website builders for electricians \u2014 Wix, Squarespace, GoDaddy, and Groundwork. Find out which one actually helps electricians get found and booked.",
+  publishedAt: "2026-04-15",
+  excerpt:
+    "Most website builders weren\u2019t designed with electricians in mind. Here\u2019s an honest breakdown of what\u2019s available \u2014 Wix, Squarespace, GoDaddy, and Groundwork \u2014 and what actually works for electrical contractors.",
+  sections: [
+    {
+      type: "paragraph",
+      text: "Most electricians grow their business through referrals and word of mouth. That\u2019s a solid foundation \u2014 but it has a ceiling. If you want a steady pipeline of new customers that doesn\u2019t depend on who someone knows, you need to show up in Google search when someone types \u201celectrician near me.\u201d",
+    },
+    {
+      type: "paragraph",
+      text: "That starts with a website. But not all website builders are equal \u2014 and most weren\u2019t designed with electricians in mind.",
+    },
+    {
+      type: "paragraph",
+      text: "Here\u2019s an honest breakdown of what\u2019s available and what actually works for electrical contractors.",
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "What Electricians Need From a Website",
+    },
+    {
+      type: "paragraph",
+      text: "Before comparing tools, it\u2019s worth being specific about what a website needs to do for an electrical business:",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "Rank in local search",
+          rest: " \u2014 your site needs to show up when people search for an electrician in your city or neighborhood",
+        },
+        {
+          bold: "Build immediate trust",
+          rest: " \u2014 license number, insurance status, and reviews need to be easy to find",
+        },
+        {
+          bold: "Capture leads",
+          rest: " \u2014 a prominent call button and quote request form, especially on mobile",
+        },
+        {
+          bold: "List your services clearly",
+          rest: " \u2014 panel upgrades, EV charger installation, service calls, commercial work, etc.",
+        },
+        {
+          bold: "Load fast on mobile",
+          rest: " \u2014 most customers searching for an electrician are on their phone",
+        },
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Generic website builders weren\u2019t designed for these requirements. You\u2019ll find yourself working around templates that don\u2019t have the right sections, and adding SEO features that aren\u2019t built in.",
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "The Options Compared",
+    },
+    {
+      type: "heading2",
+      text: "Wix",
+    },
+    {
+      type: "paragraph",
+      text: "Wix is the most popular general-purpose website builder. It offers massive flexibility and hundreds of templates. The problem for electricians: that flexibility comes at a cost in complexity. Setting up local SEO requires adding apps. License and insurance fields don\u2019t exist by default. The free plan puts Wix ads on your site.",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "Best for:",
+          rest: " Businesses with technical staff who want full design control and don\u2019t mind a steeper learning curve.",
+        },
+        {
+          bold: "Not ideal for:",
+          rest: " Electricians who want to launch quickly with a site built for their trade.",
+        },
+        {
+          bold: "Price:",
+          rest: " $17\u2013$159/month.",
+        },
+      ],
+    },
+    {
+      type: "heading2",
+      text: "Squarespace",
+    },
+    {
+      type: "paragraph",
+      text: "Squarespace produces beautiful sites. The design quality is high and templates are polished. But it\u2019s built for creatives and e-commerce \u2014 not service businesses. Local SEO for \u201celectrician in [city]\u201d is possible but not native. Service area pages require manual work. It\u2019s also one of the more expensive options.",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "Best for:",
+          rest: " Businesses where visual design is a priority.",
+        },
+        {
+          bold: "Not ideal for:",
+          rest: " Electricians focused on local search rankings and lead generation.",
+        },
+        {
+          bold: "Price:",
+          rest: " $23\u2013$65/month.",
+        },
+      ],
+    },
+    {
+      type: "heading2",
+      text: "GoDaddy",
+    },
+    {
+      type: "paragraph",
+      text: "GoDaddy\u2019s website builder uses AI to get you online fast. It\u2019s cheaper than Wix or Squarespace and simpler to set up. But the results tend to be generic and the local SEO tools are limited unless you\u2019re on a higher-tier plan. Many electricians use it because they already have GoDaddy hosting \u2014 but that\u2019s a weak reason to choose a website builder.",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "Best for:",
+          rest: " Getting something live quickly with minimal effort.",
+        },
+        {
+          bold: "Not ideal for:",
+          rest: " Electricians who want to rank well in local search over time.",
+        },
+        {
+          bold: "Price:",
+          rest: " $10\u2013$30/month.",
+        },
+      ],
+    },
+    {
+      type: "heading2",
+      text: "Groundwork",
+    },
+    {
+      type: "paragraph",
+      text: "Groundwork was built specifically for trade and home service businesses. That means the templates, SEO structure, and features start from electrician-specific requirements \u2014 not retail or portfolio use cases.",
+    },
+    {
+      type: "paragraph",
+      text: "What\u2019s included out of the box:",
+    },
+    {
+      type: "list",
+      items: [
+        "Service pages pre-structured for local SEO",
+        "License and insurance display fields",
+        "Quote request forms that route to your inbox or phone",
+        "Automated review request tool",
+        "Google Business Profile sync",
+        "Mobile-first design that loads fast",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "You don\u2019t need to adapt a generic template. The starting point is already built for how electrical customers search and hire.",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "Price:",
+          rest: " Free to start, paid plans available.",
+        },
+      ],
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "Quick Comparison",
+    },
+    {
+      type: "paragraph",
+      text: "Here\u2019s how the four builders stack up on the features that matter most to electricians:",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "Trade-specific templates:",
+          rest: " Groundwork only. Wix, Squarespace, and GoDaddy use generic templates.",
+        },
+        {
+          bold: "Local SEO built-in:",
+          rest: " Groundwork includes it natively. Wix requires add-ons; Squarespace and GoDaddy offer limited support.",
+        },
+        {
+          bold: "License/insurance fields:",
+          rest: " Native in Groundwork. Manual setup on all others.",
+        },
+        {
+          bold: "Quote request forms:",
+          rest: " Included in Groundwork. Add-on or limited on Wix, Squarespace, and GoDaddy.",
+        },
+        {
+          bold: "Review request tool:",
+          rest: " Included in Groundwork. Third-party or unavailable on others.",
+        },
+        {
+          bold: "Launch time:",
+          rest: " Under 30 minutes with Groundwork. Hours to days with the rest.",
+        },
+        {
+          bold: "Starting price:",
+          rest: " Free with Groundwork. $10\u2013$23/month for others.",
+        },
+      ],
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "The Bottom Line for Electricians",
+    },
+    {
+      type: "paragraph",
+      text: "If you\u2019re a licensed electrician who wants to get found online without spending weeks on a website project, the practical choice is a tool built for your industry. Generic builders give you flexibility you don\u2019t need and require you to build trade-specific features from scratch.",
+    },
+    {
+      type: "paragraph",
+      text: "A purpose-built tool gets you live faster, ranks better out of the gate, and converts more visitors into calls.",
+    },
+    {
+      type: "cta",
+      linkText: "Try Groundwork free \u2014 built for electricians, live in under 30 minutes \u2192",
+      href: "/for/electricians",
+    },
+  ],
+};
+
+const howToGetRoofingBusinessOnGooglePost: BlogPost = {
+  slug: "how-to-get-your-roofing-business-on-google",
+  title: "How to Get Your Roofing Business on Google",
+  metaTitle: "How to Get Your Roofing Business on Google",
+  metaDescription:
+    "A step-by-step guide for roofers who want to show up in Google search and get more leads online \u2014 without paying for ads every month.",
+  publishedAt: "2026-04-15",
+  excerpt:
+    "Roofing is one of the most searched home service categories on Google. If your business isn\u2019t showing up in those searches, you\u2019re handing jobs to competitors. Here\u2019s how to fix that \u2014 for free.",
+  sections: [
+    {
+      type: "paragraph",
+      text: "Roofing is one of the most searched home service categories on Google. When a storm rolls through, a pipe bursts under old flashing, or a homeowner finally decides to replace their aging shingles \u2014 Google is the first call they make. Not a referral. Not a neighbor\u2019s recommendation. Google.",
+    },
+    {
+      type: "paragraph",
+      text: "If your roofing business isn\u2019t showing up in those searches, you\u2019re handing jobs to competitors.",
+    },
+    {
+      type: "paragraph",
+      text: "The good news: getting on Google is not complicated, and most of it is free.",
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "Step 1: Claim and Optimize Your Google Business Profile",
+    },
+    {
+      type: "paragraph",
+      text: "Your Google Business Profile (GBP) is the most important piece of free marketing you own. It\u2019s the listing that shows up in Google Maps and in the local \u201c3-pack\u201d results that appear at the top of local searches.",
+    },
+    {
+      type: "paragraph",
+      text: "If you haven\u2019t claimed yours, go to business.google.com right now. It takes about 10 minutes and it\u2019s free.",
+    },
+    {
+      type: "paragraph",
+      text: "Once claimed, here\u2019s what to fill in:",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "Business name",
+          rest: " \u2014 your actual company name, no keyword stuffing",
+        },
+        {
+          bold: "Categories",
+          rest: " \u2014 choose \u201cRoofing Contractor\u201d as your primary category; add \u201cGutter Contractor,\u201d \u201cSiding Contractor,\u201d or others if relevant",
+        },
+        {
+          bold: "Service area",
+          rest: " \u2014 list every city, town, and county you serve",
+        },
+        {
+          bold: "Phone number and website",
+          rest: "",
+        },
+        {
+          bold: "Hours",
+          rest: " \u2014 including emergency availability if applicable",
+        },
+        {
+          bold: "Photos",
+          rest: " \u2014 upload at least 10 photos: before/after shots, your crew on the job, your trucks, completed roofs",
+        },
+        {
+          bold: "Services list",
+          rest: " \u2014 roof replacement, repair, inspection, gutters, siding, storm damage, etc.",
+        },
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "The more complete your profile, the better Google ranks it. Treat it like a mini-website.",
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "Step 2: Build a Website That Google Can Find",
+    },
+    {
+      type: "paragraph",
+      text: "Your Google Business Profile drives calls. Your website builds credibility and captures the customers who want to do research before they pick up the phone.",
+    },
+    {
+      type: "paragraph",
+      text: "A roofing website that ranks well needs:",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "Location-specific pages.",
+          rest: " If you serve 5 cities, have a page for each one. A page titled \u201cRoofing Contractor in [City Name]\u201d will rank for searches in that city.",
+        },
+        {
+          bold: "Service pages.",
+          rest: " Each major service (roof replacement, roof repair, storm damage, gutters) should have its own page.",
+        },
+        {
+          bold: "Fast load speed.",
+          rest: " Google measures page speed and uses it as a ranking factor. A slow site costs you rankings and customers.",
+        },
+        {
+          bold: "Mobile optimization.",
+          rest: " Most roofing searches happen on mobile. Your site needs to work perfectly on a phone.",
+        },
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Groundwork includes all of this structure by default \u2014 service area pages, service pages, and local SEO built in. You\u2019re not starting from a blank template.",
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "Step 3: Get Google Reviews \u2014 Consistently",
+    },
+    {
+      type: "paragraph",
+      text: "Reviews are one of the most powerful ranking factors for local search. A roofing company with 60 reviews at 4.8 stars will consistently appear ahead of competitors with fewer or lower-rated reviews.",
+    },
+    {
+      type: "paragraph",
+      text: "The strategy for getting reviews:",
+    },
+    {
+      type: "orderedList",
+      items: [
+        "Ask right after job completion, while the customer is still on-site and happy",
+        "Send a direct link to your Google Review page (not your homepage \u2014 a direct link to the review form)",
+        "Keep your message short: \u201cIf you have 2 minutes, a Google review means everything for our small business: [link]\u201d",
+        "Follow up once via text or email if they don\u2019t submit within 48 hours",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Make this a habit, not a one-time push. One new review per week compounds into a dominant position over 12 months.",
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "Step 4: Target the Right Keywords on Your Website",
+    },
+    {
+      type: "paragraph",
+      text: "Google matches your website content to search queries. If your website doesn\u2019t mention the words your customers are searching for, Google doesn\u2019t know to show you.",
+    },
+    {
+      type: "paragraph",
+      text: "For roofing, target keywords like:",
+    },
+    {
+      type: "list",
+      items: [
+        "\u201croof replacement [city]\u201d",
+        "\u201croof repair [city]\u201d",
+        "\u201croofing contractor near me\u201d",
+        "\u201cstorm damage roof repair [city]\u201d",
+        "\u201chow much does a new roof cost in [city]\u201d",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Use these naturally in your page titles, headings, and body copy. Don\u2019t stuff keywords \u2014 write for humans first, and make sure Google can see the right terms.",
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "Step 5: Keep Your Profiles Active",
+    },
+    {
+      type: "paragraph",
+      text: "Google rewards businesses that act like real, active businesses. Here\u2019s what that looks like:",
+    },
+    {
+      type: "list",
+      items: [
+        "Post updates to your Google Business Profile every 2\u20134 weeks (seasonal services, recent projects, promotions)",
+        "Respond to every Google review \u2014 positive and negative",
+        "Keep your hours current, especially around holidays",
+        "Add new photos regularly",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Activity signals legitimacy to Google and builds trust with prospective customers.",
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "How Long Until You See Results?",
+    },
+    {
+      type: "paragraph",
+      text: "Organic SEO is not instant. Here\u2019s a realistic timeline:",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "Google Business Profile:",
+          rest: " 2\u20134 weeks to see movement after full optimization",
+        },
+        {
+          bold: "New website:",
+          rest: " 2\u20133 months before it starts ranking for target keywords",
+        },
+        {
+          bold: "Reviews:",
+          rest: " Compound over time \u2014 each review builds on the last",
+        },
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "The businesses that win long-term in local search start early and stay consistent. The ones that wait for a slow season to \u201cdeal with marketing\u201d are always starting from behind.",
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "The Bottom Line",
+    },
+    {
+      type: "paragraph",
+      text: "Getting your roofing business on Google doesn\u2019t require an agency or an advertising budget. It requires claiming and optimizing your free Google Business Profile, building a website with the right structure, and asking every satisfied customer for a review.",
+    },
+    {
+      type: "paragraph",
+      text: "The roofers who do this consistently dominate their local market \u2014 even against bigger competitors with bigger ad budgets.",
+    },
+    {
+      type: "cta",
+      linkText: "Start building your Groundwork roofing website today \u2014 free to start \u2192",
+      href: "https://groundworklocal.com",
+    },
+  ],
+};
+
+const howToAdvertisePressureWashingForFreePost: BlogPost = {
+  slug: "how-to-advertise-a-pressure-washing-business-for-free",
+  title: "How to Advertise a Pressure Washing Business for Free",
+  metaTitle: "How to Advertise a Pressure Washing Business for Free",
+  metaDescription:
+    "You don\u2019t need a big ad budget to grow your pressure washing business. Here are 7 free marketing channels that actually drive bookings.",
+  publishedAt: "2026-04-15",
+  excerpt:
+    "Pressure washing is one of the most visual service businesses there is. You don\u2019t need Google Ads or Facebook campaigns to build it. Here are seven free marketing channels that actually drive bookings.",
+  sections: [
+    {
+      type: "paragraph",
+      text: "Pressure washing is one of the most visual service businesses there is. The before-and-after contrast is dramatic. The results are immediate. And customers who need the service usually want it done soon.",
+    },
+    {
+      type: "paragraph",
+      text: "All of this works in your favor when it comes to free marketing. You don\u2019t need Google Ads or Facebook campaigns to build a pressure washing business. You need the right free channels and the discipline to use them consistently.",
+    },
+    {
+      type: "paragraph",
+      text: "Here are seven ways to advertise your pressure washing business without spending a dollar.",
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "1. Google Business Profile \u2014 Your Most Powerful Free Tool",
+    },
+    {
+      type: "paragraph",
+      text: "If you\u2019ve done nothing else, start here. Google Business Profile (GBP) is a free listing that puts your business in front of people searching \u201cpressure washing near me\u201d or \u201cdriveway cleaning [city].\u201d",
+    },
+    {
+      type: "paragraph",
+      text: "Claim your profile at business.google.com. Fill it out completely:",
+    },
+    {
+      type: "list",
+      items: [
+        "Add your service area (every city and neighborhood you serve)",
+        "Upload 10\u201320 photos of your work \u2014 dramatic before/after shots",
+        "List all your services: driveway, deck, house washing, concrete, gutter cleaning, etc.",
+        "Keep your hours current",
+        "Post updates regularly \u2014 seasonal specials, before/after project photos",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "A fully optimized GBP ranks above your website for most local searches. It\u2019s free. There\u2019s no reason not to have it dialed in.",
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "2. A Website Optimized for Local Search",
+    },
+    {
+      type: "paragraph",
+      text: "You don\u2019t have to pay for ads if your website ranks organically for the searches you want. A website built with local SEO in mind can bring you consistent inbound calls without any ongoing cost.",
+    },
+    {
+      type: "paragraph",
+      text: "The key elements for a pressure washing website that ranks:",
+    },
+    {
+      type: "list",
+      items: [
+        "A page title and headline that includes your target keyword and city (e.g., \u201cPressure Washing in [City Name]\u201d)",
+        "A separate page for each city or neighborhood you serve",
+        "A separate page for each major service (driveway washing, house washing, deck cleaning)",
+        "Fast load speed on mobile",
+        "A simple quote request form",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Groundwork offers a free plan built specifically for home service businesses. It includes the SEO structure pressure washers need without requiring a developer.",
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "3. Before-and-After Photos on Social Media",
+    },
+    {
+      type: "paragraph",
+      text: "Pressure washing produces some of the most shareable before-and-after content in the trades. A driveway that goes from gray-green with algae to bright white in an afternoon is genuinely satisfying to watch.",
+    },
+    {
+      type: "paragraph",
+      text: "Post every dramatic before-and-after you complete. Facebook and Instagram are ideal because the photos are visual and local communities engage with local businesses.",
+    },
+    {
+      type: "paragraph",
+      text: "Tips for maximum reach:",
+    },
+    {
+      type: "list",
+      items: [
+        "Film a short video in addition to still photos \u2014 time-lapse or a 15-second clip showing the transformation",
+        "Tag your location in every post",
+        "Join local Facebook groups (neighborhood groups, buy/sell groups) and share your work when it\u2019s relevant to the conversation",
+        "Use hashtags like #pressurewashing #[cityname]pressurewashing #beforeandafter",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "You don\u2019t need a huge following to get leads this way. One great photo posted in the right neighborhood group can generate 5\u201310 inquiries.",
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "4. Nextdoor",
+    },
+    {
+      type: "paragraph",
+      text: "Nextdoor is a neighborhood social network where homeowners discuss local services and ask for recommendations. It\u2019s one of the most effective free channels for home service businesses because the audience is hyper-local and actively seeking recommendations.",
+    },
+    {
+      type: "paragraph",
+      text: "Create a free Nextdoor Business Page and:",
+    },
+    {
+      type: "list",
+      items: [
+        "Post your before-and-after photos",
+        "Respond to anyone asking for a pressure washing recommendation",
+        "Ask satisfied customers to recommend you on Nextdoor by name",
+        "Run a seasonal promotion (e.g., \u201c10% off driveway washing this month for Nextdoor neighbors\u201d)",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Nextdoor leads convert well because they come pre-qualified \u2014 the person asking wants the service now and lives nearby.",
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "5. Google Reviews \u2014 Your Free Social Proof",
+    },
+    {
+      type: "paragraph",
+      text: "Ask every customer for a Google review right after the job. Reviews do two things: they help you rank higher in local search (Google favors businesses with more and higher-rated reviews), and they convert skeptical customers who find you online.",
+    },
+    {
+      type: "paragraph",
+      text: "The system is simple:",
+    },
+    {
+      type: "orderedList",
+      items: [
+        "Get your direct Google Review link from your Google Business Profile",
+        "After every job, text the customer: \u201cThanks again for the job \u2014 if you have 2 minutes, a Google review means everything for our small business: [link]\u201d",
+        "Do this consistently \u2014 every single job",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "A pressure washing business with 30 five-star reviews will dominate a local market where competitors have 3\u20135 reviews. This is free. It just takes habit.",
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "6. Referral Network With Other Service Businesses",
+    },
+    {
+      type: "paragraph",
+      text: "Other trades serve the same homeowners you do \u2014 and they\u2019re not your competition. Landscapers, painters, window cleaners, and gutter companies all regularly talk to homeowners who need their driveways and houses washed.",
+    },
+    {
+      type: "paragraph",
+      text: "Build relationships with 3\u20135 local service businesses and refer each other:",
+    },
+    {
+      type: "list",
+      items: [
+        "Leave your business cards with them",
+        "Send them a referral whenever you\u2019re at a job and see an opportunity for their service",
+        "Ask them to do the same",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "This is free and it builds a consistent pipeline. A $0 referral from a landscaper you\u2019ve built a relationship with is worth more than a $200 ad spend.",
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "7. Door Hangers in High-Density Neighborhoods",
+    },
+    {
+      type: "paragraph",
+      text: "When you complete a job that produces a dramatic result, put door hangers on 20\u201330 homes within a 3-block radius. The message is simple: \u201cWe just cleaned your neighbor\u2019s driveway at [address]. Here\u2019s what we can do for yours.\u201d",
+    },
+    {
+      type: "paragraph",
+      text: "Print door hangers for $30\u2013$50 per 500 from an online printer. Your cost per lead when this works is essentially zero.",
+    },
+    {
+      type: "paragraph",
+      text: "The psychology here is powerful: you\u2019re showing evidence of work you did in their immediate neighborhood, not running an abstract ad.",
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "Putting It Together: A Weekly Routine",
+    },
+    {
+      type: "paragraph",
+      text: "You don\u2019t need to do all seven of these at once. Here\u2019s a simple weekly cadence:",
+    },
+    {
+      type: "list",
+      items: [
+        {
+          bold: "Every job:",
+          rest: " Take a before-and-after photo, ask for a Google review",
+        },
+        {
+          bold: "Weekly:",
+          rest: " Post one before-and-after on social media and Nextdoor",
+        },
+        {
+          bold: "Monthly:",
+          rest: " Check your Google Business Profile for messages, new reviews to respond to, and any missing information",
+        },
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "If you do this consistently for 90 days, you\u2019ll have a noticeable increase in inbound calls \u2014 all from free channels.",
+    },
+    { type: "divider" },
+    {
+      type: "heading2",
+      text: "The Bottom Line",
+    },
+    {
+      type: "paragraph",
+      text: "Advertising your pressure washing business doesn\u2019t require a budget. It requires showing up in the right places consistently: Google Business Profile, your website, social media, and your customer\u2019s phone after every job.",
+    },
+    {
+      type: "paragraph",
+      text: "The businesses that master free channels build the most durable growth. Paid ads stop when you stop paying. A Google review stays online forever.",
+    },
+    {
+      type: "cta",
+      linkText: "Build your pressure washing website for free with Groundwork \u2192",
+      href: "https://groundworklocal.com",
+    },
+  ],
+};
+
 export const allPosts: BlogPost[] = [
   plumbersPost,
   landscapersPost,
@@ -1679,6 +2616,10 @@ export const allPosts: BlogPost[] = [
   bestWebsiteBuilderForContractorsPost,
   howToGetMorePlumbingCustomersPost,
   doesCleaningBusinessNeedWebsitePost,
+  howToGet5StarGoogleReviewsPost,
+  bestWebsiteBuilderForElectriciansPost,
+  howToGetRoofingBusinessOnGooglePost,
+  howToAdvertisePressureWashingForFreePost,
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
