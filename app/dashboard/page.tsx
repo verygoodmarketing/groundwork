@@ -155,7 +155,7 @@ export default async function DashboardPage() {
               external: business.site?.isPublished,
               locked: !business.site?.isPublished,
             },
-            { icon: Settings, label: "Settings", href: "#", locked: false },
+            { icon: Settings, label: "Settings", href: "/dashboard/settings", locked: false },
             {
               icon: MessageSquare,
               label: "Contacts",
