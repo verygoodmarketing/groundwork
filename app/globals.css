@@ -91,3 +91,9 @@ h1, h2, h3, h4 {
   background-size: 200% 200%;
   animation: gradient-shift 10s ease infinite;
 }
+
+/* Upgrade success banner — progress bar shrink animation */
+@keyframes shrink {
+  from { width: 100%; }
+  to { width: 0%; }
+}

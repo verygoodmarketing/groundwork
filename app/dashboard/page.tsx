@@ -5,12 +5,21 @@ import Link from "next/link";
 import { Globe, Settings, MessageSquare, BarChart3, CreditCard, AlertCircle } from "lucide-react";
 import { isSubscriptionActive } from "@/lib/stripe/client";
 import { TrialNudgeBanner } from "@/components/dashboard/TrialNudgeBanner";
+import { TrialCountdownBar } from "@/components/dashboard/TrialCountdownBar";
+import { UpgradeSuccessBanner } from "@/components/dashboard/UpgradeSuccessBanner";
+import { ProFeatureGateModal } from "@/components/dashboard/ProFeatureGateModal";
 import { ReferralCard } from "@/components/dashboard/ReferralCard";
-import { computeBannerState } from "@/lib/dashboard/trial-nudge";
+import {
+  computeBannerState,
+  isTrialExpired,
+  getTrialDaysRemaining,
+  TRIAL_WARNING_DAY,
+} from "@/lib/dashboard/trial-nudge";
 
 /**
  * /dashboard — post-onboarding home page.
  * Requires auth; incomplete onboarding → redirects back to resume step.
+ * Expired trial (day 14+, no subscription) → redirects to /dashboard/trial-ended.
  */
 export default async function DashboardPage() {
   const supabase = await createServerClient();
@@ -37,20 +46,27 @@ export default async function DashboardPage() {
   }
 
   const { business } = owner;
-  const siteUrl = `https://${business.slug}.groundworklocal.com`;
   const hasActiveSub = isSubscriptionActive(business.subscriptionStatus);
   const isPastDue = business.subscriptionStatus === "PAST_DUE";
 
-  // Trial days remaining — trial is 14 days from business creation, no subscription yet
-  const TRIAL_LENGTH_DAYS = 14;
+  // Day 14 hard wall — redirect if trial has expired and user hasn't subscribed
+  if (!hasActiveSub && !isPastDue) {
+    if (isTrialExpired({ subscriptionStatus: business.subscriptionStatus, businessCreatedAt: business.createdAt })) {
+      redirect("/dashboard/trial-ended");
+    }
+  }
+
+  const siteUrl = `https://${business.slug}.groundworklocal.com`;
+
+  // eslint-disable-next-line react-hooks/purity -- server component, Date.now() runs on server
+  const trialDaysRemaining = getTrialDaysRemaining(business.createdAt);
   const isOnTrial = !hasActiveSub && !isPastDue;
-  // eslint-disable-next-line react-hooks/purity -- server component, Date.now() runs on server not during client re-renders
-  const msElapsed = Date.now() - business.createdAt.getTime();
-  const daysElapsed = Math.floor(msElapsed / (1000 * 60 * 60 * 24));
-  const trialDaysRemaining = Math.max(0, TRIAL_LENGTH_DAYS - daysElapsed);
   const trialStatusLabel = isOnTrial
     ? `Free trial — ${trialDaysRemaining} day${trialDaysRemaining === 1 ? "" : "s"} remaining`
     : null;
+
+  // Show sticky countdown bar only when ≤7 days remain and user is on trial
+  const showCountdownBar = isOnTrial && trialDaysRemaining <= TRIAL_WARNING_DAY;
 
   const nudgeBannerState = computeBannerState({
     onboardingComplete: business.onboardingComplete,
@@ -61,6 +77,12 @@ export default async function DashboardPage() {
 
   return (
     <div className="min-h-screen bg-[var(--background)]">
+      {/* Sticky trial countdown bar — shown only when ≤7 days remain */}
+      {showCountdownBar && <TrialCountdownBar daysLeft={trialDaysRemaining} />}
+
+      {/* Upgrade success banner — client component reads ?checkout=success from URL */}
+      <UpgradeSuccessBanner />
+
       {/* Header */}
       <header className="border-b border-surface-800/30">
         <div className="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
@@ -153,40 +175,48 @@ export default async function DashboardPage() {
               href: business.site?.isPublished ? siteUrl : "/pricing",
               external: business.site?.isPublished,
               locked: !business.site?.isPublished,
+              proFeature: false,
             },
-            { icon: Settings, label: "Settings", href: "#", locked: false },
+            { icon: Settings, label: "Settings", href: "#", locked: false, proFeature: false },
             {
               icon: MessageSquare,
               label: "Contacts",
               href: "#",
               locked: !hasActiveSub,
+              proFeature: true,
             },
             {
               icon: BarChart3,
               label: "Analytics",
               href: "#",
               locked: !hasActiveSub,
+              proFeature: true,
             },
-          ].map(({ icon: Icon, label, href, external, locked }) => (
-            <Link
+          ].map(({ icon: Icon, label, href, external, locked, proFeature }) => (
+            <ProFeatureGateModal
               key={label}
-              href={href}
-              target={external ? "_blank" : undefined}
-              rel={external ? "noopener noreferrer" : undefined}
-              className={`flex flex-col items-center gap-2 rounded-xl border border-surface-700 bg-surface-900 p-5 text-center hover:border-surface-600 transition-colors relative ${
-                locked ? "opacity-60" : ""
-              }`}
+              featureName={label}
+              isLocked={locked && proFeature}
             >
-              {locked && (
-                <span className="absolute top-2 right-2">
-                  <svg className="w-3 h-3 text-surface-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
-                  </svg>
-                </span>
-              )}
-              <Icon className="w-5 h-5 text-brand-400" />
-              <span className="text-sm font-medium text-[var(--foreground)] font-body">{label}</span>
-            </Link>
+              <Link
+                href={href}
+                target={external ? "_blank" : undefined}
+                rel={external ? "noopener noreferrer" : undefined}
+                className={`flex flex-col items-center gap-2 rounded-xl border border-surface-700 bg-surface-900 p-5 text-center hover:border-surface-600 transition-colors relative ${
+                  locked ? "opacity-60" : ""
+                }`}
+              >
+                {locked && (
+                  <span className="absolute top-2 right-2">
+                    <svg aria-hidden="true" className="w-3 h-3 text-surface-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
+                    </svg>
+                  </span>
+                )}
+                <Icon className="w-5 h-5 text-brand-400" />
+                <span className="text-sm font-medium text-[var(--foreground)] font-body">{label}</span>
+              </Link>
+            </ProFeatureGateModal>
           ))}
         </div>
 
@@ -202,7 +232,7 @@ export default async function DashboardPage() {
                 className="text-xs text-brand-400 hover:text-brand-300 transition-colors flex items-center gap-1"
               >
                 View live site
-                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg aria-hidden="true" className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
               </a>
@@ -264,7 +294,7 @@ export default async function DashboardPage() {
               className="text-sm font-semibold text-brand-400 hover:text-brand-300 transition-colors flex items-center gap-1"
             >
               Manage
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg aria-hidden="true" className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </Link>
