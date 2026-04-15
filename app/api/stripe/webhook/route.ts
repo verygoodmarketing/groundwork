@@ -3,6 +3,7 @@ import Stripe from "stripe";
 import { stripe } from "@/lib/stripe/client";
 import { prisma } from "@/lib/db/client";
 import { sendEmail } from "@/lib/email/send";
+import { getOrCreateReferralCode } from "@/lib/referral/utils";
 import type { BillingStatus, PlanTier } from "@prisma/client";
 import { track } from "@vercel/analytics/server";
 
@@ -53,6 +54,11 @@ export async function POST(req: NextRequest) {
       case "checkout.session.completed": {
         const session = event.data.object as Stripe.Checkout.Session;
         await handleCheckoutCompleted(session);
+        break;
+      }
+      case "customer.subscription.created": {
+        const subscription = event.data.object as Stripe.Subscription;
+        await handleSubscriptionCreated(subscription);
         break;
       }
       case "invoice.paid": {
@@ -140,6 +146,9 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
       ? session.customer
       : (session.customer as Stripe.Customer | null)?.id;
 
+  const isPaidTier = subscription.status !== "trialing";
+  const now = new Date();
+
   const business = await prisma.business.update({
     where: { id: businessId },
     data: {
@@ -149,6 +158,8 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
       stripeCurrentPeriodEnd: currentPeriodEnd,
       planTier: planKey ?? null,
       subscriptionStatus: subscription.status === "trialing" ? "TRIAL" : "ACTIVE",
+      // Record the paid subscription start time for onboarding email scheduling
+      ...(isPaidTier ? { paidSubscriptionStartedAt: now } : {}),
     },
   });
 
@@ -160,13 +171,99 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
   }
 
   // Send post-conversion welcome email (only for non-trial checkouts)
-  if (subscription.status !== "trialing" && business.email) {
+  if (isPaidTier && business.email) {
     await sendEmail(business.email, "post_conversion_welcome", {
       firstName: business.name.split(" ")[0] ?? "there",
     }).catch((err) =>
       console.error("[stripe/webhook] post_conversion_welcome email failed:", err)
     );
   }
+
+  // Fire post-paid onboarding Day 1 email (idempotent)
+  if (isPaidTier && business.email) {
+    await triggerPaidOnboardingDay1(business.id, business.email, business.name).catch((err) =>
+      console.error("[stripe/webhook] paid onboarding day1 email failed:", err)
+    );
+  }
+}
+
+/**
+ * Handle customer.subscription.created — primary trigger for paid onboarding Day 1 email.
+ * Also records paidSubscriptionStartedAt if not already set.
+ * Skips trialing subscriptions (free trial).
+ */
+async function handleSubscriptionCreated(subscription: Stripe.Subscription) {
+  // Only process paid (non-trial) subscriptions
+  if (subscription.status === "trialing") return;
+
+  const business = await prisma.business.findUnique({
+    where: { stripeSubscriptionId: subscription.id },
+  });
+
+  if (!business) {
+    // Business may not exist yet if checkout hasn't completed — safe to skip.
+    // handleCheckoutCompleted will handle the Day 1 email.
+    return;
+  }
+
+  // Set paidSubscriptionStartedAt if not already recorded
+  if (!business.paidSubscriptionStartedAt) {
+    await prisma.business.update({
+      where: { id: business.id },
+      data: { paidSubscriptionStartedAt: new Date() },
+    });
+  }
+
+  // Fire Day 1 onboarding email (idempotent — won't re-send if already sent)
+  if (business.email) {
+    await triggerPaidOnboardingDay1(business.id, business.email, business.name).catch((err) =>
+      console.error("[stripe/webhook] subscription.created day1 email failed:", err)
+    );
+  }
+}
+
+/**
+ * Send the post-paid onboarding Day 1 email to a business.
+ * Idempotent: checks paidOnboardingDay1SentAt before sending.
+ * Sets paidOnboardingDay1SentAt after a successful send.
+ */
+async function triggerPaidOnboardingDay1(
+  businessId: string,
+  email: string,
+  name: string
+): Promise<void> {
+  // Re-fetch to get the latest sentAt state (avoids race on webhook replay)
+  const business = await prisma.business.findUnique({
+    where: { id: businessId },
+    select: { id: true, paidOnboardingDay1SentAt: true, paidSubscriptionStartedAt: true },
+  });
+
+  if (!business) return;
+
+  // Idempotency guard: skip if already sent
+  if (business.paidOnboardingDay1SentAt) {
+    console.log(`[paid-onboarding] Day 1 already sent for business ${businessId} — skipping`);
+    return;
+  }
+
+  const firstName = name.split(" ")[0] ?? "there";
+  const dashboardUrl = `${process.env.NEXT_PUBLIC_APP_URL ?? "https://app.groundwork.so"}/dashboard`;
+
+  await sendEmail(email, "onboarding_paid_day1", {
+    firstName,
+    dashboardUrl,
+  });
+
+  await prisma.business.update({
+    where: { id: businessId },
+    data: {
+      paidOnboardingDay1SentAt: new Date(),
+      // Ensure paidSubscriptionStartedAt is set (may have been missed if subscription.created fired first)
+      paidSubscriptionStartedAt: business.paidSubscriptionStartedAt ?? new Date(),
+    },
+  });
+
+  console.log(`[paid-onboarding] Day 1 sent to ${email} (business ${businessId})`);
 }
 
 async function handleInvoicePaid(invoice: Stripe.Invoice) {
@@ -268,6 +365,11 @@ async function handleSubscriptionUpdated(subscription: Stripe.Subscription) {
       firstName: business.name.split(" ")[0] ?? "there",
     }).catch((err) =>
       console.error("[stripe/webhook] post_conversion_welcome email failed:", err)
+    );
+
+    // Fire post-paid onboarding Day 1 email on trial → active conversion (idempotent)
+    await triggerPaidOnboardingDay1(business.id, business.email, business.name).catch((err) =>
+      console.error("[stripe/webhook] subscription.updated day1 email failed:", err)
     );
   }
 }
