@@ -35,6 +35,9 @@ model Business {
   // Subscription tier & status (managed by webhook)
   planTier           PlanTier?
   subscriptionStatus BillingStatus?
+  // Timestamp when the business first activated a paid subscription (not trial).
+  // Used to schedule post-paid onboarding emails at Day 3 (72h) and Day 7 (168h).
+  planActivatedAt    DateTime?
 
   // Onboarding
   onboardingStep     Int     @default(1) // 1–5, tracks where user left off

@@ -4,6 +4,7 @@
  *
  * All copy is sourced from the CMO's trial-activation-emails document (VER-69)
  * and the trial nurture sequence document (VER-145).
+ * Post-paid onboarding copy is sourced from VER-236#document-email-copy.
  * Do NOT hardcode copy here — modify the CMO document first, then update these constants.
  *
  * Template data substitution is done at send time via `sendEmail()`.
@@ -21,7 +22,11 @@ export type EmailTemplate =
   | "vgm_nurture_day3"
   | "vgm_nurture_day7"
   | "vgm_nurture_day14"
-  | "vgm_paid_welcome";
+  | "vgm_paid_welcome"
+  // Post-paid onboarding sequence (VER-244) — sent after paid plan activation
+  | "onboarding_paid_day1"
+  | "onboarding_paid_day3"
+  | "onboarding_paid_day7";
 
 export interface TemplateData {
   firstName: string;
@@ -35,6 +40,8 @@ export interface TemplateData {
   daysRemaining?: number;
   /** Unsubscribe URL — required for CAN-SPAM compliance */
   unsubscribeUrl?: string;
+  /** Customer's unique referral URL — used in post-paid onboarding Day 7 email */
+  referralLink?: string;
 }
 
 export interface EmailContent {
@@ -517,6 +524,195 @@ Very Good Marketing${unsubText}`,
 <p>— ${founderName}<br>Very Good Marketing</p>
 ${unsubHtml}`, appUrl),
       };
+
+    // ────────────────────────────────────────────────────────────────────────
+    // Post-paid onboarding sequence (VER-244)
+    // Copy sourced from VER-236#document-email-copy
+    // ────────────────────────────────────────────────────────────────────────
+
+    case "onboarding_paid_day1":
+      return {
+        subject: `${firstName}, you're up and running — 3 things to do today`,
+        text: `Hey ${firstName},
+
+You just upgraded — and your professional website is live.
+
+That's a big deal. Most contractors in your area still don't have one. Now you do.
+
+Here are 3 quick things to do in the next 24 hours to make sure it's working for you:
+
+1. Add your logo (or business name graphic)
+Your logo is the first thing customers see. Even a clean text-based logo looks 10x more professional than a blank header.
+→ Go to Site Customizer: ${appUrl}/dashboard
+
+2. Pick your brand colors
+Match your truck, your uniform, or just pick something you like. It takes 30 seconds and makes your site feel like yours.
+→ Open Color Settings: ${appUrl}/dashboard
+
+3. Copy your website link and share it
+Send it to a few contacts. Post it on your Facebook. Add it to your email signature. The sooner it's out there, the sooner it starts working.
+→ Copy My Website Link: ${appUrl}/dashboard
+
+That's it. Three steps. Most of your competitors haven't done any of them.
+
+You've got a head start. Use it.
+
+— The Groundwork Team
+
+*Need help? Reply to this email. A real person reads every one.*
+
+Go to My Dashboard → ${appUrl}/dashboard`,
+        html: wrapInBrandedLayout(`<p>Hey ${firstName},</p>
+<p>You just upgraded — and your professional website is live.</p>
+<p>That's a big deal. Most contractors in your area still don't have one. Now you do.</p>
+<p>Here are 3 quick things to do in the next 24 hours to make sure it's working for you:</p>
+<p><strong>1. Add your logo (or business name graphic)</strong><br>
+Your logo is the first thing customers see. Even a clean text-based logo looks 10x more professional than a blank header.<br>
+<a href="${appUrl}/dashboard">→ Go to Site Customizer</a></p>
+<p><strong>2. Pick your brand colors</strong><br>
+Match your truck, your uniform, or just pick something you like. It takes 30 seconds and makes your site feel like yours.<br>
+<a href="${appUrl}/dashboard">→ Open Color Settings</a></p>
+<p><strong>3. Copy your website link and share it</strong><br>
+Send it to a few contacts. Post it on your Facebook. Add it to your email signature. The sooner it's out there, the sooner it starts working.<br>
+<a href="${appUrl}/dashboard">→ Copy My Website Link</a></p>
+<p>That's it. Three steps. Most of your competitors haven't done any of them.</p>
+<p>You've got a head start. Use it.</p>
+<p>— The Groundwork Team</p>
+<p><em>Need help? Reply to this email. A real person reads every one.</em></p>
+<p><a href="${appUrl}/dashboard"><strong>Go to My Dashboard →</strong></a></p>`, appUrl),
+      };
+
+    case "onboarding_paid_day3":
+      return {
+        subject: `${firstName}, Google doesn't know about you yet. Let's fix that.`,
+        text: `Hey ${firstName},
+
+Here's something most people don't realize: having a website doesn't automatically mean Google shows you to local customers.
+
+To show up when someone nearby searches "plumber near me" or "electrician in [your city]" — you need a Google Business Profile.
+
+It's free. It takes about 5 minutes to set up. And it's one of the highest-impact things you can do for your business.
+
+Here's how to claim yours:
+
+1. Go to business.google.com
+2. Search for your business name
+3. If it exists, claim it. If not, create it.
+4. Add your phone number, hours, and a few photos
+5. Verify your listing (Google will mail you a postcard or offer a phone call)
+
+Once you're verified, your business shows up on Google Maps and in local search results. Customers can call you directly, get directions, and see your reviews.
+
+The Groundwork side:
+
+We've already submitted your sitemap to Google so your website gets indexed faster. Once your Google Business Profile is live, link your Groundwork site URL in the "Website" field — that's how Google connects the dots.
+
+→ Claim Your Google Business Profile → https://business.google.com
+
+This one step can drive more calls than almost anything else you do online.
+
+— The Groundwork Team
+
+*Questions? Reply here — we're happy to walk you through it.*
+
+Set Up Google Business Profile → https://business.google.com`,
+        html: wrapInBrandedLayout(`<p>Hey ${firstName},</p>
+<p>Here's something most people don't realize: having a website doesn't automatically mean Google shows you to local customers.</p>
+<p>To show up when someone nearby searches "plumber near me" or "electrician in [your city]" — you need a Google Business Profile.</p>
+<p>It's free. It takes about 5 minutes to set up. And it's one of the highest-impact things you can do for your business.</p>
+<p><strong>Here's how to claim yours:</strong></p>
+<ol>
+<li>Go to <a href="https://business.google.com">business.google.com</a></li>
+<li>Search for your business name</li>
+<li>If it exists, claim it. If not, create it.</li>
+<li>Add your phone number, hours, and a few photos</li>
+<li>Verify your listing (Google will mail you a postcard or offer a phone call)</li>
+</ol>
+<p>Once you're verified, your business shows up on Google Maps and in local search results. Customers can call you directly, get directions, and see your reviews.</p>
+<p><strong>The Groundwork side:</strong></p>
+<p>We've already submitted your sitemap to Google so your website gets indexed faster. Once your Google Business Profile is live, link your Groundwork site URL in the "Website" field — that's how Google connects the dots.</p>
+<p><a href="https://business.google.com"><strong>→ Claim Your Google Business Profile</strong></a></p>
+<p>This one step can drive more calls than almost anything else you do online.</p>
+<p>— The Groundwork Team</p>
+<p><em>Questions? Reply here — we're happy to walk you through it.</em></p>
+<p><a href="https://business.google.com"><strong>Set Up Google Business Profile →</strong></a></p>`, appUrl),
+      };
+
+    case "onboarding_paid_day7": {
+      const referralLink = data.referralLink ?? `${appUrl}/dashboard`;
+      return {
+        subject: `${firstName}, your first lead is closer than you think`,
+        text: `Hey ${firstName},
+
+It's been a week. Let's make sure your site is actually working for you.
+
+Where do your leads go?
+
+When someone fills out the contact form on your Groundwork site, it goes two places:
+
+1. Email — directly to the inbox you set up
+2. Your dashboard — where you can see every lead, when it came in, and what they asked for
+
+→ Check My Leads → ${appUrl}/dashboard
+
+If you're not getting leads yet, that's okay — your site is still young. The Google Business Profile from the last email is one of the fastest ways to change that.
+
+---
+
+Get your first review (the easy way)
+
+Reviews are the #1 thing local customers look at before calling a contractor. Here's the fastest way to get them:
+
+Think of 3 customers you've done good work for — even going back a year. Text or call them:
+
+"Hey, I just launched my new business website and I'm trying to build my online reviews. Would you mind leaving me a quick Google review? It would really help. Here's the link: [your Google review link]"
+
+Most people say yes. Three reviews puts you ahead of most contractors in your area.
+
+---
+
+Know another contractor?
+
+If you know another plumber, electrician, landscaper, or tradesperson who's still running their business without a real website — send them your referral link.
+
+When they sign up and upgrade, you get 1 month free. No limit on how many times you can use it.
+
+→ Get My Referral Link: ${referralLink}
+
+You're building something real here. We're glad you're on board.
+
+— The Groundwork Team
+
+*Something not working right? Reply to this email and we'll fix it.*
+
+Go to My Dashboard → ${appUrl}/dashboard`,
+        html: wrapInBrandedLayout(`<p>Hey ${firstName},</p>
+<p>It's been a week. Let's make sure your site is actually working for you.</p>
+<p><strong>Where do your leads go?</strong></p>
+<p>When someone fills out the contact form on your Groundwork site, it goes two places:</p>
+<ol>
+<li><strong>Email</strong> — directly to the inbox you set up</li>
+<li><strong>Your dashboard</strong> — where you can see every lead, when it came in, and what they asked for</li>
+</ol>
+<p><a href="${appUrl}/dashboard"><strong>→ Check My Leads</strong></a></p>
+<p>If you're not getting leads yet, that's okay — your site is still young. The Google Business Profile from the last email is one of the fastest ways to change that.</p>
+<hr style="margin:24px 0;border:none;border-top:1px solid #eee;" />
+<p><strong>Get your first review (the easy way)</strong></p>
+<p>Reviews are the #1 thing local customers look at before calling a contractor. Here's the fastest way to get them:</p>
+<p>Think of 3 customers you've done good work for — even going back a year. Text or call them:</p>
+<blockquote style="border-left:3px solid #e5e7eb;padding-left:16px;color:#555;margin:16px 0;">"Hey, I just launched my new business website and I'm trying to build my online reviews. Would you mind leaving me a quick Google review? It would really help. Here's the link: [your Google review link]"</blockquote>
+<p>Most people say yes. Three reviews puts you ahead of most contractors in your area.</p>
+<hr style="margin:24px 0;border:none;border-top:1px solid #eee;" />
+<p><strong>Know another contractor?</strong></p>
+<p>If you know another plumber, electrician, landscaper, or tradesperson who's still running their business without a real website — send them your referral link.</p>
+<p>When they sign up and upgrade, <strong>you get 1 month free</strong>. No limit on how many times you can use it.</p>
+<p><a href="${referralLink}"><strong>→ Get My Referral Link</strong></a></p>
+<p>You're building something real here. We're glad you're on board.</p>
+<p>— The Groundwork Team</p>
+<p><em>Something not working right? Reply to this email and we'll fix it.</em></p>
+<p><a href="${appUrl}/dashboard"><strong>Go to My Dashboard →</strong></a></p>`, appUrl),
+      };
+    }
 
     default: {
       const _exhaustive: never = template;

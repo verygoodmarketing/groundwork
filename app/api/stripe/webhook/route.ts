@@ -10,11 +10,12 @@ import { track } from "@vercel/analytics/server";
  * POST /api/stripe/webhook
  *
  * Handles Stripe webhook events:
- *   - checkout.session.completed  → provision subscription after checkout
- *   - invoice.paid                → renew subscription, keep status ACTIVE
- *   - customer.subscription.updated → sync plan/status changes
- *   - customer.subscription.deleted → mark subscription as CANCELLED
- *   - invoice.payment_failed      → mark subscription as PAST_DUE
+ *   - checkout.session.completed        → provision subscription after checkout
+ *   - customer.subscription.created     → fire Day 1 paid onboarding email for new paid subs
+ *   - invoice.paid                      → renew subscription, keep status ACTIVE
+ *   - customer.subscription.updated     → sync plan/status changes
+ *   - customer.subscription.deleted     → mark subscription as CANCELLED
+ *   - invoice.payment_failed            → mark subscription as PAST_DUE
  *
  * NOTE: Stripe v22 moved `Invoice.subscription` under
  * `invoice.parent.subscription_details.subscription`, and
@@ -53,6 +54,11 @@ export async function POST(req: NextRequest) {
       case "checkout.session.completed": {
         const session = event.data.object as Stripe.Checkout.Session;
         await handleCheckoutCompleted(session);
+        break;
+      }
+      case "customer.subscription.created": {
+        const subscription = event.data.object as Stripe.Subscription;
+        await handleSubscriptionCreated(subscription);
         break;
       }
       case "invoice.paid": {
@@ -134,6 +140,7 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
 
   const subscription = await stripe.subscriptions.retrieve(subscriptionId);
   const currentPeriodEnd = getCurrentPeriodEnd(subscription);
+  const isPaidActivation = subscription.status !== "trialing";
 
   const stripeCustomerId =
     typeof session.customer === "string"
@@ -148,23 +155,75 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
       stripePlanId: planKey ?? null,
       stripeCurrentPeriodEnd: currentPeriodEnd,
       planTier: planKey ?? null,
-      subscriptionStatus: subscription.status === "trialing" ? "TRIAL" : "ACTIVE",
+      subscriptionStatus: isPaidActivation ? "ACTIVE" : "TRIAL",
+      // Record the activation timestamp for post-paid onboarding email scheduling.
+      // Only set on first paid activation (not on trial start).
+      ...(isPaidActivation ? { planActivatedAt: new Date() } : {}),
     },
   });
 
   // Fire analytics events — no PII, anonymous subscription metadata only.
-  if (subscription.status === "trialing") {
+  if (!isPaidActivation) {
     track("trial_started", { planTier: planKey ?? null }).catch(() => {});
   } else {
     track("subscription_activated", { planTier: planKey ?? null }).catch(() => {});
   }
 
   // Send post-conversion welcome email (only for non-trial checkouts)
-  if (subscription.status !== "trialing" && business.email) {
+  if (isPaidActivation && business.email) {
     await sendEmail(business.email, "post_conversion_welcome", {
       firstName: business.name.split(" ")[0] ?? "there",
     }).catch((err) =>
       console.error("[stripe/webhook] post_conversion_welcome email failed:", err)
+    );
+
+    // Send Day 1 paid onboarding email immediately on upgrade
+    await sendEmail(business.email, "onboarding_paid_day1", {
+      firstName: business.name.split(" ")[0] ?? "there",
+    }).catch((err) =>
+      console.error("[stripe/webhook] onboarding_paid_day1 email failed:", err)
+    );
+  }
+}
+
+/**
+ * Handle customer.subscription.created — fires when a new subscription is created.
+ *
+ * This event fires for ALL new subscriptions including trials. We only care about
+ * non-trial (immediately paid) subscriptions here to fire the Day 1 onboarding email
+ * and record planActivatedAt.
+ *
+ * Note: For most paid checkouts, handleCheckoutCompleted fires first and already
+ * handles this. This handler acts as a safety net for subscriptions created outside
+ * the checkout flow (e.g. via Stripe Dashboard or API). It is idempotent — if
+ * planActivatedAt is already set, it skips the email.
+ */
+async function handleSubscriptionCreated(subscription: Stripe.Subscription) {
+  // Only proceed for active (paid) subscriptions — skip trials
+  if (subscription.status !== "active") return;
+
+  const business = await prisma.business.findUnique({
+    where: { stripeSubscriptionId: subscription.id },
+  });
+
+  if (!business) {
+    // Business may not exist yet if checkout.session.completed hasn't fired — skip.
+    return;
+  }
+
+  // Idempotency: if planActivatedAt is already set, Day 1 email was already sent.
+  if (business.planActivatedAt) return;
+
+  await prisma.business.update({
+    where: { id: business.id },
+    data: { planActivatedAt: new Date() },
+  });
+
+  if (business.email) {
+    await sendEmail(business.email, "onboarding_paid_day1", {
+      firstName: business.name.split(" ")[0] ?? "there",
+    }).catch((err) =>
+      console.error("[stripe/webhook] onboarding_paid_day1 (subscription.created) email failed:", err)
     );
   }
 }
@@ -269,6 +328,19 @@ async function handleSubscriptionUpdated(subscription: Stripe.Subscription) {
     }).catch((err) =>
       console.error("[stripe/webhook] post_conversion_welcome email failed:", err)
     );
+
+    // Set planActivatedAt and send Day 1 paid onboarding email (idempotent)
+    if (!business.planActivatedAt) {
+      await prisma.business.update({
+        where: { id: business.id },
+        data: { planActivatedAt: new Date() },
+      });
+      await sendEmail(business.email, "onboarding_paid_day1", {
+        firstName: business.name.split(" ")[0] ?? "there",
+      }).catch((err) =>
+        console.error("[stripe/webhook] onboarding_paid_day1 (subscription.updated trial→active) email failed:", err)
+      );
+    }
   }
 }
 
