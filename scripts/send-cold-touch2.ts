@@ -14,7 +14,7 @@ import { Resend } from "resend";
 
 const DRY_RUN = process.env.DRY_RUN === "true";
 const FROM_EMAIL =
-  process.env.FROM_EMAIL || "Brad at Groundwork <brad@time.verygoodmarketing.com>";
+  process.env.FROM_EMAIL || "Brad at GroundWork <brad@time.verygoodmarketing.com>";
 const CALENDAR_LINK = "https://groundworklocal.com";
 
 interface Target {
@@ -89,7 +89,7 @@ function buildHtml(t: Target): string {
     <tr>
       <td align="left" style="max-width:560px;padding:0 24px;">
         <p style="margin:0 0 24px 0;">
-          <img src="https://groundworklocal.com/brand/bimi-logo.svg" alt="Groundwork" width="36" height="36" style="display:inline-block;vertical-align:middle;border-radius:7px;" />
+          <img src="https://groundworklocal.com/brand/logo-horizontal-light.png" alt="GroundWork" width="160" style="display:block;" />
         </p>
         <p style="margin:0 0 16px 0;font-size:16px;line-height:26px;color:#333333;">${greeting},</p>
 
@@ -98,7 +98,7 @@ function buildHtml(t: Target): string {
         </p>
 
         <p style="margin:0 0 16px 0;font-size:16px;line-height:26px;color:#333333;">
-          We recently helped a ${t.trade} in a market similar to ${t.city}. They had zero web presence. Set up Groundwork on a Saturday. By the following Friday, they had 2 quote requests come in from Google search.
+          We recently helped a ${t.trade} in a market similar to ${t.city}. They had zero web presence. Set up GroundWork on a Saturday. By the following Friday, they had 2 quote requests come in from Google search.
         </p>
 
         <p style="margin:0 0 16px 0;font-size:16px;line-height:26px;color:#333333;">
@@ -106,7 +106,7 @@ function buildHtml(t: Target): string {
         </p>
 
         <p style="margin:0 0 16px 0;font-size:16px;line-height:26px;color:#333333;">
-          If you've been meaning to get online but haven't found the time, that's the whole point of Groundwork — it takes about an hour.
+          If you've been meaning to get online but haven't found the time, that's the whole point of GroundWork — it takes about an hour.
         </p>
 
         <p style="margin:0 0 16px 0;font-size:16px;line-height:26px;color:#333333;">
@@ -115,7 +115,7 @@ function buildHtml(t: Target): string {
 
         <p style="margin:0 0 4px 0;font-size:16px;line-height:26px;color:#333333;">Brad</p>
         <p style="margin:0 0 24px 0;font-size:14px;line-height:22px;color:#888888;">
-          Groundwork<br>
+          GroundWork<br>
           <a href="https://groundworklocal.com" style="color:#888888;">groundworklocal.com</a>
         </p>
       </td>
@@ -132,16 +132,16 @@ function buildText(t: Target): string {
 
 Following up — but wanted to share something relevant instead of just bumping my last email.
 
-We recently helped a ${t.trade} in a market similar to ${t.city}. They had zero web presence. Set up Groundwork on a Saturday. By the following Friday, they had 2 quote requests come in from Google search.
+We recently helped a ${t.trade} in a market similar to ${t.city}. They had zero web presence. Set up GroundWork on a Saturday. By the following Friday, they had 2 quote requests come in from Google search.
 
 Nothing fancy. Just a clean site, a contact form, and local SEO that works.
 
-If you've been meaning to get online but haven't found the time, that's the whole point of Groundwork — it takes about an hour.
+If you've been meaning to get online but haven't found the time, that's the whole point of GroundWork — it takes about an hour.
 
 Still worth a quick 15 minutes? ${CALENDAR_LINK}
 
 Brad
-Groundwork
+GroundWork
 https://groundworklocal.com
 `;
 }

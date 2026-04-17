@@ -64,8 +64,8 @@ const TARGETS: Target[] = [
   },
 ];
 
-function buildSubject(t: Target): string {
-  return `${t.firstName === "Owner" ? "Quick question" : t.firstName}, is ${t.businessName} showing up on Google?`;
+function buildSubject(_t: Target): string {
+  return `Your next customer is searching right now`;
 }
 
 function buildHtml(t: Target): string {
@@ -82,37 +82,33 @@ function buildHtml(t: Target): string {
     <tr>
       <td align="left" style="max-width:560px;padding:0 24px;">
         <p style="margin:0 0 24px 0;">
-          <img src="https://groundworklocal.com/brand/bimi-logo.svg" alt="Groundwork" width="36" height="36" style="display:inline-block;vertical-align:middle;border-radius:7px;" />
+          <img src="https://groundworklocal.com/brand/logo-horizontal-light.png" alt="GroundWork" width="160" style="display:block;" />
         </p>
         <p style="margin:0 0 16px 0;font-size:16px;line-height:26px;color:#333333;">${greeting},</p>
 
         <p style="margin:0 0 16px 0;font-size:16px;line-height:26px;color:#333333;">
-          I was looking for ${t.trade} help in ${t.city} and came across ${t.businessName}.
+          78% of people search Google before hiring a local service provider. Right now, someone in ${t.city} is searching for a ${t.trade} — if your business isn't showing up when they do, they're calling someone else.
         </p>
 
         <p style="margin:0 0 16px 0;font-size:16px;line-height:26px;color:#333333;">
-          Quick question: when someone searches Google for a ${t.trade} in ${t.city}, are they finding you?
+          Most local service businesses rely on referrals and word-of-mouth — which works great, but it means you're invisible to customers who are actively searching for exactly what you offer right now.
         </p>
 
         <p style="margin:0 0 16px 0;font-size:16px;line-height:26px;color:#333333;">
-          I ask because most local ${t.trade} businesses I talk to rely on referrals and word-of-mouth — which is great, but it means they're invisible to the 78% of people who search online before they hire anyone.
+          I built <a href="https://groundworklocal.com" style="color:#1a1a2e;">GroundWork</a> to fix that. It gets local service businesses online fast — professional website, local SEO, and a lead form that actually works — in under an hour, starting at $49/month.
         </p>
 
         <p style="margin:0 0 16px 0;font-size:16px;line-height:26px;color:#333333;">
-          I built <a href="https://groundworklocal.com" style="color:#1a1a2e;">Groundwork</a> to fix that. It gets local service businesses online fast — professional website, local SEO, and a lead form that actually works — in under an hour, starting at $49/month.
+          See how it would work for your ${t.trade} business in ${t.city}:
         </p>
 
         <p style="margin:0 0 16px 0;font-size:16px;line-height:26px;color:#333333;">
-          Would a quick 15-minute call make sense? I can show you exactly how it looks for a ${t.trade} business in ${t.city}.
-        </p>
-
-        <p style="margin:0 0 16px 0;font-size:16px;line-height:26px;color:#333333;">
-          Just reply here or grab a time: <a href="${CALENDAR_LINK}" style="color:#1a1a2e;">${CALENDAR_LINK}</a>
+          <a href="https://groundworklocal.com" style="color:#1a1a2e;">groundworklocal.com</a>
         </p>
 
         <p style="margin:0 0 4px 0;font-size:16px;line-height:26px;color:#333333;">Brad</p>
         <p style="margin:0 0 24px 0;font-size:14px;line-height:22px;color:#888888;">
-          Groundwork<br>
+          GroundWork<br>
           <a href="https://groundworklocal.com" style="color:#888888;">groundworklocal.com</a>
         </p>
 
@@ -131,20 +127,18 @@ function buildText(t: Target): string {
     t.firstName === "Owner" ? "Hi there" : `Hi ${t.firstName}`;
   return `${greeting},
 
-I was looking for ${t.trade} help in ${t.city} and came across ${t.businessName}.
+78% of people search Google before hiring a local service provider. Right now, someone in ${t.city} is searching for a ${t.trade} — if your business isn't showing up when they do, they're calling someone else.
 
-Quick question: when someone searches Google for a ${t.trade} in ${t.city}, are they finding you?
+Most local service businesses rely on referrals and word-of-mouth — which works great, but it means you're invisible to customers who are actively searching for exactly what you offer right now.
 
-I ask because most local ${t.trade} businesses I talk to rely on referrals and word-of-mouth — which is great, but it means they're invisible to the 78% of people who search online before they hire anyone.
+I built GroundWork to fix that. It gets local service businesses online fast — professional website, local SEO, and a lead form that actually works — in under an hour, starting at $49/month.
 
-I built Groundwork to fix that. It gets local service businesses online fast — professional website, local SEO, and a lead form that actually works — in under an hour, starting at $49/month.
+See how it would work for your ${t.trade} business in ${t.city}:
 
-Would a quick 15-minute call make sense? I can show you exactly how it looks for a ${t.trade} business in ${t.city}.
-
-Just reply here or grab a time: ${CALENDAR_LINK}
+groundworklocal.com
 
 Brad
-Groundwork
+GroundWork
 https://groundworklocal.com
 
 P.S. 14-day free trial, no credit card required — nothing to lose.

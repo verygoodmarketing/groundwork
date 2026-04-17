@@ -13,7 +13,7 @@ import { Resend } from "resend";
 
 const DRY_RUN = process.env.DRY_RUN === "true";
 const FROM_EMAIL =
-  process.env.FROM_EMAIL || "Groundwork <brad@time.verygoodmarketing.com>";
+  process.env.FROM_EMAIL || "GroundWork <brad@time.verygoodmarketing.com>";
 const SUBJECT =
   "The scheduling problem that's costing service businesses jobs (and how to fix it)";
 const PREVIEW_TEXT =
@@ -41,7 +41,7 @@ function buildHtml(email: string): string {
         <table width="600" cellpadding="0" cellspacing="0" border="0" style="background-color:#ffffff;border-radius:6px;padding:40px 48px;max-width:600px;">
           <tr>
             <td style="padding-bottom:32px;border-bottom:1px solid #f0f0f0;margin-bottom:32px;">
-              <img src="https://groundworklocal.com/brand/bimi-logo.svg" alt="Groundwork" width="40" height="40" style="display:block;border-radius:8px;" />
+              <img src="https://groundworklocal.com/brand/logo-horizontal-light.png" alt="GroundWork" width="160" style="display:block;" />
             </td>
           </tr>
           <tr>
@@ -73,11 +73,11 @@ function buildHtml(email: string): string {
               </p>
 
               <p style="margin:0 0 24px 0;font-size:18px;line-height:28px;color:#111111;font-weight:bold;">
-                This is the scheduling problem Groundwork solves.
+                This is the scheduling problem GroundWork solves.
               </p>
 
               <p style="margin:0 0 16px 0;font-size:16px;line-height:26px;color:#333333;">
-                Most "scheduling software" focuses on managing the calendar <em>after</em> the phone rings. Groundwork makes sure the phone rings in the first place — with a professional website that:
+                Most "scheduling software" focuses on managing the calendar <em>after</em> the phone rings. GroundWork makes sure the phone rings in the first place — with a professional website that:
               </p>
 
               <ul style="margin:0 0 24px 0;padding-left:24px;">
@@ -94,14 +94,14 @@ function buildHtml(email: string): string {
               <p style="margin:0 0 8px 0;font-size:16px;line-height:26px;color:#333333;font-weight:bold;">The math:</p>
 
               <p style="margin:0 0 24px 0;font-size:16px;line-height:26px;color:#333333;">
-                If you capture just 2 additional service calls per month from online search — jobs you're currently missing — at $200–$400 per job, that's $400–$800/month in recovered revenue. Groundwork starts at $49/month.
+                If you capture just 2 additional service calls per month from online search — jobs you're currently missing — at $200–$400 per job, that's $400–$800/month in recovered revenue. GroundWork starts at $49/month.
               </p>
 
               <table cellpadding="0" cellspacing="0" border="0" style="margin:0 0 24px 0;">
                 <tr>
                   <td style="background-color:#1a1a2e;border-radius:4px;padding:14px 28px;">
                     <a href="https://groundworklocal.com" style="color:#ffffff;font-size:16px;font-weight:bold;text-decoration:none;display:block;">
-                      See how Groundwork works for your trade →
+                      See how GroundWork works for your trade →
                     </a>
                   </td>
                 </tr>
@@ -126,11 +126,11 @@ function buildHtml(email: string): string {
               </table>
 
               <p style="margin:0 0 4px 0;font-size:16px;line-height:26px;color:#333333;">Brad</p>
-              <p style="margin:0 0 32px 0;font-size:14px;line-height:22px;color:#888888;">Groundwork</p>
+              <p style="margin:0 0 32px 0;font-size:14px;line-height:22px;color:#888888;">GroundWork</p>
 
               <hr style="border:none;border-top:1px solid #eeeeee;margin:0 0 24px 0;">
               <p style="margin:0;font-size:12px;line-height:20px;color:#aaaaaa;text-align:center;">
-                You're receiving this because you signed up for early access to Groundwork.<br>
+                You're receiving this because you signed up for early access to GroundWork.<br>
                 <a href="https://groundworklocal.com" style="color:#aaaaaa;">groundworklocal.com</a>
               </p>
             </td>
@@ -160,7 +160,7 @@ You never knew they existed.
 
 THIS IS THE SCHEDULING PROBLEM GROUNDWORK SOLVES.
 
-Most "scheduling software" focuses on managing the calendar after the phone rings. Groundwork makes sure the phone rings in the first place — with a professional website that:
+Most "scheduling software" focuses on managing the calendar after the phone rings. GroundWork makes sure the phone rings in the first place — with a professional website that:
 
 - Shows up in local search when people are actively looking for your service
 - Has a lead capture form and click-to-call on every page
@@ -171,9 +171,9 @@ The result: you capture the leads you're currently losing to competitors who hav
 
 THE MATH:
 
-If you capture just 2 additional service calls per month from online search — jobs you're currently missing — at $200–$400 per job, that's $400–$800/month in recovered revenue. Groundwork starts at $49/month.
+If you capture just 2 additional service calls per month from online search — jobs you're currently missing — at $200–$400 per job, that's $400–$800/month in recovered revenue. GroundWork starts at $49/month.
 
-See how Groundwork works for your trade: https://groundworklocal.com
+See how GroundWork works for your trade: https://groundworklocal.com
 
 Still on the free trial fence? Here's what's included:
 - 14 days free
@@ -184,10 +184,10 @@ Still on the free trial fence? Here's what's included:
 Start your free trial: https://groundworklocal.com
 
 Brad
-Groundwork
+GroundWork
 
 ---
-You're receiving this because you signed up for early access to Groundwork.
+You're receiving this because you signed up for early access to GroundWork.
 groundworklocal.com
 `;
 }
@@ -210,8 +210,8 @@ async function main() {
     const TEST_DOMAINS = [
       "example.com",
       "mailinator.com",
-      "versa-test.com",
-      "versa-qa.dev",
+      
+      
     ];
     const realSignups = signups.filter(({ email }) => {
       const domain = email.split("@")[1]?.toLowerCase() ?? "";

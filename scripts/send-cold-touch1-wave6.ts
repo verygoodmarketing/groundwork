@@ -201,13 +201,12 @@ const TARGETS: Target[] = [
   },
 ];
 
-function buildSubject(t: Target): string {
-  return `Quick question — is ${t.businessName} showing up on Google?`;
+function buildSubject(_t: Target): string {
+  return `Your next customer is searching right now`;
 }
 
 function buildHtml(t: Target): string {
-  const greeting =
-    t.firstName === "Owner" ? "Hi there" : `Hi ${t.firstName}`;
+  const firstName = t.firstName === "Owner" ? "there" : t.firstName;
   return `<!DOCTYPE html>
 <html>
 <head>
@@ -219,42 +218,46 @@ function buildHtml(t: Target): string {
     <tr>
       <td align="left" style="max-width:560px;padding:0 24px;">
         <p style="margin:0 0 24px 0;">
-          <img src="https://groundworklocal.com/brand/bimi-logo.svg" alt="Groundwork" width="36" height="36" style="display:inline-block;vertical-align:middle;border-radius:7px;" />
+          <img src="https://groundworklocal.com/brand/logo-horizontal-light.png" alt="GroundWork" width="160" style="display:block;" />
         </p>
-        <p style="margin:0 0 16px 0;font-size:16px;line-height:26px;color:#333333;">${greeting},</p>
+        <p style="margin:0 0 16px 0;font-size:16px;line-height:26px;color:#333333;">Hi ${firstName},</p>
 
         <p style="margin:0 0 16px 0;font-size:16px;line-height:26px;color:#333333;">
-          I was looking for ${t.trade} help in ${t.city} and came across ${t.businessName}.
-        </p>
-
-        <p style="margin:0 0 16px 0;font-size:16px;line-height:26px;color:#333333;">
-          Quick question: when someone searches Google for a ${t.trade} in ${t.city}, are they finding you?
+          Quick question: when someone searches for a ${t.trade} in ${t.city} at 5pm on a Tuesday — does your business show up? And if they land on your site, can they request a quote without calling?
         </p>
 
         <p style="margin:0 0 16px 0;font-size:16px;line-height:26px;color:#333333;">
-          I ask because most local ${t.trade} businesses I talk to rely on referrals and word-of-mouth — which is great, but it means they're invisible to the 78% of people who search online before they hire anyone.
+          Most local service businesses can't answer yes to both. Those leads quietly go to the next result. You never knew they were there.
         </p>
 
         <p style="margin:0 0 16px 0;font-size:16px;line-height:26px;color:#333333;">
-          I built <a href="https://groundworklocal.com" style="color:#1a1a2e;">Groundwork</a> to fix that. It gets local service businesses online fast — professional website, local SEO, and a lead form that actually works — in under an hour, starting at $49/month.
+          That's the problem <a href="https://groundworklocal.com" style="color:#1a1a2e;">GroundWork</a> solves.
         </p>
 
         <p style="margin:0 0 16px 0;font-size:16px;line-height:26px;color:#333333;">
-          Would a quick 15-minute call make sense? I can show you exactly how it looks for a ${t.trade} business in ${t.city}.
+          GroundWork is a website platform built specifically for local service businesses — not Wix, not Squarespace. Something built for the trades, with lead capture and local SEO wired in from day one. It goes live in under an hour. Every page has a lead form and click-to-call built in, your service area is set up for local SEO from the start, and after each job it automatically asks your customer for a review.
         </p>
 
         <p style="margin:0 0 16px 0;font-size:16px;line-height:26px;color:#333333;">
-          Just reply here or grab a time: <a href="${CALENDAR_LINK}" style="color:#1a1a2e;">${CALENDAR_LINK}</a>
+          $49/month. 14-day free trial, no credit card required.
+        </p>
+
+        <p style="margin:0 0 16px 0;font-size:16px;line-height:26px;color:#333333;">
+          If you're already getting all the leads you want, ignore this. But if you're leaving work on the table because people can't find you easily — it's worth 5 minutes to look.
+        </p>
+
+        <p style="margin:0 0 16px 0;font-size:16px;line-height:26px;color:#333333;">
+          <a href="https://groundworklocal.com" style="color:#1a1a2e;">groundworklocal.com</a>
+        </p>
+
+        <p style="margin:0 0 16px 0;font-size:16px;line-height:26px;color:#333333;">
+          Happy to answer any questions — just hit reply.
         </p>
 
         <p style="margin:0 0 4px 0;font-size:16px;line-height:26px;color:#333333;">Brad</p>
         <p style="margin:0 0 24px 0;font-size:14px;line-height:22px;color:#888888;">
-          Groundwork<br>
+          GroundWork<br>
           <a href="https://groundworklocal.com" style="color:#888888;">groundworklocal.com</a>
-        </p>
-
-        <p style="margin:0;font-size:13px;line-height:20px;color:#aaaaaa;">
-          P.S. 14-day free trial, no credit card required — nothing to lose.
         </p>
       </td>
     </tr>
@@ -264,27 +267,28 @@ function buildHtml(t: Target): string {
 }
 
 function buildText(t: Target): string {
-  const greeting =
-    t.firstName === "Owner" ? "Hi there" : `Hi ${t.firstName}`;
-  return `${greeting},
+  const firstName = t.firstName === "Owner" ? "there" : t.firstName;
+  return `Hi ${firstName},
 
-I was looking for ${t.trade} help in ${t.city} and came across ${t.businessName}.
+Quick question: when someone searches for a ${t.trade} in ${t.city} at 5pm on a Tuesday — does your business show up? And if they land on your site, can they request a quote without calling?
 
-Quick question: when someone searches Google for a ${t.trade} in ${t.city}, are they finding you?
+Most local service businesses can't answer yes to both. Those leads quietly go to the next result. You never knew they were there.
 
-I ask because most local ${t.trade} businesses I talk to rely on referrals and word-of-mouth — which is great, but it means they're invisible to the 78% of people who search online before they hire anyone.
+That's the problem GroundWork solves.
 
-I built Groundwork to fix that. It gets local service businesses online fast — professional website, local SEO, and a lead form that actually works — in under an hour, starting at $49/month.
+GroundWork is a website platform built specifically for local service businesses — not Wix, not Squarespace. Something built for the trades, with lead capture and local SEO wired in from day one. It goes live in under an hour. Every page has a lead form and click-to-call built in, your service area is set up for local SEO from the start, and after each job it automatically asks your customer for a review.
 
-Would a quick 15-minute call make sense? I can show you exactly how it looks for a ${t.trade} business in ${t.city}.
+$49/month. 14-day free trial, no credit card required.
 
-Just reply here or grab a time: ${CALENDAR_LINK}
+If you're already getting all the leads you want, ignore this. But if you're leaving work on the table because people can't find you easily — it's worth 5 minutes to look.
+
+groundworklocal.com
+
+Happy to answer any questions — just hit reply.
 
 Brad
-Groundwork
+GroundWork
 https://groundworklocal.com
-
-P.S. 14-day free trial, no credit card required — nothing to lose.
 `;
 }
 
