@@ -34,6 +34,8 @@ export const metadata: Metadata = {
   },
 };
 
+export const dynamic = "force-dynamic";
+
 export default function Home() {
   if (process.env.PRE_LAUNCH_MODE === "true") {
     return <PreLaunchPage />;
