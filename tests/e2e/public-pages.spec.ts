@@ -27,19 +27,22 @@ test.describe("Homepage", () => {
     });
     await page.goto("/");
     // Filter out known third-party noise (e.g. Stripe, analytics preloads)
+    // Next.js dev HMR can log a WebSocket handshake warning in headless Chromium.
     const appErrors = errors.filter(
       (e) =>
         !e.includes("stripe") &&
         !e.includes("analytics") &&
-        !e.includes("favicon")
+        !e.includes("favicon") &&
+        !e.includes("webpack-hmr") &&
+        !e.includes("_next/webpack-hmr")
     );
     expect(appErrors).toHaveLength(0);
   });
 
   test("Start Free Trial CTA links to /onboarding/step-1", async ({ page }) => {
     await page.goto("/");
-    // Look for primary CTA link
-    const ctaLinks = page.locator('a[href="/onboarding/step-1"]');
+    // Primary CTAs use this path; some include query params (e.g. mode=signin)
+    const ctaLinks = page.locator('a[href^="/onboarding/step-1"]');
     await expect(ctaLinks.first()).toBeVisible();
   });
 });
