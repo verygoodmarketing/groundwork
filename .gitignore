@@ -47,3 +47,10 @@ next-env.d.ts
 
 # supabase CLI temp files
 /supabase/.temp/
+
+# E2E test output
+test-results/
+playwright-report/
+cypress/screenshots/
+cypress/videos/
+allure-results/
