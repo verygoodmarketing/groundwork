@@ -386,7 +386,7 @@ async function handlePaymentFailed(invoice: Stripe.Invoice) {
  * the referred user completes their first paid billing cycle.
  *
  * Mechanic: Give 1 month free / Get 1 month free (bi-directional).
- * Credit amount: $49 (4900 cents) — one month of Starter plan.
+ * Credit amount: $39 (3900 cents) — one month of Starter plan.
  */
 async function processReferralCredits(
   referredBusinessId: string,
@@ -410,8 +410,8 @@ async function processReferralCredits(
 
   if (!referral) return; // No referral to process
 
-  // Credit amount: $49 (one month Starter)
-  const CREDIT_AMOUNT = 4900; // cents
+  // Credit amount: $39 (one month Starter)
+  const CREDIT_AMOUNT = 3900; // cents
   const CREDIT_CURRENCY = "usd";
 
   // Apply credit to referred user

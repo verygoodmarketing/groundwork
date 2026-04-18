@@ -244,7 +244,7 @@ const TESTIMONIALS = [
 const PRICING = [
   {
     name: "Starter",
-    price: "$49",
+    price: "$39",
     period: "/month",
     description: "Everything you need to get online and start getting leads.",
     features: [
@@ -263,7 +263,7 @@ const PRICING = [
   },
   {
     name: "Pro",
-    price: "$99",
+    price: "$79",
     period: "/month",
     description: "For businesses ready to grow faster and keep more customers.",
     features: [
@@ -279,25 +279,6 @@ const PRICING = [
     cta: "Start free trial",
     href: "/pricing",
     highlighted: true,
-  },
-  {
-    name: "Business",
-    price: "$199",
-    period: "/month",
-    description:
-      "For growing businesses that need more power and white-glove support.",
-    features: [
-      "Everything in Pro",
-      "Unlimited email contacts",
-      "Dedicated account manager",
-      "Custom integrations",
-      "Multi-location support",
-      "White-label reports",
-      "Phone support",
-    ],
-    cta: "Start free trial",
-    href: "/pricing",
-    highlighted: false,
   },
 ];
 
@@ -469,7 +450,7 @@ function HeroSection() {
             </h1>
 
             <p className="text-xl text-[#c9d1d9] mb-8 leading-relaxed max-w-lg">
-              Groundwork handles the website, the local SEO, and the lead capture form. Everything a plumber, electrician, or HVAC tech needs to win online — starting at $49/mo.
+              Groundwork handles the website, the local SEO, and the lead capture form. Everything a plumber, electrician, or HVAC tech needs to win online — starting at $39/mo.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mb-6">
@@ -938,7 +919,7 @@ function PricingSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
           {PRICING.map((plan) => (
             <div
               key={plan.name}

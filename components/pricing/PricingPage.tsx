@@ -7,7 +7,7 @@ import { PricingNavCTA } from "@/components/pricing/PricingNavCTA";
 import { ExitIntentPopup } from "@/components/ExitIntentPopup";
 
 type Plan = {
-  key: "STARTER" | "PRO" | "BUSINESS";
+  key: "STARTER" | "PRO";
   name: string;
   price: string;
   priceMonthly: number;
@@ -130,7 +130,7 @@ const FAQ = [
   },
   {
     q: "What's a GroundWork subdomain?",
-    a: "We give every business a free subdomain like yourbiz.groundworklocal.com. On the Pro and Business plans you can connect your own domain (e.g. myplumbing.com).",
+    a: "We give every business a free subdomain like yourbiz.groundworklocal.com. On the Pro plan you can connect your own domain (e.g. myplumbing.com).",
   },
   {
     q: "Is my website data secure?",
@@ -187,7 +187,7 @@ export function PricingPage({ plans }: Props) {
           </h1>
           <p className="text-xl text-gray-500 max-w-2xl mx-auto mb-8">
             Get your business found online, collect leads, and win more jobs —
-            starting at $49/month. No setup fees. No contracts. 14-day free
+            starting at $39/month. No setup fees. No contracts. 14-day free
             trial, no credit card required.
           </p>
 
@@ -222,7 +222,7 @@ export function PricingPage({ plans }: Props) {
         {/* Plans */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
               {plans.map((plan) => (
                 <PlanCard key={plan.key} plan={plan} />
               ))}
@@ -271,28 +271,20 @@ export function PricingPage({ plans }: Props) {
                     <th className="text-center py-3 px-4 font-semibold text-brand-700 bg-brand-50 rounded-t-lg">
                       Pro
                     </th>
-                    <th className="text-center py-3 pl-4 font-semibold text-gray-700">
-                      Business
-                    </th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-100">
                   {[
-                    ["Professional website", true, true, true],
-                    ["GroundWork subdomain", true, true, true],
-                    ["Contact forms + lead inbox", true, true, true],
-                    ["Basic SEO + sitemap", true, true, true],
-                    ["Email contacts", "200", "500", "Unlimited"],
-                    ["Custom domain", false, true, true],
-                    ["Email newsletter / broadcasts", false, true, true],
-                    ["Review request campaigns", false, true, true],
-                    ["Advanced analytics", false, true, true],
-                    ["Email marketing automation", false, false, true],
-                    ["Multi-location support", false, false, true],
-                    ["Dedicated account manager", false, false, true],
-                    ["Phone support", false, false, true],
-                    ["White-label reports", false, false, true],
-                  ].map(([feature, starter, pro, business]) => (
+                    ["Professional website", true, true],
+                    ["GroundWork subdomain", true, true],
+                    ["Contact forms + lead inbox", true, true],
+                    ["Basic SEO + sitemap", true, true],
+                    ["Email contacts", "200", "500"],
+                    ["Custom domain", false, true],
+                    ["Email newsletter / broadcasts", false, true],
+                    ["Review request campaigns", false, true],
+                    ["Advanced analytics", false, true],
+                  ].map(([feature, starter, pro]) => (
                     <tr key={String(feature)}>
                       <td className="py-3 pr-4 text-gray-700">{feature}</td>
                       <td className="text-center py-3 px-4">
@@ -300,9 +292,6 @@ export function PricingPage({ plans }: Props) {
                       </td>
                       <td className="text-center py-3 px-4 bg-brand-50/50">
                         <FeatureCell value={pro} highlighted />
-                      </td>
-                      <td className="text-center py-3 pl-4">
-                        <FeatureCell value={business} />
                       </td>
                     </tr>
                   ))}

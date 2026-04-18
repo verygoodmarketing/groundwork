@@ -76,7 +76,6 @@ model Business {
 enum PlanTier {
   STARTER
   PRO
-  BUSINESS
 }
 
 enum BillingStatus {

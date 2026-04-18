@@ -76,7 +76,7 @@ const data: IndustryPageData = {
     {
       question: "How much does it cost?",
       answer:
-        "GroundWork starts at $49/month with a 14-day free trial — no credit card required to get started. You can cancel anytime. Most plumbers make back their monthly fee from just one new job.",
+        "GroundWork starts at $39/month with a 14-day free trial — no credit card required to get started. You can cancel anytime. Most plumbers make back their monthly fee from just one new job.",
     },
   ],
   blogPost: {

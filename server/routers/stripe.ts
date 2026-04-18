@@ -15,7 +15,7 @@ export const stripeRouter = router({
   createCheckoutSession: protectedProcedure
     .input(
       z.object({
-        planKey: z.enum(["STARTER", "PRO", "BUSINESS"]),
+        planKey: z.enum(["STARTER", "PRO"]),
       })
     )
     .mutation(async ({ ctx, input }) => {

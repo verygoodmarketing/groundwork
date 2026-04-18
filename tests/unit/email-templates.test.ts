@@ -29,7 +29,7 @@ const BASE_DATA = {
   appUrl: "https://app.example.com",
   pricingUrl: "https://app.example.com/pricing",
   trialExpiryDate: "April 30, 2026",
-  planPrice: "$49",
+  planPrice: "$39",
   daysRemaining: 3,
   unsubscribeUrl: "https://app.example.com/unsubscribe",
   referralLink: "https://app.example.com/ref/abc123",

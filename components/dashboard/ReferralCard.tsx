@@ -43,7 +43,7 @@ export function ReferralCard() {
   function getSmsShareUrl() {
     if (!codeData?.url) return "#";
     const msg = encodeURIComponent(
-      `Hey, I use GroundWork to get more customers online. It's $49/mo — use my link and we both get a free month. ${codeData.url}`
+      `Hey, I use GroundWork to get more customers online. It's $39/mo — use my link and we both get a free month. ${codeData.url}`
     );
     return `sms:?body=${msg}`;
   }

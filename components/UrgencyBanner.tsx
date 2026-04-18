@@ -18,7 +18,7 @@ export function UrgencyBanner() {
   return (
     <div className="bg-amber-600 text-white text-sm py-2 px-4 flex items-center justify-between w-full">
       <span className="mx-auto font-medium text-center">
-        Founding member pricing — $49/mo locked in forever. Spots limited.
+        Founding member pricing — $39/mo locked in forever. Spots limited.
       </span>
       <button
         type="button"

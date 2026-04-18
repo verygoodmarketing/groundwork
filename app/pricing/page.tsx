@@ -7,7 +7,7 @@ const APP_URL =
 export const metadata: Metadata = {
   title: "Pricing — GroundWork",
   description:
-    "Simple, transparent pricing for local service businesses. Get your professional website, lead capture, and marketing tools starting at $49/month. 14-day free trial.",
+    "Simple, transparent pricing for local service businesses. Get your professional website, lead capture, and marketing tools starting at $39/month. 14-day free trial.",
 };
 
 const pricingJsonLd = {
@@ -25,11 +25,11 @@ const pricingJsonLd = {
     {
       "@type": "Offer",
       name: "Starter",
-      price: "49.00",
+      price: "39.00",
       priceCurrency: "USD",
       priceSpecification: {
         "@type": "UnitPriceSpecification",
-        price: "49.00",
+        price: "39.00",
         priceCurrency: "USD",
         unitCode: "MON",
       },
@@ -41,32 +41,16 @@ const pricingJsonLd = {
     {
       "@type": "Offer",
       name: "Pro",
-      price: "99.00",
+      price: "79.00",
       priceCurrency: "USD",
       priceSpecification: {
         "@type": "UnitPriceSpecification",
-        price: "99.00",
+        price: "79.00",
         priceCurrency: "USD",
         unitCode: "MON",
       },
       description:
         "The full toolkit for service businesses that want to grow — more leads, more reviews, more repeat jobs.",
-      url: `${APP_URL}/pricing`,
-      availability: "https://schema.org/InStock",
-    },
-    {
-      "@type": "Offer",
-      name: "Business",
-      price: "199.00",
-      priceCurrency: "USD",
-      priceSpecification: {
-        "@type": "UnitPriceSpecification",
-        price: "199.00",
-        priceCurrency: "USD",
-        unitCode: "MON",
-      },
-      description:
-        "For established service companies managing multiple locations, teams, or a high volume of jobs.",
       url: `${APP_URL}/pricing`,
       availability: "https://schema.org/InStock",
     },
@@ -81,8 +65,8 @@ export default function Pricing() {
     {
       key: "STARTER" as const,
       name: "Starter",
-      price: "$49",
-      priceMonthly: 49,
+      price: "$39",
+      priceMonthly: 39,
       period: "/month",
       description: "Get your business online and start capturing leads from day one.",
       features: [
@@ -102,8 +86,8 @@ export default function Pricing() {
     {
       key: "PRO" as const,
       name: "Pro",
-      price: "$99",
-      priceMonthly: 99,
+      price: "$79",
+      priceMonthly: 79,
       period: "/month",
       description: "The full toolkit for service businesses that want to grow — more leads, more reviews, more repeat jobs.",
       features: [
@@ -119,27 +103,6 @@ export default function Pricing() {
       cta: "Start free trial",
       paymentLink: process.env.STRIPE_PAYMENT_LINK_PRO ?? null,
       highlighted: true,
-    },
-    {
-      key: "BUSINESS" as const,
-      name: "Business",
-      price: "$199",
-      priceMonthly: 199,
-      period: "/month",
-      description:
-        "For established service companies managing multiple locations, teams, or a high volume of jobs — with hands-on support.",
-      features: [
-        "Everything in Pro",
-        "Email your entire customer list — no limits",
-        "Your own dedicated account manager",
-        "Custom integrations with your existing tools (CRM, scheduling, etc.)",
-        "Manage multiple locations from one dashboard",
-        "Branded reports to share with your team or partners",
-        "Phone support — call us when you need us",
-      ],
-      cta: "Start free trial",
-      paymentLink: process.env.STRIPE_PAYMENT_LINK_BUSINESS ?? null,
-      highlighted: false,
     },
   ];
 

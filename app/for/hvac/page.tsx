@@ -76,7 +76,7 @@ const data: IndustryPageData = {
     {
       question: "How does the free trial work?",
       answer:
-        "14 days of full access, no credit card required. Your site goes live immediately, so you can start capturing leads during your trial. After the trial, plans start at $49/month.",
+        "14 days of full access, no credit card required. Your site goes live immediately, so you can start capturing leads during your trial. After the trial, plans start at $39/month.",
     },
   ],
   blogPost: {

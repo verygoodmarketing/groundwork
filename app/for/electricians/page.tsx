@@ -74,7 +74,7 @@ const data: IndustryPageData = {
         "Referrals are great, but they have a ceiling. A website lets you grow beyond your current network by capturing people who are actively searching for an electrician right now. Most electricians who launch with GroundWork double their inbound inquiries within 3 months.",
     },
     {
-      question: "What's included in the $49/month plan?",
+      question: "What's included in the $39/month plan?",
       answer:
         "Everything you need to grow online: professional website, local SEO, lead capture forms, click-to-call, 200 email contacts, Google Business integration, and basic analytics. Free 14-day trial included.",
     },

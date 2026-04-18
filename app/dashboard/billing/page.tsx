@@ -110,15 +110,13 @@ export default async function BillingPage() {
         </div>
 
         {/* Upgrade prompt */}
-        {hasActiveSub && business.planTier !== "BUSINESS" && (
+        {hasActiveSub && business.planTier === "STARTER" && (
           <div className="rounded-xl border border-brand-800/40 bg-brand-950/30 p-6">
             <h2 className="font-display text-base font-semibold text-[var(--foreground)] mb-1">
               Upgrade your plan
             </h2>
             <p className="text-surface-400 text-sm mb-4">
-              {business.planTier === "STARTER"
-                ? "Upgrade to Pro to unlock custom domains, email marketing, and review request campaigns."
-                : "Upgrade to Business for unlimited contacts, dedicated support, and multi-location features."}
+              Upgrade to Pro to unlock custom domains, email marketing, and review request campaigns.
             </p>
             <Link
               href="/pricing"

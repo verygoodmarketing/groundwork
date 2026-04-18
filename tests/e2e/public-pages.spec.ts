@@ -58,14 +58,12 @@ test.describe("Pricing page", () => {
     // All three plan names must be visible
     await expect(page.getByText("Starter").first()).toBeVisible();
     await expect(page.getByText("Pro").first()).toBeVisible();
-    await expect(page.getByText("Business").first()).toBeVisible();
   });
 
   test("shows pricing for each tier", async ({ page }) => {
     await page.goto("/pricing");
-    await expect(page.getByText("$49").first()).toBeVisible();
-    await expect(page.getByText("$99").first()).toBeVisible();
-    await expect(page.getByText("$199").first()).toBeVisible();
+    await expect(page.getByText("$39").first()).toBeVisible();
+    await expect(page.getByText("$79").first()).toBeVisible();
   });
 
   test("has CTA buttons visible", async ({ page }) => {

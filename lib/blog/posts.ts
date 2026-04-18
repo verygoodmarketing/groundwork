@@ -1036,7 +1036,7 @@ const plumberSchedulingPost: BlogPost = {
         },
         {
           bold: "GroundWork.",
-          rest: " Combines a professional plumbing website with built-in lead capture and contact forms. When a customer fills out a service request on your GroundWork site, it goes straight to you — so you never miss a lead. Pair it with Housecall Pro or Jobber for full scheduling, and you have a complete system starting at $49/month.",
+          rest: " Combines a professional plumbing website with built-in lead capture and contact forms. When a customer fills out a service request on your GroundWork site, it goes straight to you — so you never miss a lead. Pair it with Housecall Pro or Jobber for full scheduling, and you have a complete system starting at $39/month.",
         },
       ],
     },
@@ -1211,7 +1211,7 @@ const hvacDispatchPost: BlogPost = {
     {
       type: "orderedList",
       items: [
-        "Professional website with lead capture and click-to-call — so you get found and customers can reach you immediately (GroundWork, $49–$99/month)",
+        "Professional website with lead capture and click-to-call — so you get found and customers can reach you immediately (GroundWork, $39–$79/month)",
         "Field service + dispatch software for job management, routing, and customer notifications (Housecall Pro or Jobber, $49–$65/month)",
         "Google Business Profile, fully filled out with photos, services, and hours — free, and critical for local search",
         "Review request follow-up after every completed job — builds the rating that drives future calls",
@@ -3017,7 +3017,7 @@ const bestWebsiteBuilderElectricians2026Post: BlogPost = {
     {
       type: "list",
       items: [
-        { bold: "Pricing:", rest: " Starts at $49/month" },
+        { bold: "Pricing:", rest: " Starts at $39/month" },
         {
           bold: "Pros:",
           rest: " Built for the trades, fast to set up, local SEO and lead capture built in",

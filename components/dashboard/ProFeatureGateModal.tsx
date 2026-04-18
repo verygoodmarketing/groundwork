@@ -118,7 +118,7 @@ export function ProFeatureGateModal({
                 href="/pricing"
                 className="block w-full text-center bg-brand-600 text-white font-semibold py-3 rounded-xl hover:bg-brand-700 transition-colors text-sm"
               >
-                See plans — from $49/mo
+                See plans — from $39/mo
               </Link>
               <button
                 type="button"

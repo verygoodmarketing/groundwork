@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { trpc } from "@/lib/trpc/client";
 import { createClient } from "@/lib/supabase/client";
 
-type PlanKey = "STARTER" | "PRO" | "BUSINESS";
+type PlanKey = "STARTER" | "PRO";
 
 type Props = {
   planKey: PlanKey;

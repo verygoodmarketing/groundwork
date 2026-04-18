@@ -107,7 +107,7 @@ export default async function TrialEndedPage() {
               className="flex items-center justify-center gap-2 w-full bg-brand-600 text-white font-semibold py-3.5 px-6 rounded-xl hover:bg-brand-700 transition-colors text-base"
             >
               <CreditCard className="w-5 h-5" />
-              Choose a plan — from $49/mo
+              Choose a plan — from $39/mo
             </Link>
             <p className="text-xs text-surface-400 font-body">
               No contract. Cancel any time. Data never deleted.

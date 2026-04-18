@@ -28,7 +28,7 @@ export const stripe: Stripe = new Proxy({} as Stripe, {
 export const PLANS = {
   STARTER: {
     name: "Starter",
-    price: 4900, // cents
+    price: 3900, // cents
     interval: "month" as const,
     paymentLinkUrl: process.env.STRIPE_PAYMENT_LINK_STARTER ?? null,
     priceId: process.env.STRIPE_STARTER_PRICE_ID ?? null,
@@ -45,7 +45,7 @@ export const PLANS = {
   },
   PRO: {
     name: "Pro",
-    price: 9900, // cents
+    price: 7900, // cents
     interval: "month" as const,
     paymentLinkUrl: process.env.STRIPE_PAYMENT_LINK_PRO ?? null,
     priceId: process.env.STRIPE_PRO_PRICE_ID ?? null,
@@ -58,23 +58,6 @@ export const PLANS = {
       "Advanced analytics",
       "Priority email support",
       "Early access to new features",
-    ],
-  },
-  BUSINESS: {
-    name: "Business",
-    price: 19900, // cents
-    interval: "month" as const,
-    paymentLinkUrl: process.env.STRIPE_PAYMENT_LINK_BUSINESS ?? null,
-    priceId: process.env.STRIPE_BUSINESS_PRICE_ID ?? null,
-    features: [
-      "Everything in Pro",
-      "Unlimited email contacts",
-      "Email marketing automation",
-      "Dedicated account manager",
-      "Phone support",
-      "Multi-location support",
-      "White-label reports",
-      "Custom integrations",
     ],
   },
 } as const;

@@ -103,7 +103,7 @@ export function buildEmailContent(
   const unsubscribeUrl = data.unsubscribeUrl ?? `${getAppUrl()}/unsubscribe`;
   const unsubText = buildUnsubscribeText(unsubscribeUrl);
   const unsubHtml = buildUnsubscribeHtml(unsubscribeUrl);
-  const { firstName, trialExpiryDate, planPrice = "$49", daysRemaining } = data;
+  const { firstName, trialExpiryDate, planPrice = "$39", daysRemaining } = data;
 
   switch (template) {
     case "onboarding_nudge_24h":
