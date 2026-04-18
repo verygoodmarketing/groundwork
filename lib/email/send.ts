@@ -27,6 +27,42 @@ function getResendClient(): Resend {
   return _resend;
 }
 
+/**
+ * Send a raw (non-template) email via Resend. Respects RESEND_ENABLED flag.
+ */
+export async function sendRawEmail(opts: {
+  to: string;
+  subject: string;
+  text: string;
+  html: string;
+}): Promise<void> {
+  const enabled = process.env.RESEND_ENABLED === "true";
+
+  if (!enabled) {
+    console.log(`[sendRawEmail] RESEND_ENABLED=false — skipping send.`, {
+      to: opts.to,
+      subject: opts.subject,
+    });
+    return;
+  }
+
+  const resend = getResendClient();
+  const { error } = await resend.emails.send({
+    from: FROM_EMAIL,
+    to: opts.to,
+    subject: opts.subject,
+    text: opts.text,
+    html: opts.html,
+  });
+
+  if (error) {
+    console.error(`[sendRawEmail] Resend error to ${opts.to}:`, error);
+    throw new Error(`Resend send failed: ${error.message}`);
+  }
+
+  console.log(`[sendRawEmail] Sent "${opts.subject}" to ${opts.to}`);
+}
+
 export async function sendEmail(
   to: string,
   template: EmailTemplate,
