@@ -320,13 +320,6 @@ export default async function DashboardPage() {
 
         {/* Referral card — client component, shows after 7+ days */}
         <ReferralCard />
-
-        {/* Coming soon */}
-        <div className="rounded-xl border border-dashed border-surface-700 p-6 text-center">
-          <p className="text-surface-400 font-body text-sm">
-            More features coming soon — lead management, email marketing, review requests, and more.
-          </p>
-        </div>
       </main>
     </div>
   );
