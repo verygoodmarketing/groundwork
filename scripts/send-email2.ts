@@ -243,6 +243,7 @@ async function main() {
         const result = await resend.emails.send({
           from: FROM_EMAIL,
           to: email,
+          replyTo: "brad@groundworklocal.com",
           subject: SUBJECT,
           html: buildHtml(email),
           text: buildText(),
