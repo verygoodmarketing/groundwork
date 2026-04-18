@@ -15,7 +15,7 @@ import { Resend } from "resend";
 
 const DRY_RUN = process.env.DRY_RUN === "true";
 const FROM_EMAIL =
-  process.env.FROM_EMAIL || "Brad at GroundWork <brad@time.verygoodmarketing.com>";
+  process.env.FROM_EMAIL || "Brad at GroundWork <brad@send.groundworklocal.com>";
 const CALENDAR_LINK = "https://groundworklocal.com";
 
 interface Target {

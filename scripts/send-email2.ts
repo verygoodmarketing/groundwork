@@ -13,7 +13,7 @@ import { Resend } from "resend";
 
 const DRY_RUN = process.env.DRY_RUN === "true";
 const FROM_EMAIL =
-  process.env.FROM_EMAIL || "GroundWork <brad@time.verygoodmarketing.com>";
+  process.env.FROM_EMAIL || "GroundWork <brad@send.groundworklocal.com>";
 const SUBJECT =
   "The scheduling problem that's costing service businesses jobs (and how to fix it)";
 const PREVIEW_TEXT =
