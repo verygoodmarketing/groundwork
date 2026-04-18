@@ -16,7 +16,8 @@ import { prisma } from "@/lib/db/client";
 export const dynamic = "force-dynamic";
 
 function verifyToken(businessId: string, token: string): boolean {
-  const secret = process.env.UNSUBSCRIBE_SECRET ?? "changeme";
+  const secret = process.env.UNSUBSCRIBE_SECRET;
+  if (!secret) throw new Error("UNSUBSCRIBE_SECRET environment variable is required");
   const expected = createHmac("sha256", secret)
     .update(businessId)
     .digest("hex");

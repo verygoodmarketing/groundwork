@@ -50,7 +50,8 @@ function daysFromNow(days: number, from: Date): Date {
 function buildUnsubscribeUrl(businessId: string): string {
   const base =
     process.env.NEXT_PUBLIC_APP_URL ?? "https://app.verygoodmarketing.com";
-  const secret = process.env.UNSUBSCRIBE_SECRET ?? "changeme";
+  const secret = process.env.UNSUBSCRIBE_SECRET;
+  if (!secret) throw new Error("UNSUBSCRIBE_SECRET environment variable is required");
   const token = createHmac("sha256", secret)
     .update(businessId)
     .digest("hex");
@@ -77,7 +78,7 @@ export async function GET(req: NextRequest) {
   // Validate cron secret to prevent unauthorized execution
   const authHeader = req.headers.get("authorization");
   const cronSecret = process.env.CRON_SECRET;
-  if (cronSecret && authHeader !== `Bearer ${cronSecret}`) {
+  if (!cronSecret || authHeader !== `Bearer ${cronSecret}`) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
