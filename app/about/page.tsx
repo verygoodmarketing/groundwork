@@ -67,14 +67,12 @@ export default function AboutPage() {
               What we offer
             </h2>
             <p className="text-surface-600 leading-relaxed mb-3">
-              GroundWork bundles the five tools that local businesses actually need:
+              GroundWork bundles the core tools that local businesses actually need:
             </p>
             <ul className="list-disc pl-6 space-y-2 text-surface-600">
               <li><strong>Professional website</strong> — live in under an hour, no code required</li>
-              <li><strong>Local SEO</strong> — built in from day one so Google can find you</li>
-              <li><strong>Lead capture</strong> — contact forms and click-to-call that funnel inquiries to your inbox</li>
-              <li><strong>Email marketing</strong> — send newsletters, promotions, and seasonal offers to your customer list</li>
-              <li><strong>Review requests</strong> — automated prompts that help you collect more 5-star Google reviews</li>
+              <li><strong>Local SEO optimization</strong> — rank higher in local search results and get found by nearby customers</li>
+              <li><strong>Lead capture and management</strong> — convert website visitors into real business inquiries</li>
             </ul>
           </section>
 

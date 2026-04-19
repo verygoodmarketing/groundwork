@@ -8,7 +8,7 @@ const data: IndustryPageData = {
   slug: "plumbers",
   pageTitle: "Website Builder for Plumbers — Get More Plumbing Jobs Online | GroundWork",
   metaDescription:
-    "Get a professional plumber website live in under an hour. Built-in local SEO, lead capture, click-to-call, and Google review tools — designed for plumbing businesses. Free to try.",
+    "Get a professional plumber website live in under an hour. Built-in local SEO, lead capture, and click-to-call — designed for plumbing businesses. Free to try.",
   h1: "The Website Builder Made for Plumbers",
   heroSubcopy:
     "Get a professional plumbing website live in under an hour — with local SEO, contact forms, and click-to-call built in. No tech skills required.",
@@ -41,12 +41,6 @@ const data: IndustryPageData = {
       title: "Lead capture forms — 24/7",
       description:
         "Service request and quote forms that work while you're on a job. Every submission goes straight to your inbox so you never miss a lead.",
-    },
-    {
-      icon: "⭐",
-      title: "Automated review requests",
-      description:
-        "After every job, send a one-click review request. More Google reviews means higher rankings and more trust with new customers.",
     },
   ],
   testimonial: {

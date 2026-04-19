@@ -8,7 +8,7 @@ const data: IndustryPageData = {
   slug: "cleaners",
   pageTitle: "Website for Cleaning Businesses — Get More Cleaning Clients Online | GroundWork",
   metaDescription:
-    "Build a professional cleaning business website in under an hour. Attract residential and commercial clients with local SEO, booking forms, and automated Google review requests. Free to try.",
+    "Build a professional cleaning business website in under an hour. Attract residential and commercial clients with local SEO and booking forms. Free to try.",
   h1: "Grow Your Cleaning Business Online",
   heroSubcopy:
     "A professional cleaning website that captures leads, builds trust, and gets you found in local search — all built in under an hour without any tech skills.",
@@ -19,7 +19,7 @@ const data: IndustryPageData = {
   accentColor: "brand",
   trustSignals: [
     "Booking & quote forms",
-    "Review automation",
+    "Before/after galleries",
     "Local SEO built in",
     "Free to try",
   ],
@@ -35,12 +35,6 @@ const data: IndustryPageData = {
       title: "Booking & quote request forms",
       description:
         "Let customers request a quote or book a clean right from your website. Every submission comes to your inbox with all the details — no more missed calls or back-and-forth texts.",
-    },
-    {
-      icon: "⭐",
-      title: "Automate review requests after every job",
-      description:
-        "Send a one-tap review link after each clean. More Google reviews builds social proof and bumps your local ranking — bringing in new clients on autopilot.",
     },
     {
       icon: "📍",
@@ -64,9 +58,9 @@ const data: IndustryPageData = {
         "Yes. GroundWork lets you list all your services — standard cleaning, deep cleaning, move-out, commercial, and more — with descriptions and pricing. You can also show pricing tiers or leave a 'get a quote' option.",
     },
     {
-      question: "How do I get more Google reviews for my cleaning business?",
+      question: "How do I showcase my work and build trust with new clients?",
       answer:
-        "GroundWork includes a built-in review request tool. After a job, you send a short email with a direct link to your Google review page. One click from your customer and they're reviewing you. Most GroundWork users double their review count within 3 months.",
+        "GroundWork makes it easy to add before/after photos, client testimonials, and service descriptions. A strong visual portfolio combined with your professional site helps convert visitors into bookings.",
     },
     {
       question: "I only clean in specific neighbourhoods — can my website reflect that?",

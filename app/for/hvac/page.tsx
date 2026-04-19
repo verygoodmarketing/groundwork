@@ -46,7 +46,7 @@ const data: IndustryPageData = {
       icon: "⭐",
       title: "Collect reviews after every job",
       description:
-        "More Google reviews = higher local rankings = more calls. GroundWork's automated review requests make it easy to build a strong reputation without any extra work.",
+        "Build local SEO trust with customer testimonials displayed prominently on your site. When homeowners compare HVAC companies, reviews and social proof help you stand out.",
     },
   ],
   testimonial: {

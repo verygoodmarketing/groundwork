@@ -27,15 +27,13 @@ export const metadata: Metadata = {
 		template: '%s | GroundWork',
 	},
 	description:
-		'Show up first. Win more work. GroundWork helps plumbers, electricians, cleaners, and contractors get a professional website live in under an hour — with built-in local SEO, lead capture, email marketing, and review tools. Free to try.',
+		'Show up first. Win more work. GroundWork helps plumbers, electricians, cleaners, and contractors get a professional website live in under an hour — with built-in local SEO and lead capture. Free to try.',
 	keywords: [
 		'website builder for small businesses',
 		'local SEO for service businesses',
 		'website for plumbers',
 		'website for electricians',
 		'marketing tools for small service businesses',
-		'email marketing for small businesses',
-		'Google review request tool',
 		'website builder for contractors',
 		'local business website',
 		'service business marketing',
@@ -50,7 +48,7 @@ export const metadata: Metadata = {
 	openGraph: {
 		title: 'GroundWork — Show up first. Win more work.',
 		description:
-			'Show up first. Win more work. The all-in-one marketing platform for local service businesses. Website builder, local SEO, lead capture, review requests, and email marketing — in one simple tool.',
+			'Show up first. Win more work. The marketing platform for local service businesses. Website builder, local SEO, and lead capture — in one simple tool.',
 		type: 'website',
 		url: APP_URL,
 		siteName: 'GroundWork',
@@ -68,7 +66,7 @@ export const metadata: Metadata = {
 		card: 'summary_large_image',
 		title: 'GroundWork — Show up first. Win more work.',
 		description:
-			'Show up first. Win more work. The all-in-one marketing platform for local service businesses. Website builder, local SEO, lead capture, review requests, and email marketing — in one simple tool.',
+			'Show up first. Win more work. The marketing platform for local service businesses. Website builder, local SEO, and lead capture — in one simple tool.',
 		images: ['/og-image.png'],
 	},
 	robots: {

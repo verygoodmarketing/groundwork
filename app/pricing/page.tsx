@@ -15,7 +15,7 @@ const pricingJsonLd = {
   "@type": "Product",
   name: "GroundWork",
   description:
-    "All-in-one marketing platform for local service businesses — website builder, local SEO, lead capture, review requests, and email marketing.",
+    "Marketing platform for local service businesses — website builder, local SEO, and lead capture.",
   url: `${APP_URL}/pricing`,
   brand: {
     "@type": "Brand",
@@ -75,7 +75,6 @@ export default function Pricing() {
         "Contact forms that funnel leads straight to your inbox",
         "Click-to-call button — customers tap and ring you instantly",
         "Built-in SEO so Google can find your business",
-        "Email up to 200 customers and prospects",
         "Connect to Google Business Profile in one click",
         "See who's visiting your site and where they come from",
       ],
@@ -89,13 +88,10 @@ export default function Pricing() {
       price: "$79",
       priceMonthly: 79,
       period: "/month",
-      description: "The full toolkit for service businesses that want to grow — more leads, more reviews, more repeat jobs.",
+      description: "The full toolkit for service businesses that want to grow — more leads, better visibility, and easier customer management.",
       features: [
         "Everything in Starter",
         "Your own domain name (e.g. myjohnsonplumbing.com)",
-        "Email up to 500 customers",
-        "Send email blasts, promos, and seasonal offers",
-        "Automated review requests — get more 5-star Google reviews",
         "Priority support — real humans, fast responses",
         "Advanced analytics — see which marketing is winning jobs",
         "First access to every new GroundWork feature",

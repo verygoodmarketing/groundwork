@@ -68,7 +68,7 @@ export default function TermsPage() {
             <p className="text-surface-600 leading-relaxed">
               {COMPANY_NAME} provides an all-in-one marketing and website platform for local
               service businesses, including website builder tools, local SEO features, lead
-              capture forms, email marketing, and review management capabilities
+              capture forms and analytics capabilities
               (collectively, the &ldquo;Service&rdquo;).
             </p>
           </section>

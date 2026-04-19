@@ -215,8 +215,8 @@ function SuccessScreen({
           <div className="space-y-2">
             {[
               { icon: MapPin, text: "Add your Google Business link to drive local traffic" },
-              { icon: Star, text: "Set up review requests to build social proof" },
-              { icon: Mail, text: "Send your first email campaign to past customers" },
+              { icon: Star, text: "Add client testimonials to build social proof" },
+              { icon: Mail, text: "Connect with past customers to share your new site" },
             ].map(({ icon: Icon, text }) => (
               <div key={text} className="flex items-start gap-2.5">
                 <Icon className="w-4 h-4 flex-shrink-0 mt-0.5" style={{ color: C.brandText }} />

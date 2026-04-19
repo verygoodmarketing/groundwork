@@ -94,7 +94,7 @@ function buildHtml(email: string): string {
               <p style="margin:0 0 8px 0;font-size:16px;line-height:26px;color:#333333;font-weight:bold;">The math:</p>
 
               <p style="margin:0 0 24px 0;font-size:16px;line-height:26px;color:#333333;">
-                If you capture just 2 additional service calls per month from online search — jobs you're currently missing — at $200–$400 per job, that's $400–$800/month in recovered revenue. GroundWork starts at $49/month.
+                If you capture just 2 additional service calls per month from online search — jobs you're currently missing — at $200–$400 per job, that's $400–$800/month in recovered revenue. GroundWork starts at $39/month.
               </p>
 
               <table cellpadding="0" cellspacing="0" border="0" style="margin:0 0 24px 0;">
@@ -171,7 +171,7 @@ The result: you capture the leads you're currently losing to competitors who hav
 
 THE MATH:
 
-If you capture just 2 additional service calls per month from online search — jobs you're currently missing — at $200–$400 per job, that's $400–$800/month in recovered revenue. GroundWork starts at $49/month.
+If you capture just 2 additional service calls per month from online search — jobs you're currently missing — at $200–$400 per job, that's $400–$800/month in recovered revenue. GroundWork starts at $39/month.
 
 See how GroundWork works for your trade: https://groundworklocal.com
 

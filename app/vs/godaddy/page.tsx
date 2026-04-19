@@ -12,7 +12,7 @@ const data: ComparisonPageData = {
   pageTitle:
     "GroundWork vs GoDaddy Website Builder: Which Is Better for Local Service Businesses?",
   metaDescription:
-    "GroundWork vs GoDaddy for local service businesses. Compare trade-specific templates, local SEO, lead capture, and review automation. See which platform actually grows your business.",
+    "GroundWork vs GoDaddy for local service businesses. Compare trade-specific templates, local SEO, and lead capture. See which platform actually grows your business.",
   h1: "GroundWork vs GoDaddy Website Builder: Which Is Better for Local Service Businesses?",
   intro:
     "GoDaddy is one of the most recognized names in web hosting and domains. Their website builder — GoDaddy Websites + Marketing — is marketed heavily to small businesses. But recognition doesn't always mean the right fit. Here's how GroundWork and GoDaddy compare for local service businesses.",
@@ -44,16 +44,6 @@ const data: ComparisonPageData = {
       competitor: "⚠️ Limited sync",
     },
     {
-      feature: "Automated review requests",
-      groundwork: "✅ Included (Pro plan)",
-      competitor: "❌ Not available",
-    },
-    {
-      feature: "Email marketing",
-      groundwork: "✅ Included (Pro plan)",
-      competitor: "⚠️ Add-on; limited on lower tiers",
-    },
-    {
       feature: "Analytics",
       groundwork: "✅ Privacy-first, built-in",
       competitor: "⚠️ Basic analytics; third-party needed for depth",
@@ -83,7 +73,7 @@ const data: ComparisonPageData = {
     {
       number: "2",
       title: "GoDaddy's real cost is higher than the headline price.",
-      body: "GoDaddy advertises starter plans at $10–$13/month. But to get email marketing, appointment scheduling, and priority support, the cost jumps — and you may still need third-party tools for review management, local SEO optimization, and lead tracking. GroundWork bundles everything a local service business needs at $39–$79/month. No surprises.",
+      body: "GoDaddy advertises starter plans at $10–$13/month. But to get appointment scheduling and priority support, the cost jumps — and you may still need third-party tools for local SEO optimization and lead tracking. GroundWork bundles everything a local service business needs at $39–$79/month. No surprises.",
     },
     {
       number: "3",
@@ -92,13 +82,8 @@ const data: ComparisonPageData = {
     },
     {
       number: "4",
-      title: "Review request automation included.",
-      body: "GoDaddy doesn't offer automated review requests. GroundWork Pro does. After you complete a job, you send a one-tap review request and your customer lands on your Google review page with one click. More reviews mean more trust, more calls, and better local rankings. It's one of the highest-ROI features available to local service businesses — and GroundWork includes it.",
-    },
-    {
-      number: "5",
       title: "Everything for your growth in one dashboard.",
-      body: "GroundWork brings together your website, lead inbox, local SEO, email marketing, review requests, and analytics in one place. GoDaddy offers a website builder, but growth tools are patchy — some included, some add-ons, some requiring outside integrations. For a business owner managing a team and handling jobs every day, the fewer dashboards the better.",
+      body: "GroundWork brings together your website, lead inbox, local SEO, and analytics in one place. GoDaddy offers a website builder, but growth tools are patchy — some included, some add-ons, some requiring outside integrations. For a business owner managing a team and handling jobs every day, the fewer dashboards the better.",
     },
   ],
   whoShouldUse: {

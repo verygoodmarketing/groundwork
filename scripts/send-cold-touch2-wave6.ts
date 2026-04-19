@@ -16,7 +16,22 @@ import { Resend } from "resend";
 const DRY_RUN = process.env.DRY_RUN === "true";
 const FROM_EMAIL =
   process.env.FROM_EMAIL || "Brad at GroundWork <brad@send.groundworklocal.com>";
-const CALENDAR_LINK = "https://groundworklocal.com";
+
+// Map trades to landing page URLs with UTM tracking
+function getLandingPageUrl(trade: string): string {
+  const baseUrl = "https://groundworklocal.com/start";
+  const utm = "?utm_source=email&utm_medium=cold&utm_campaign=wave6_touch2";
+  
+  const tradeMap: Record<string, string> = {
+    plumber: `${baseUrl}/plumbers${utm}`,
+    electrician: `${baseUrl}/electricians${utm}`,
+    landscaper: `${baseUrl}${utm}`, // Generic landing page
+    cleaner: `${baseUrl}/cleaners${utm}`,
+    contractor: `${baseUrl}/contractors${utm}`,
+  };
+  
+  return tradeMap[trade] || `${baseUrl}${utm}`;
+}
 
 interface Target {
   firstName: string;
@@ -240,7 +255,7 @@ function buildHtml(t: Target): string {
         </p>
 
         <p style="margin:0 0 16px 0;font-size:16px;line-height:26px;color:#333333;">
-          Still worth a quick 15 minutes? <a href="${CALENDAR_LINK}" style="color:#1a1a2e;">${CALENDAR_LINK}</a>
+          Still worth a quick 15 minutes? <a href="${getLandingPageUrl(t.trade)}" style="color:#1a1a2e;">See how it works</a>
         </p>
 
         <p style="margin:0 0 4px 0;font-size:16px;line-height:26px;color:#333333;">Brad</p>
@@ -268,7 +283,7 @@ Nothing fancy. Just a clean site, a contact form, and local SEO that works.
 
 If you've been meaning to get online but haven't found the time, that's the whole point of GroundWork — it takes about an hour.
 
-Still worth a quick 15 minutes? ${CALENDAR_LINK}
+Still worth a quick 15 minutes? ${getLandingPageUrl(t.trade)}
 
 Brad
 GroundWork

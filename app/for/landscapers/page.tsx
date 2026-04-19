@@ -42,12 +42,6 @@ const data: IndustryPageData = {
       description:
         "GroundWork builds local SEO into every page — structured data, service area pages, and Google Business integration so you show up when homeowners search for landscapers in your area.",
     },
-    {
-      icon: "⭐",
-      title: "Turn happy customers into new leads",
-      description:
-        "After every job, send a review request. More 5-star reviews = higher Google ranking = more calls. It's the lowest-cost marketing you can do.",
-    },
   ],
   testimonial: {
     name: "Dave R.",

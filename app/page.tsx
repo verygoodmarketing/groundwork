@@ -6,13 +6,13 @@ const APP_URL =
   process.env.NEXT_PUBLIC_APP_URL ?? "https://groundworklocal.com";
 
 export const metadata: Metadata = {
-  title: "GroundWork — Websites & Marketing for Local Service Businesses",
+  title: "GroundWork — Get Found Online, Win More Customers",
   description:
-    "GroundWork helps plumbers, electricians, cleaners, and contractors get a professional website live in under an hour — with built-in local SEO, lead capture, email marketing, and review tools. Free to try.",
+    "Stop losing jobs to competitors with better websites. GroundWork helps plumbers, electricians, HVAC, cleaners, and contractors win more customers — with a professional website, Google rankings, and 24/7 lead capture. Live in 48 hours. Free to try.",
   openGraph: {
-    title: "GroundWork — Get Found Online. Get More Customers.",
+    title: "GroundWork — Get Found Online. Win More Customers.",
     description:
-      "The all-in-one marketing platform for local service businesses. Website builder, local SEO, lead capture, review requests, and email marketing — in one simple tool.",
+      "Stop losing jobs to competitors with better websites. Get your business online, start ranking on Google, and capture leads 24/7 — in under an hour.",
     type: "website",
     url: APP_URL,
     siteName: "GroundWork",
@@ -21,15 +21,15 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "GroundWork — Get Found Online. Get More Customers.",
+        alt: "GroundWork — Get Found Online. Win More Customers.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "GroundWork — Get Found Online. Get More Customers.",
+    title: "GroundWork — Get Found Online. Win More Customers.",
     description:
-      "The all-in-one marketing platform for local service businesses. Website builder, local SEO, lead capture, review requests, and email marketing — in one simple tool.",
+      "Stop losing jobs to competitors with better websites. Get your business online, start ranking on Google, and capture leads 24/7 — in under an hour.",
     images: ["/og-image.png"],
   },
 };

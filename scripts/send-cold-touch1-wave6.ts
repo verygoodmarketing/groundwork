@@ -17,7 +17,6 @@ import { Resend } from "resend";
 const DRY_RUN = process.env.DRY_RUN === "true";
 const FROM_EMAIL =
   process.env.FROM_EMAIL || "Brad at Groundwork <brad@send.groundworklocal.com>";
-const CALENDAR_LINK = "https://groundworklocal.com";
 
 interface Target {
   firstName: string;
@@ -201,7 +200,7 @@ const TARGETS: Target[] = [
   },
 ];
 
-function buildSubject(_t: Target): string {
+function buildSubject(): string {
   return `Does your business show up after 5pm?`;
 }
 
@@ -238,7 +237,7 @@ function buildHtml(t: Target): string {
         </p>
 
         <p style="margin:0 0 16px 0;font-size:16px;line-height:26px;color:#333333;">
-          $49/month. 14-day free trial, no credit card required.
+          $39/month. 14-day free trial, no credit card required.
         </p>
 
         <p style="margin:0 0 16px 0;font-size:16px;line-height:26px;color:#333333;">
@@ -276,7 +275,7 @@ That's the problem GroundWork solves.
 
 GroundWork is a website platform built specifically for local service businesses — not Wix, not Squarespace. Something built for the trades, with lead capture and local SEO wired in from day one. It goes live in under an hour. Every page has a lead form and click-to-call built in, your service area is set up for local SEO from the start, and after each job it automatically asks your customer for a review.
 
-$49/month. 14-day free trial, no credit card required.
+$39/month. 14-day free trial, no credit card required.
 
 If you're already getting all the leads you want, ignore this. But if you're leaving work on the table because people can't find you easily — it's worth 5 minutes to look.
 
@@ -299,7 +298,7 @@ async function main() {
     console.log("\nDRY RUN — would send to:");
     for (const t of TARGETS) {
       console.log(`  - ${t.email} (${t.businessName}, ${t.city} ${t.state})`);
-      console.log(`    Subject: "${buildSubject(t)}"`);
+      console.log(`    Subject: "${buildSubject()}"`);
     }
     return;
   }
@@ -312,7 +311,7 @@ async function main() {
         from: FROM_EMAIL,
         to: t.email,
         replyTo: "brad@groundworklocal.com",
-        subject: buildSubject(t),
+        subject: buildSubject(),
         html: buildHtml(t),
         text: buildText(t),
       });

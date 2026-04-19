@@ -116,7 +116,7 @@ export default async function BillingPage() {
               Upgrade your plan
             </h2>
             <p className="text-surface-400 text-sm mb-4">
-              Upgrade to Pro to unlock custom domains, email marketing, and review request campaigns.
+              Upgrade to Pro to unlock custom domains and advanced features.
             </p>
             <Link
               href="/pricing"

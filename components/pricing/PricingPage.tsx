@@ -281,8 +281,6 @@ export function PricingPage({ plans }: Props) {
                     ["Basic SEO + sitemap", true, true],
                     ["Email contacts", "200", "500"],
                     ["Custom domain", false, true],
-                    ["Email newsletter / broadcasts", false, true],
-                    ["Review request campaigns", false, true],
                     ["Advanced analytics", false, true],
                   ].map(([feature, starter, pro]) => (
                     <tr key={String(feature)}>

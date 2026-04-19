@@ -32,7 +32,7 @@ const CASE_STUDIES = [
     initials: "SH",
     color: "from-violet-500 to-purple-600",
     metric: "47 new Google reviews in 2 months",
-    metricDetail: "Used the built-in review request tool to automatically follow up with every client after a cleaning.",
+    metricDetail: "Leveraged local SEO and client testimonials to build trust and bring in steady referrals after every job.",
     quote:
       "I had 8 reviews when I started. My competitor down the street had 200. GroundWork's review tool changed everything — I'm now at 55 and closing the gap every week.",
     attribution: "— Diane M., owner",

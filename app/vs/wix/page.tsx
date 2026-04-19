@@ -12,7 +12,7 @@ const data: ComparisonPageData = {
   pageTitle:
     "GroundWork vs Wix: Which Website Builder Is Better for Local Service Businesses?",
   metaDescription:
-    "GroundWork vs Wix for local service businesses. See why plumbers, contractors, and cleaners choose GroundWork over Wix for local SEO, lead capture, and review automation.",
+    "GroundWork vs Wix for local service businesses. See why plumbers, contractors, and cleaners choose GroundWork over Wix for local SEO and lead capture.",
   h1: "GroundWork vs Wix: Which Website Builder Is Better for Local Service Businesses?",
   intro:
     "If you're a plumber, cleaner, landscaper, or contractor shopping for a website builder, you've probably come across Wix. It's everywhere — TV ads, Google results, billboards. But Wix was built for everyone: bloggers, artists, e-commerce stores. That means it was not really built for you.\n\nGroundWork is. Here's how the two compare.",
@@ -41,16 +41,6 @@ const data: ComparisonPageData = {
       feature: "Google Business Profile integration",
       groundwork: "✅ Built-in",
       competitor: "❌ Not included",
-    },
-    {
-      feature: "Automated review requests",
-      groundwork: "✅ Included (Pro plan)",
-      competitor: "❌ Not available",
-    },
-    {
-      feature: "Email marketing",
-      groundwork: "✅ Included (Pro plan)",
-      competitor: "❌ Wix Ascend add-on (~$45+/mo extra)",
     },
     {
       feature: "Site analytics",
@@ -86,11 +76,6 @@ const data: ComparisonPageData = {
     },
     {
       number: "4",
-      title: "Review requests without a third-party subscription.",
-      body: "Online reviews drive more local business than almost anything else. GroundWork Pro includes automated review request emails: after each job, your customer gets a one-click link straight to your Google review page. Wix doesn't have this feature at all. You'd need a separate tool like Podium or Broadly — typically $200+ per month.",
-    },
-    {
-      number: "5",
       title: "Simple enough for a busy owner to actually use.",
       body: "Wix's drag-and-drop editor is powerful, but power comes with complexity. Most service business owners don't have time to become web designers. GroundWork is intentionally limited: add your business name, phone number, services, and photos. You're live. Average setup time: under an hour.",
     },

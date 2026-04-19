@@ -12,7 +12,7 @@ const data: ComparisonPageData = {
   pageTitle:
     "GroundWork vs Squarespace: Which Is Better for Local Service Businesses?",
   metaDescription:
-    "GroundWork vs Squarespace for local service businesses. Compare local SEO, lead capture, review requests, and pricing. See why plumbers and contractors choose GroundWork.",
+    "GroundWork vs Squarespace for local service businesses. Compare local SEO, lead capture, and pricing. See why plumbers and contractors choose GroundWork.",
   h1: "GroundWork vs Squarespace: Which Is Better for Local Service Businesses?",
   intro:
     "Squarespace is known for gorgeous design — it's the go-to for photographers, boutique hotels, and design studios. But if you're a plumber, landscaper, cleaner, or electrician, you probably don't need a runway-worthy website. You need one that gets the phone ringing.\n\nHere's how GroundWork and Squarespace compare for local service businesses.",
@@ -43,16 +43,6 @@ const data: ComparisonPageData = {
       competitor: "❌ Not included",
     },
     {
-      feature: "Automated review requests",
-      groundwork: "✅ Included (Pro plan)",
-      competitor: "❌ Not available",
-    },
-    {
-      feature: "Email marketing",
-      groundwork: "✅ Included (Pro plan)",
-      competitor: "❌ Squarespace Campaigns add-on required",
-    },
-    {
       feature: "Analytics",
       groundwork: "✅ Privacy-first, simple",
       competitor: "⚠️ Built-in but complex; no local focus",
@@ -81,8 +71,13 @@ const data: ComparisonPageData = {
     },
     {
       number: "3",
-      title: "Lead capture that goes beyond a contact form.",
+      title: "Lead routing that actually works for busy owners.",
       body: "Both platforms include a contact form. But GroundWork routes every inquiry to a dedicated lead inbox, tracks your leads over time, and includes click-to-call buttons that work on mobile — where most local searches happen. Squarespace sends form submissions to email, with limited organization or follow-up options.",
+    },
+    {
+      number: "4",
+      title: "No design degree required.",
+      body: "Squarespace's editing experience is polished but designed for people who care about design. Resizing columns, choosing fonts, managing blocks — it's a real time investment. GroundWork makes one deliberate trade-off: less design flexibility, in exchange for a site you can actually launch today. For a business owner, that's often the right call.",
     },
     {
       number: "4",
@@ -100,7 +95,7 @@ const data: ComparisonPageData = {
     body: "Squarespace is excellent for businesses where design is part of the brand — photographers, interior designers, wedding planners, creative agencies. If your website needs to be a portfolio and a conversion engine, Squarespace is worth the learning curve.\n\nFor local service businesses where speed, lead capture, and local search visibility matter more than visual perfection, GroundWork is purpose-built for the job.",
   },
   bottomLine:
-    "Squarespace is a beautiful design platform. GroundWork is a growth platform for local service businesses.\n\nBoth create professional websites. Only GroundWork combines that website with local SEO, lead capture, review requests, and email marketing — in one platform, under an hour to launch.",
+    "Squarespace is a beautiful design platform. GroundWork is a growth platform for local service businesses.\n\nBoth create professional websites. Only GroundWork combines that website with local SEO and lead capture — in one platform, under an hour to launch.",
   ctaText: "Try GroundWork free for 14 days",
 };
 

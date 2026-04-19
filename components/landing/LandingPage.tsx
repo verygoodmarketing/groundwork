@@ -49,49 +49,33 @@ const NAV_LINKS = [
 const FEATURES = [
   {
     id: "website",
-    title: "Professional website in under an hour",
+    title: "Look credible. Win more trust.",
     description:
-      "Pick from 8+ templates designed for your trade. Add your business name, logo, phone, and hours — and you're live. No code. No designers. No hassle.",
+      "A professional website makes prospects feel safe hiring you — even before you speak. GroundWork templates are built for trades, not generic businesses. Live in under an hour. No code or design skills needed.",
     Icon: Globe,
     colorKey: "brand",
   },
   {
     id: "leads",
-    title: "More calls, more leads",
+    title: "Turn visitors into paying customers",
     description:
-      "Built-in contact forms and click-to-call buttons turn website visitors into real phone inquiries. Every lead lands in your inbox instantly.",
+      "Built-in contact forms and click-to-call buttons capture leads 24/7 — even when you're on a job. Every inquiry lands in your inbox instantly so you never miss a call again.",
     Icon: Phone,
     colorKey: "blue",
   },
   {
     id: "seo",
-    title: "Show up on Google",
+    title: "Get found when customers search \"near me\"",
     description:
-      "GroundWork sites are built for local SEO from day one — with auto-generated meta tags, sitemaps, and Google Business Profile integration so customers find you when they search nearby.",
+      "Your site is built for local search from day one. When someone searches \"plumber near me\" or \"HVAC repair [your city]\", GroundWork helps you show up first — with automatic local SEO, sitemaps, and Google Business Profile integration.",
     Icon: MapPin,
     colorKey: "violet",
   },
   {
-    id: "email",
-    title: "Email marketing made easy",
-    description:
-      "Capture email addresses from your site and send simple newsletters or promotions to your customers. Seasonal deals, reminders, thank-you notes — done in minutes.",
-    Icon: Mail,
-    colorKey: "orange",
-  },
-  {
-    id: "reviews",
-    title: "More 5-star reviews",
-    description:
-      "After a job, send a quick review request via email. One click from your customer lands them on your Google review page. More reviews = more trust = more business.",
-    Icon: Star,
-    colorKey: "amber",
-  },
-  {
     id: "analytics",
-    title: "See what's working",
+    title: "Know which leads are worth chasing",
     description:
-      "Simple, privacy-first analytics show you how many people visit your site, which pages they look at, and how many contact you — no cookie banners needed.",
+      "See exactly how many people visit your site, which pages they look at, and how many contact you — so you know what's working and where to focus. Simple, privacy-first analytics. No cookie banners needed.",
     Icon: BarChart3,
     colorKey: "sky",
   },
@@ -102,8 +86,8 @@ const WHO_WE_HELP = [
     id: "plumbers",
     title: "Plumbers",
     Icon: Wrench,
-    pain: "Missed calls mean missed jobs. Your competitors show up on Google — you don't.",
-    solution: "Get a professional website and booking form that captures leads 24/7, even when you're on a job.",
+    pain: "You're losing jobs to plumbers with better websites and Google rankings — even if you're better at the work.",
+    solution: "Get found on Google. Capture leads 24/7. Stop losing jobs to competitors who just showed up first online.",
     href: "/for/plumbers",
   },
   {
@@ -127,7 +111,7 @@ const WHO_WE_HELP = [
     title: "Cleaners",
     Icon: Sparkles,
     pain: "Word of mouth only goes so far. Growing beyond your current circle feels impossible.",
-    solution: "Automate review requests and let happy customers bring in new business on autopilot.",
+    solution: "Build trust fast with a professional site, client testimonials, and easy online booking.",
     href: "/for/cleaners",
   },
   {
@@ -176,8 +160,8 @@ const TRUST_STATS = [
   {
     id: "built-for-trades",
     Icon: Store,
-    headline: "Built for plumbers, HVAC, electricians, cleaners, and contractors",
-    detail: "Every feature is designed around winning local service jobs — not generic websites.",
+    headline: "Built to win local service jobs — not generic websites",
+    detail: "Every feature is designed around what plumbers, HVAC, electricians, cleaners, and contractors need to get more customers and grow revenue.",
     colorBg: "bg-brand-50",
     colorIcon: "text-brand-600",
     colorRing: "ring-brand-200",
@@ -185,8 +169,8 @@ const TRUST_STATS = [
   {
     id: "setup-time",
     Icon: Clock,
-    headline: "Live in under an hour — no developer or design skills needed",
-    detail: "Pick a template, add your info, and you're online. No agency, no code.",
+    headline: "Stop wasting weeks on a website. Go live in under an hour.",
+    detail: "Pick a template, add your info, and you're online — no agency, no developer, no waiting. Focus on your trade, not tech.",
     colorBg: "bg-blue-50",
     colorIcon: "text-blue-600",
     colorRing: "ring-blue-200",
@@ -194,8 +178,8 @@ const TRUST_STATS = [
   {
     id: "local-seo",
     Icon: MapPin,
-    headline: "Local SEO baked in \u2014 optimized for \u201cservice near me\u201d searches",
-    detail: "Auto-generated meta tags, sitemaps, and Google Business Profile integration from day one.",
+    headline: "Get found when customers search \"near me\"",
+    detail: "Built for local search from day one — so when someone needs your service, you show up first. Not your competitors.",
     colorBg: "bg-violet-50",
     colorIcon: "text-violet-600",
     colorRing: "ring-violet-200",
@@ -203,8 +187,8 @@ const TRUST_STATS = [
   {
     id: "free-trial",
     Icon: CreditCard,
-    headline: "14-day free trial — no credit card required",
-    detail: "Try everything risk-free. Cancel anytime, no questions asked.",
+    headline: "Try it free. See results. Then decide.",
+    detail: "14 days to build your site, get it live, and see if leads start coming in. No credit card required. Cancel anytime, no questions asked.",
     colorBg: "bg-amber-50",
     colorIcon: "text-amber-600",
     colorRing: "ring-amber-200",
@@ -237,7 +221,7 @@ const TESTIMONIALS = [
     businessType: "Photography",
     color: "from-amber-500 to-orange-600",
     quote:
-      "The review request tool alone was worth it. I went from 12 Google reviews to 47 in two months just by asking after every session.",
+      "The website templates are stunning and so easy to customize. I had a professional portfolio site live in less than an hour. My booking rate went up immediately.",
   },
 ];
 
@@ -253,7 +237,6 @@ const PRICING = [
       "Contact forms + lead inbox",
       "Click-to-call + mobile-optimized",
       "Basic SEO + sitemap",
-      "Up to 200 contacts for email",
       "Google Business Profile integration",
       "Basic analytics",
     ],
@@ -269,9 +252,6 @@ const PRICING = [
     features: [
       "Everything in Starter",
       "Custom domain support",
-      "Up to 500 email contacts",
-      "Email broadcast + newsletter",
-      "Review request campaigns",
       "Priority email support",
       "Advanced analytics",
       "Early access to new features",
@@ -443,14 +423,14 @@ function HeroSection() {
               className="text-4xl sm:text-5xl xl:text-6xl font-extrabold text-white leading-[1.05] mb-6"
               style={{ letterSpacing: "-0.03em", fontFamily: "var(--font-display)" }}
             >
-              A professional website + Google ranking —{" "}
+              Stop losing jobs to competitors who show up on Google.{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-emerald-400">
-                built for local trades, live in 48 hours
+                Get found. Get booked. Grow your business.
               </span>
             </h1>
 
             <p className="text-xl text-[#c9d1d9] mb-8 leading-relaxed max-w-lg">
-              Groundwork handles the website, the local SEO, and the lead capture form. Everything a plumber, electrician, or HVAC tech needs to win online — starting at $39/mo.
+              GroundWork gives plumbers, electricians, HVAC, cleaners, and contractors everything they need to win more customers online — a professional website, Google rankings, and 24/7 lead capture. Live in 48 hours. Starting at $39/mo.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mb-6">
@@ -522,8 +502,8 @@ function HeroSection() {
           {[
             { value: "< 1 hour", label: "Average setup time" },
             { value: "8+", label: "Industry templates" },
-            { value: "47%", label: "Avg. review increase" },
-            { value: "5 tools", label: "In one platform" },
+            { value: "24/7", label: "Lead capture uptime" },
+            { value: "4 tools", label: "In one platform" },
           ].map((stat) => (
             <div key={stat.label} className="text-center md:text-left">
               <div className="text-2xl sm:text-3xl font-bold text-white" style={{ fontFamily: "var(--font-display)" }}>{stat.value}</div>
@@ -547,10 +527,10 @@ function FeaturesSection() {
             Features
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4" style={{ fontFamily: "var(--font-display)" }}>
-            Everything you need. Nothing you don&apos;t.
+            Win more customers. Work less on marketing.
           </h2>
           <p className="text-lg text-gray-500">
-            GroundWork bundles the 5 tools that local businesses actually need into one simple platform — so you can stop paying for 5 different subscriptions and start actually using them.
+            GroundWork bundles the core tools that local businesses need into one simple platform — website, SEO, and lead capture working together.
           </p>
         </div>
 
@@ -610,7 +590,7 @@ function WhoWeHelpSection() {
             Who We Help
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4" style={{ fontFamily: "var(--font-display)" }}>
-            Built for the Businesses That Keep Your Town Running
+            Built for the businesses that keep your town running — and deserve more customers
           </h2>
           <p className="text-lg text-gray-500">
             We built GroundWork specifically for trade and service businesses — people who are experts at their craft but didn&apos;t sign up to become web developers or marketers.
@@ -681,7 +661,7 @@ function HowItWorksSection() {
             How it works
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4" style={{ fontFamily: "var(--font-display)" }}>
-            Up and running in 3 steps
+            From zero to online — and taking calls — in 3 steps
           </h2>
           <p className="text-lg text-[#c9d1d9]">
             No learning curve. No technical knowledge required.
@@ -1020,10 +1000,10 @@ function WaitlistSection() {
 
       <div className="relative max-w-2xl mx-auto text-center">
         <h2 className="text-3xl sm:text-5xl font-extrabold text-white mb-4 leading-tight" style={{ fontFamily: "var(--font-display)" }}>
-          Ready to get more customers?
+          Ready to stop losing jobs to competitors with better websites?
         </h2>
         <p className="text-lg text-brand-100 mb-10">
-          Build your professional website in under an hour. Free to try — no credit card required. No tech skills needed.
+          Get your business online, start ranking on Google, and capture leads 24/7 — in under an hour. Free to try. No credit card required. No tech skills needed.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center">

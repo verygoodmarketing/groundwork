@@ -10,7 +10,6 @@ import { Resend } from "resend";
 const DRY_RUN = process.env.DRY_RUN === "true";
 const FROM_EMAIL =
   process.env.FROM_EMAIL || "Brad at Groundwork <brad@send.groundworklocal.com>";
-const CALENDAR_LINK = "https://groundworklocal.com";
 
 interface Target {
   firstName: string;
@@ -64,7 +63,7 @@ const TARGETS: Target[] = [
   },
 ];
 
-function buildSubject(_t: Target): string {
+function buildSubject(): string {
   return `Your next customer is searching right now`;
 }
 
@@ -93,7 +92,7 @@ function buildHtml(t: Target): string {
         </p>
 
         <p style="margin:0 0 16px 0;font-size:16px;line-height:26px;color:#333333;">
-          I built <a href="https://groundworklocal.com" style="color:#1a1a2e;">GroundWork</a> to fix that. It gets local service businesses online fast — professional website, local SEO, and a lead form that actually works — in under an hour, starting at $49/month.
+          I built <a href="https://groundworklocal.com" style="color:#1a1a2e;">GroundWork</a> to fix that. It gets local service businesses online fast — professional website, local SEO, and a lead form that actually works — in under an hour, starting at $39/month.
         </p>
 
         <p style="margin:0 0 16px 0;font-size:16px;line-height:26px;color:#333333;">
@@ -127,7 +126,7 @@ function buildText(t: Target): string {
 
 Most local service businesses rely on referrals and word-of-mouth — which works great, but it means you're invisible to customers who are actively searching for exactly what you offer right now.
 
-I built GroundWork to fix that. It gets local service businesses online fast — professional website, local SEO, and a lead form that actually works — in under an hour, starting at $49/month.
+I built GroundWork to fix that. It gets local service businesses online fast — professional website, local SEO, and a lead form that actually works — in under an hour, starting at $39/month.
 
 See how it would work for your ${t.trade} business in ${t.city}:
 
@@ -162,7 +161,7 @@ async function main() {
         from: FROM_EMAIL,
         to: t.email,
         replyTo: "brad@groundworklocal.com",
-        subject: buildSubject(t),
+        subject: buildSubject(),
         html: buildHtml(t),
         text: buildText(t),
       });

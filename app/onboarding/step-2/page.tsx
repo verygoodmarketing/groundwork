@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { OnboardingLayout } from "@/components/onboarding/OnboardingLayout";
 import { trpc } from "@/lib/trpc/client";
 import { Loader2, CheckCircle2, XCircle, ChevronDown, ChevronUp } from "lucide-react";
+import { getStoredUtm, formatUtmForDb } from "@/lib/utm";
 
 // Light-theme colour tokens
 const C = {
@@ -162,6 +163,10 @@ export default function Step2Page() {
     e.preventDefault();
     const radius = form.serviceAreaRadius ? parseInt(form.serviceAreaRadius) : undefined;
 
+    // Capture UTM parameters for attribution
+    const storedUtm = getStoredUtm();
+    const utmParams = formatUtmForDb(storedUtm);
+
     if (currentBusiness) {
       await updateOnboardingStep.mutateAsync({
         step: 2,
@@ -181,6 +186,7 @@ export default function Step2Page() {
         slug: form.slug,
         phone: form.phone || undefined,
         category: form.category || undefined,
+        ...utmParams, // Include UTM parameters for new businesses
       });
     }
   }
